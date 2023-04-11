@@ -11,7 +11,7 @@
   [quest6ハッシュ](quest/week_1-2/quest6.rb)  
   [quest7シンボル](quest/week_1-2/quest7.rb)  
   [quest8例外処理](quest/week_1-2/quest8.rb)  
-  [submission quest](quest/week_1-2/submission_quest.rb)  
+  [提出quest](quest/week_1-2/submission_quest.rb)  
   [第1回技術ブログ]()
 
 ## Week 3-4
