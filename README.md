@@ -3,6 +3,7 @@
 - リンクは各クエストのファイルに繋がってます
   - 例quest/week_x-x/questファイル
 - .gitignoreにRubyのテンプレートを設定してあります
+- [日報]
 
 ## Week 1-2　　　　
 1. [[学習力][Level1] 続的に学習時間を確保できる](quest/week_1-2/quest1.md)<br>
