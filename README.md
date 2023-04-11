@@ -7,7 +7,7 @@
 
 ## Week 1-2　　　　
 1. [[学習力][Level1] 続的に学習時間を確保できる](quest/week_1-2/quest1.md)<br>
-2. [[実装力][Level1] コードを手元で動かすことができる](quest/week_1-2)<br>
+2. [[実装力][Level1] コードを手元で動かすことができる](quest/week_1-2/quest2.rb)<br>
 3. [[Ruby][Level1] メソッドを自作し使うことができる](quest/week_1-2/quest3.rb)<br>
 4. [[Ruby][Level1] 変数を宣言し代入することができる](quest/week_1-2/quest4.rb)<br>
 5. [[Ruby][Level1] 条件分岐を使うことができる](quest/week_1-2/quest5.rb)<br>
