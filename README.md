@@ -1,10 +1,11 @@
 # 概要 
-### アプレンティスのクエストを管理するリポジトリです
-- リンクは各クエストのファイルに繋がってます
-  - 例quest/week_x-x/questファイル
-- .gitignoreにRubyのテンプレートを設定してあります
+## アプレンティスのクエストを管理するリポジトリです
+### リンクは各クエストのファイルに繋がってます
+- 例quest/week_x-x/questファイル
+### .gitignoreにRubyのテンプレートを設定してあります
+## [日報](daily-report)
 
-## Week 1-2　　　　
+# Week 1-2　
 1. [[学習力][Level1] 続的に学習時間を確保できる](quest/week_1-2/quest1.md)<br>
 2. [[実装力][Level1] コードを手元で動かすことができる](quest/week_1-2/quest2.rb)<br>
 3. [[Ruby][Level1] メソッドを自作し使うことができる](quest/week_1-2/quest3.rb)<br>
@@ -24,4 +25,4 @@
 17. [[提出 QUEST ブラックジャックゲーム]](quest/week_1-2)<br>
 - [第1回技術ブログ]()
 
-## Week 3-4
+# Week 3-4
