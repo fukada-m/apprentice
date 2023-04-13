@@ -28,13 +28,6 @@
 # Week 3-4
 
 
-docker run のオプション
--v　ボリュームをマウントする
--d　バックグラウンドで実行する
--i　でコンテナに操作端末を繋ぐ
 
-linuxのコンテナを起動
-docker run -it -d --name CentOS centos
-CentOSの中にはいる
-docker exec -it CentOS /bin/bash
+
 
