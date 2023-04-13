@@ -11,9 +11,9 @@
 3. [[Ruby][Level1] メソッドを自作し使うことができる](quest/week_1-2/quest3.rb)<br>
 4. [[Ruby][Level1] 変数を宣言し代入することができる](quest/week_1-2/quest4.rb)<br>
 5. [[Ruby][Level1] 条件分岐を使うことができる](quest/week_1-2/quest5.rb)<br>
-6. [[Ruby][Level1] 繰り返し処理を行うことができる](quest/week_1-2)<br>
-7. [[Ruby][Level2] ブロックを使った配列の処理ができる(advanced)](quest/week_1-2)<br>
-8. [[Ruby][Level2] ハッシュを使うことができる(advanced)](quest/week_1-2)<br>
+6. [[Ruby][Level1] 繰り返し処理を行うことができる](quest/week_1-2/quest6.rb)<br>
+7. [[Ruby][Level2] ブロックを使った配列の処理ができる(advanced)](quest/week_1-2/quest7.rb)<br>
+8. [[Ruby][Level2] ハッシュを使うことができる(advanced)](quest/week_1-2/quest8.rb)<br>
 9. [[Ruby][Level2] シンボルを使うことができる(advanced)](quest/week_1-2)<br>
 10. [[オブジェクト指向][Level2] オブジェクト指向が何かを説明できる](quest/week_1-2)<br>
 11. [[オブジェクト指向][Level2] オブジェクト指向を使うことができる](quest/week_1-2)<br>
