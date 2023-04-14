@@ -1,12 +1,12 @@
 # 1.100回 "こんにちは！" と出力する関数 hello 
-# def say_hello
-#     100.times do
-#         puts "こんちは！"
-#     end
+def say_hello
+    100.times do
+        puts "こんちは！"
+    end
 
-# end
+end
 
-# say_hello()
+say_hello()
 
 # 2.あなたは眠れなくなったので羊の数を数えることにしました。羊の数 n が与えられ
 # 羊が1匹 羊が2匹 羊が3匹 ...
