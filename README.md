@@ -14,9 +14,9 @@
 6. [[Ruby][Level1] 繰り返し処理を行うことができる](quest/week_1-2/quest6.rb)<br>
 7. [[Ruby][Level2] ブロックを使った配列の処理ができる(advanced)](quest/week_1-2/quest7.rb)<br>
 8. [[Ruby][Level2] ハッシュを使うことができる(advanced)](quest/week_1-2/quest8.rb)<br>
-9. [[Ruby][Level2] シンボルを使うことができる(advanced)](quest/week_1-2)<br>
-10. [[オブジェクト指向][Level2] オブジェクト指向が何かを説明できる](quest/week_1-2)<br>
-11. [[オブジェクト指向][Level2] オブジェクト指向を使うことができる](quest/week_1-2)<br>
+9. [[Ruby][Level2] シンボルを使うことができる(advanced)](quest/week_1-2/quest9.rb)<br>
+10. [[オブジェクト指向][Level2] オブジェクト指向が何かを説明できる](quest/week_1-2/quest10.md)<br>
+11. [[オブジェクト指向][Level2] オブジェクト指向を使うことができる](quest/week_1-2/quest11.rb)<br>
 12. [[Ruby][Level2] モジュールを説明できる(advanced)](quest/week_1-2)<br>
 13. [[Ruby][Level2] 例外処理を使うことができる](quest/week_1-2)<br>
 14. [[Ruby][Level2] 外部ライブラリを使うことができる(advanced)](quest/week_1-2)<br>
