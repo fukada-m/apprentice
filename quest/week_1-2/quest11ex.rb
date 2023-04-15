@@ -1,42 +1,13 @@
 # 1. クラスの定義
+# クエストを見ないでやるように仕様だけをコメントにコピー
 # 自動販売機のクラス VendingMachine を宣言してください
 # ボタンを押すとサイダーが出るようにします。press_button メソッドを実行すると 'cider' の文字列を返してください
- 
-# class VendingMachine
-#   def press_button
-#     "cider"
-#   end
-# end
-
-# # サンプル呼び出し
-# vending_machine = VendingMachine.new
-# puts vending_machine.press_button
-
-
 
 # 2. initializeメソッド
 # 自動販売機のプログラムに initialize メソッド を追加しましょう。下記の仕様を追加します。
 # オブジェクトの生成時に自動販売機のメーカー名を記録できるように、initialize メソッドを追加します
 # 自動販売機のメーカー名確認ボタンを押すと、メーカー名を返す press_manufacturer_name メソッドを追加する
 
-# class VendingMachine
-#   def initialize(manufacturer_name)
-#     @manufacturer_name = manufacturer_name
-#   end
-
-#   def press_button
-#     "cider"
-#   end
-
-#   def press_manufacturer_name
-#     @manufacturer_name
-#   end
-# end
-
-
-# # サンプル呼び出し
-# vending_machine = VendingMachine.new('サントリー')
-# puts vending_machine.press_manufacturer_name
 
 # 3. メソッドの可視性
 # 自動販売機のプログラムのメソッドに可視性を追記します。下記の仕様を追加します。
@@ -44,94 +15,11 @@
 # 100円以上貯まった状態でボタンを押すとサイダーが出るようにします。サイダーが出ると入れた金額から100円が減ります
 # press_manufacturer_name メソッドは外部に公開しない非公開メソッドにしてください。private キーワードを使用します
 
-# class VendingMachine
-
-#     def initialize(manufacturer_name)
-#       @manufacturer_name = manufacturer_name
-#       @total_coin = 0
-#     end
-  
-#     def press_button
-#         # 100円以上の時のみサイダーを出す
-#         if @total_coin >= 100
-#             @total_coin -= 100
-#             return "cider"
-#         end
-#     end
-    
-#     private def press_manufacturer_name
-#         @manufacturer_name
-#     end
-
-#     def deposit_coin(coin)
-#         # 100円以外入れられない
-#         if coin == 100
-#             @total_coin += 100
-#         end
-#     end
-
-#   end
-
-
-# # サンプル呼び出し
-# vending_machine = VendingMachine.new('サントリー')
-# puts vending_machine.press_button
-
-# vending_machine.deposit_coin(150)
-# puts vending_machine.press_button
-
-# vending_machine.deposit_coin(100)
-# puts vending_machine.press_button
-
-# puts vending_machine.press_manufacturer_name
-
 
 # 4. 単一責任の原則
 # 自動販売機プログラムを単一責任の原則に基づいて設計しましょう。下記の仕様を追加します。
 # 押したボタンに応じて、サイダーかコーラが出るようにしましょう。サイダーは100円、コーラは150円とします。100円以外のコインは入れられない仕様はそのままです
 # 自動販売機に関する責務とアイテムに関する責務は別のものになります。単一責任の原則に基づいてクラスを設計してください。
-
-class VendingMachine
-
-    def initialize(manufacturer_name)
-      @manufacturer_name = manufacturer_name
-      @total_coin = 0
-    end
-  
-    def press_button
-        # 100円以上の時のみサイダーを出す
-        if @total_coin >= 100
-            @total_coin -= 100
-            return "cider"
-        end
-    end
-    
-    private def press_manufacturer_name
-        @manufacturer_name
-    end
-
-    def deposit_coin(coin)
-        # 100円以外入れられない
-        if coin == 100
-            @total_coin += 100
-        end
-    end
-
-  end
-
-  class Item
-  end
-
-  cola = #{アイテムクラス}.new('cola')
-  vending_machine = VendingMachine.new('サントリー')
-  vending_machine.deposit_coin(100)
-  puts vending_machine.press_button(cola)
-  vending_machine.deposit_coin(100)
-  puts vending_machine.press_button(cola)
-
-# サンプルアウトプット
-  # 150円が貯まっていないので空文字が出力されます
-# cola
 
 
 # 5. 継承
