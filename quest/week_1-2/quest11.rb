@@ -92,17 +92,22 @@
 # 自動販売機に関する責務とアイテムに関する責務は別のものになります。単一責任の原則に基づいてクラスを設計してください。
 
 class VendingMachine
-
+    attr_accessor :total_coin
     def initialize(manufacturer_name)
       @manufacturer_name = manufacturer_name
       @total_coin = 0
     end
-  
-    def press_button
-        # 100円以上の時のみサイダーを出す
-        if @total_coin >= 100
-            @total_coin -= 100
-            return "cider"
+  # 自動販売機の責務はボタンが押されたら飲み物を排出する
+    def press_button(item)
+      # tmp = 0
+      if item.drink_name == "cola" && total_coin >= 150
+        tmp = total_coin - 150
+        total_coin = tmp
+        "cola"
+      elsif item.drink_name == "サイダー" && total_coin >= 100
+          tmp = total_coin -100
+          total_coin -= 100
+          "cider"
         end
     end
     
@@ -120,9 +125,14 @@ class VendingMachine
   end
 
   class Item
+    attr_reader :drink_name
+
+    def initialize(drink_name)
+      @drink_name = drink_name
+    end
   end
 
-  cola = #{アイテムクラス}.new('cola')
+  cola = Item.new('cola')
   vending_machine = VendingMachine.new('サントリー')
   vending_machine.deposit_coin(100)
   puts vending_machine.press_button(cola)
