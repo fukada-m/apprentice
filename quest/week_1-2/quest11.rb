@@ -20,6 +20,7 @@
 # 自動販売機のメーカー名確認ボタンを押すと、メーカー名を返す press_manufacturer_name メソッドを追加する
 
 # class VendingMachine
+#   attr_reader :manufacturer_name
 #   def initialize(manufacturer_name)
 #     @manufacturer_name = manufacturer_name
 #   end
@@ -29,14 +30,16 @@
 #   end
 
 #   def press_manufacturer_name
-#     @manufacturer_name
+#     manufacturer_name
 #   end
 # end
-
 
 # # サンプル呼び出し
 # vending_machine = VendingMachine.new('サントリー')
 # puts vending_machine.press_manufacturer_name
+
+
+
 
 # 3. メソッドの可視性
 # 自動販売機のプログラムのメソッドに可視性を追記します。下記の仕様を追加します。
@@ -45,29 +48,39 @@
 # press_manufacturer_name メソッドは外部に公開しない非公開メソッドにしてください。private キーワードを使用します
 
 # class VendingMachine
+#   attr_accessor :deposit
+#   attr_reader :manufacturer_name
 
 #     def initialize(manufacturer_name)
+
 #       @manufacturer_name = manufacturer_name
-#       @total_coin = 0
+#       @deposit = 0
 #     end
   
+#     # サイダーを出す
 #     def press_button
-#         # 100円以上の時のみサイダーを出す
-#         if @total_coin >= 100
-#             @total_coin -= 100
-#             return "cider"
+#         # depositが100円以上の時のみサイダーを出す
+#         if deposit >= 100
+#           calc_deposit(-100)
+#           "cider"
 #         end
 #     end
     
 #     private def press_manufacturer_name
-#         @manufacturer_name
+#         manufacturer_name
 #     end
 
+#     # コインを入れる
 #     def deposit_coin(coin)
 #         # 100円以外入れられない
 #         if coin == 100
-#             @total_coin += 100
+#           calc_deposit(coin)
 #         end
+#     end
+
+#     #ディポジットを計算する 
+#     def calc_deposit(value)
+#       self.deposit += value
 #     end
 
 #   end
@@ -86,62 +99,98 @@
 # puts vending_machine.press_manufacturer_name
 
 
+
 # 4. 単一責任の原則
 # 自動販売機プログラムを単一責任の原則に基づいて設計しましょう。下記の仕様を追加します。
 # 押したボタンに応じて、サイダーかコーラが出るようにしましょう。サイダーは100円、コーラは150円とします。100円以外のコインは入れられない仕様はそのままです
 # 自動販売機に関する責務とアイテムに関する責務は別のものになります。単一責任の原則に基づいてクラスを設計してください。
 
-class VendingMachine
-    attr_accessor :total_coin
-    def initialize(manufacturer_name)
-      @manufacturer_name = manufacturer_name
-      @total_coin = 0
-    end
-  # 自動販売機の責務はボタンが押されたら飲み物を排出する
-    def press_button(item)
-      # tmp = 0
-      if item.drink_name == "cola" && total_coin >= 150
-        tmp = total_coin - 150
-        total_coin = tmp
-        "cola"
-      elsif item.drink_name == "サイダー" && total_coin >= 100
-          tmp = total_coin -100
-          total_coin -= 100
-          "cider"
-        end
-    end
+# 飲み物を出すことに対して責任を持つ
+# class VendingMachine
+#     attr_accessor :deposit
+
+#     def initialize(manufacturer_name)
+#       @manufacturer_name = manufacturer_name
+#       @deposit = 0
+#     end
+
+#   # ボタンが押されたら飲み物を排出する
+#     def press_button(item)
+#       if check_deposit(item)
+#         calc_deposit(-(item.price))
+#         item.drink_name
+#       end
+#     end
     
-    private def press_manufacturer_name
-        @manufacturer_name
-    end
+#     # ディポジットが商品価格以上かチェックする
+#     def check_deposit(item)
+#       if self.deposit > item.price
+#         true
+#       else
+#         false
+#       end
+#     end
+    
 
-    def deposit_coin(coin)
-        # 100円以外入れられない
-        if coin == 100
-            @total_coin += 100
-        end
-    end
+#     # お金を入れたらチェックして貯める
+#     def deposit_coin(coin)
+#       if check_coin(coin)
+#         calc_deposit(coin)
+#       end
+#     end
+    
+#     # 投入されたコインを確認する
+#     def check_coin(coin)
+#       if coin == 100
+#         true
+#       else
+#         false  
+#       end
+#     end
+    
+#     #ディポジットを計算する 
+#     def calc_deposit(value)
+#       self.deposit += value
+#     end
+    
+#     private def press_manufacturer_name
+#         @manufacturer_name
+#     end
+#   end
 
-  end
+# # 商品の名前と価格に対して責任を持つ
+# class Item
+#   attr_reader :drink_name, :price
 
-  class Item
-    attr_reader :drink_name
+#   def initialize(drink_name)
+#     @drink_name = drink_name
+#     @price = set_price(drink_name)
+#   end
 
-    def initialize(drink_name)
-      @drink_name = drink_name
-    end
-  end
+#   # 商品名に対応する価格を返す
+#   def set_price(drink_name)
+#     case drink_name
+#     when "cola"
+#       150
 
-  cola = Item.new('cola')
-  vending_machine = VendingMachine.new('サントリー')
-  vending_machine.deposit_coin(100)
-  puts vending_machine.press_button(cola)
-  vending_machine.deposit_coin(100)
-  puts vending_machine.press_button(cola)
+#     when "cider"
+#       100
+#     end
+#   end
+
+# end
+
+#   cola = Item.new('cola')
+#   vending_machine = VendingMachine.new('サントリー')
+#   vending_machine.deposit_coin(100)
+#   puts vending_machine.press_button(cola)
+#   vending_machine.deposit_coin(100)
+#   puts vending_machine.press_button(cola)
 
 # サンプルアウトプット
   # 150円が貯まっていないので空文字が出力されます
 # cola
+
 
 
 # 5. 継承
@@ -149,6 +198,116 @@ class VendingMachine
 # カップコーヒー（カップに注ぐコーヒー）のアイスとホットも選択できるようにします。値段はどちらも100円です
 # カップの在庫管理も行ってください。カップコーヒーが一つ注文されるとカップも在庫から一つ減ります。自動販売機が保持できるカップ数は最大100個とします
 # カップを追加できるようにしてください
+
+# 飲み物を出すことに対して責任を持つ
+class VendingMachine
+  attr_accessor :deposit
+
+  def initialize(manufacturer_name)
+    @manufacturer_name = manufacturer_name
+    @deposit = 0
+  end
+
+# ボタンが押されたら飲み物を排出する
+  def press_button(item)
+    if check_deposit(item)
+      calc_deposit(-(item.price))
+      item.drink_name
+    end
+  end
+  
+  # ディポジットが商品価格以上かチェックする
+  def check_deposit(item)
+    if self.deposit > item.price
+      true
+    else
+      false
+    end
+  end
+  
+
+  # お金を入れたらチェックして貯める
+  def deposit_coin(coin)
+    if check_coin(coin)
+      calc_deposit(coin)
+    end
+  end
+  
+  # 投入されたコインを確認する
+  def check_coin(coin)
+    if coin == 100
+      true
+    else
+      false  
+    end
+  end
+  
+  #ディポジットを計算する 
+  def calc_deposit(value)
+    self.deposit += value
+  end
+  
+  private def press_manufacturer_name
+      @manufacturer_name
+  end
+end
+
+# 商品の名前と価格に対して責任を持つ
+class Item
+attr_reader :drink_name, :price
+
+def initialize(drink_name)
+  @drink_name = drink_name
+  @price = set_price(drink_name)
+end
+
+# 商品名に対応する価格を返す
+def set_price(drink_name)
+end
+
+end
+
+class Drink < Item
+ # 商品名に対応する価格を返す
+def set_price(drink_name)
+  case drink_name
+  when "cola"
+    150
+
+  when "cider"
+    100
+  end
+end
+end
+
+class CupCoffee < Item
+
+  def set_price(drink_name)
+    case drink_name
+    when "hot", "ice"
+      100
+    end
+  end
+end
+
+
+# press_button メソッドを実行すると、与えられた引数に応じた飲み物を返してください。
+
+hot_cup_coffee = CupCoffee.new('hot')
+cider = Drink.new('cider')
+vending_machine = VendingMachine.new('サントリー')
+vending_machine.deposit_coin(100)
+vending_machine.deposit_coin(100)
+puts vending_machine.press_button(cider)
+
+puts vending_machine.press_button(hot_cup_coffee)
+vending_machine.add_cup(1)
+puts vending_machine.press_button(hot_cup_coffee)
+# ▼サンプルアウトプット
+# cider
+# カップが貯まっていないので空文字が出力されます
+# hot cup coffee
+
 
 
 # 6. ポリモーフィズム
