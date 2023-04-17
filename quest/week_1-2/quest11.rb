@@ -201,11 +201,12 @@
 
 # 飲み物を出すことに対して責任を持つ
 class VendingMachine
-  attr_accessor :deposit
+  attr_accessor :deposit, :cup
 
   def initialize(manufacturer_name)
     @manufacturer_name = manufacturer_name
     @deposit = 0
+    @cup = 0
   end
 
 # ボタンが押されたら飲み物を排出する
@@ -218,28 +219,27 @@ class VendingMachine
   
   # ディポジットが商品価格以上かチェックする
   def check_deposit(item)
-    if self.deposit > item.price
-      true
-    else
-      false
-    end
+    true if self.deposit >= item.price
   end
   
+  # カップの数をチェックする
+  def check_cup_number
+    true if self.cup >= 1 
+  end
+
+  # カップを増やす機能
+  def add_cup(number)
+    self.cup += number
+  end
 
   # お金を入れたらチェックして貯める
   def deposit_coin(coin)
-    if check_coin(coin)
-      calc_deposit(coin)
-    end
+    calc_deposit(coin) if check_coin(coin)
   end
   
-  # 投入されたコインを確認する
+  # 投入されたコインが100円か確認する
   def check_coin(coin)
-    if coin == 100
-      true
-    else
-      false  
-    end
+    true if coin == 100
   end
   
   #ディポジットを計算する 
@@ -252,24 +252,25 @@ class VendingMachine
   end
 end
 
+
+
 # 商品の名前と価格に対して責任を持つ
 class Item
-attr_reader :drink_name, :price
+  attr_reader :drink_name, :price
 
-def initialize(drink_name)
-  @drink_name = drink_name
-  @price = set_price(drink_name)
-end
+  def initialize(drink_name)
+    @drink_name = drink_name
+    @price = set_price(drink_name)
+  end
 
-# 商品名に対応する価格を返す
-def set_price(drink_name)
-end
-
+  # 商品名に対応する価格を返す
+  def set_price(drink_name)
+  end
 end
 
 class Drink < Item
- # 商品名に対応する価格を返す
-def set_price(drink_name)
+  # 商品名に対応する価格を返す
+  def set_price(drink_name)
   case drink_name
   when "cola"
     150
@@ -313,3 +314,51 @@ puts vending_machine.press_button(hot_cup_coffee)
 # 6. ポリモーフィズム
 # 自動販売機プログラムにスナック菓子を追加しましょう。下記の仕様を追加します。
 # ボタンを押すとポテトチップスが出るようにしましょう。ポテトチップスは150円とします。スナック菓子用のクラスを新規に作ることで対応してください。
+
+
+
+# ▼サンプル呼び出し
+
+# hot_cup_coffee = #{カップコーヒーのクラス}.new('hot');
+# cider = #{飲み物のクラス}.new('cider')
+# snack = #{スナック菓子のクラス}.new
+# vending_machine = VendingMachine.new('サントリー')
+# vending_machine.deposit_coin(100)
+# vending_machine.deposit_coin(100)
+# puts vending_machine.press_button(cider)
+
+# puts vending_machine.press_button(hot_cup_coffee)
+# vending_machine.add_cup(1)
+# puts vending_machine.press_button(hot_cup_coffee)
+
+# puts vending_machine.press_button(snack)
+# vending_machine.deposit_coin(100)
+# vending_machine.deposit_coin(100)
+# puts vending_machine.press_button(snack)
+# ▼サンプルアウトプット
+
+# cider
+#  # カップが貯まっていないので空文字が出力されます
+# hot cup coffee
+#  # お金が貯まっていないので空文字が出力されます
+# potato chips
+# ▼回答例_Ruby
+
+# class VendingMachine
+#   # クラスを完成させてください
+# end
+
+# class # アイテムに関する責務のクラスを作成してください
+# end
+
+# # 飲み物に関する責務のクラスを継承を利用して作成してください
+# class #{飲み物クラス} < #{アイテムクラス} 
+# end
+
+# # カップコーヒーに関する責務のクラスを継承を利用して作成してください
+# class #{カップコーヒークラス} < #{アイテムクラス} 
+# end
+
+# # スナック菓子に関する責務のクラスを継承を利用して作成してください
+# class #{スナック菓子クラス} < #{アイテムクラス} 
+# end
