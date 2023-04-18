@@ -2,20 +2,24 @@
 class GameManager 
     def initialize
         # カードを生成する
-        create_card
-        @deck = [
-            1,2,3,4,5,6,7,8,9,10,11,12,13,
-            1,2,3,4,5,6,7,8,9,10,11,12,13,
-            1,2,3,4,5,6,7,8,9,10,11,12,13,
-            1,2,3,4,5,6,7,8,9,10,11,12,13,
-        ]
+        @deck = []
+        create_card(@deck)
+        # @deck = [
+        #     1,2,3,4,5,6,7,8,9,10,11,12,13,
+        #     1,2,3,4,5,6,7,8,9,10,11,12,13,
+        #     1,2,3,4,5,6,7,8,9,10,11,12,13,
+        #     1,2,3,4,5,6,7,8,9,10,11,12,13,
+        # ]
         @player_hand = 0
     end
 
     # カードを作成する
-    def create_card
-        13.times do |num| 
-            @deck.push(num) 
+    def create_card(deck)
+        4.times do |index|
+            mark = ["ハート", "ダイヤ", "スペード", "クローバー"]
+            13.times do |num| 
+                deck.push("#{mark[index]}の#{num+1}") 
+            end
         end
     end
         # カードをシャッフルする
@@ -59,3 +63,4 @@ gameManager.start
 gameManager.draw
 gameManager.delete_card
 gameManager.draw
+gameManager.delete_card
