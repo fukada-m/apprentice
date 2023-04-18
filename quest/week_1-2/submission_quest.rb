@@ -1,4 +1,4 @@
-
+# ブラックジャックをするクラス
 class GameManager 
     attr_accessor :deck
     attr_reader :dealer, :player
@@ -8,12 +8,12 @@ class GameManager
         @deck = []
         @player = Player.new
         @dealer = Dealer.new
-        create_card(@deck)
+        create_card(deck)
         
     end
 
     # カードを作成する
-    def create_card(deck)
+    private def create_card(deck)
         4.times do |index|
             mark = ["ハート", "ダイヤ", "スペード", "クローバー"]
             13.times do |num| 
@@ -21,20 +21,21 @@ class GameManager
             end
         end
     end
+    
         # カードをシャッフルする
-    def start
-        @deck = @deck.sort_by{rand}
+     def shuffle
+        self.deck = deck.sort_by{rand}
         puts "ブラックジャックを開始します"
     end
 
         # カードを引く
     def draw(human)
-        human.draw(@deck)
+        human.draw(deck)
     end
 
     # デッキからカードを削除する
     def delete_card
-        @deck.delete_at(0)
+        deck.delete_at(0)
     end
 
     # 現在の得点を表示する
@@ -91,7 +92,7 @@ end
 
 
 gameManager = GameManager.new
-gameManager.start
+gameManager.shuffle
 2.times do 
     gameManager.draw(gameManager.player)
     gameManager.delete_card
