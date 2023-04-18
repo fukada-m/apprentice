@@ -18,11 +18,11 @@
 10. [[オブジェクト指向][Level2] オブジェクト指向が何かを説明できる](quest/week_1-2/quest10.md)<br>
 11. [[オブジェクト指向][Level2] オブジェクト指向を使うことができる](quest/week_1-2/quest11.rb)<br>
 12. [[Ruby][Level2] モジュールを説明できる(advanced)](quest/week_1-2)<br>
-13. [[Ruby][Level2] 例外処理を使うことができる](quest/week_1-2)<br>
-14. [[Ruby][Level2] 外部ライブラリを使うことができる(advanced)](quest/week_1-2)<br>
-15. [[Ruby][Level2] デバッガを活用してデバッグができる(advanced)](quest/week_1-2)<br>
-16. [[Ruby][Level2] 静的解析ツールを使うことができる(advanced)](quest/week_1-2)<br>
-17. [[提出 QUEST ブラックジャックゲーム]](quest/week_1-2)<br>
+13. [[Ruby][Level2] 例外処理を使うことができる](quest/week_1-2/quest13.rb)<br>
+14. [[Ruby][Level2] 外部ライブラリを使うことができる(advanced)](quest/week_1-2/quest14.rb)<br>
+15. [[Ruby][Level2] デバッガを活用してデバッグができる(advanced)](quest/week_1-2/quest15.rb)<br>
+16. [[Ruby][Level2] 静的解析ツールを使うことができる(advanced)](quest/week_1-2/quest16.rb)<br>
+17. [[提出 QUEST ブラックジャックゲーム]](quest/week_1-2/submission_quest.rb)<br>
 - [第1回技術ブログ]()
 
 # Week 3-4
