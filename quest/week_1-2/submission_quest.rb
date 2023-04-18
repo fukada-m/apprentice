@@ -15,7 +15,7 @@ class GameManager
     # カードを作成する
     def create_card
         13.times do |num| 
-            @deck
+            @deck.push(num) 
         end
     end
         # カードをシャッフルする
