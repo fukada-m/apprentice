@@ -39,12 +39,13 @@ class GameManager
     end
 
     # 現在の得点を表示する
-    def show_points
-
+    def show_points(human)
+        human.show_points
     end
 
-    # カードを引くか聞く？
-    def dwaw_next_card?
+    # カードを引くか聞く
+    def want_next_card(player)
+        player.want_next_card
     end
 
     # 勝敗を判定する
@@ -58,26 +59,42 @@ end
 
 
 class Human
-    attr_accessor :hand
-    attr_reader :name
+    attr_accessor :hand, :points
+    attr_reader :name 
 
     def initialize
         @hand = 0
+        @points = 0
     end
     
     def draw(deck)
         self.hand = deck[0]
         puts "#{self.name}の引いたカードは#{self.hand}です"
     end
+
+    # 現在の得点を表示
+    def show_points
+        print "#{name}の現在の得点は0です。"
+    end
+
+    
 end
 
 
 class Player < Human
+    attr_accessor :isnext
 
     def initialize
         super
         @name ="あなた"
+        @isnext = true
     end 
+
+    # カードを引くか聞く
+    def want_next_card
+        print "カードを引きますか？（Y/N）"
+        self.isnext = gets 
+    end
 end
 
 class Dealer < Human
@@ -101,3 +118,10 @@ end
     gameManager.draw(gameManager.dealer)
     gameManager.delete_card
 end    
+gameManager.show_points(gameManager.player)
+gameManager.want_next_card(gameManager.player)
+if gameManager.player.isnext == "Y\n"
+    gameManager.draw(gameManager.player)
+    gameManager.delete_card
+end
+
