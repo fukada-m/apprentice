@@ -1,10 +1,15 @@
 
 class GameManager 
+    attr_accessor :deck
+    attr_reader :dealer, :player
+
     def initialize
         # カードを生成する
         @deck = []
+        @player = Player.new
+        @dealer = Dealer.new
         create_card(@deck)
-        @player_hand = 0
+        
     end
 
     # カードを作成する
@@ -23,9 +28,8 @@ class GameManager
     end
 
         # カードを引く
-    def draw
-        @player_hand = @deck[0]
-        puts "あなたの引いたカードは#{@player_hand}です"
+    def draw(human)
+        human.draw(@deck)
     end
 
     # デッキからカードを削除する
@@ -51,14 +55,48 @@ class GameManager
     end
 end
 
-class player
+
+class Human
+    attr_accessor :hand
+    attr_reader :name
+
+    def initialize
+        @hand = 0
+    end
     
+    def draw(deck)
+        self.hand = deck[0]
+        puts "#{self.name}の引いたカードは#{self.hand}です"
+    end
 end
+
+
+class Player < Human
+
+    def initialize
+        super
+        @name ="あなた"
+    end 
+end
+
+class Dealer < Human
+
+    def initialize
+        super
+        @name ="ディーラー"
+    end
+
+end
+
 
 
 gameManager = GameManager.new
 gameManager.start
-gameManager.draw
-gameManager.delete_card
-gameManager.draw
-gameManager.delete_card
+2.times do 
+    gameManager.draw(gameManager.player)
+    gameManager.delete_card
+end    
+2.times do 
+    gameManager.draw(gameManager.dealer)
+    gameManager.delete_card
+end    
