@@ -4,12 +4,6 @@ class GameManager
         # カードを生成する
         @deck = []
         create_card(@deck)
-        # @deck = [
-        #     1,2,3,4,5,6,7,8,9,10,11,12,13,
-        #     1,2,3,4,5,6,7,8,9,10,11,12,13,
-        #     1,2,3,4,5,6,7,8,9,10,11,12,13,
-        #     1,2,3,4,5,6,7,8,9,10,11,12,13,
-        # ]
         @player_hand = 0
     end
 
@@ -55,6 +49,9 @@ class GameManager
     # ブラックジャックを修了する
     def exit
     end
+end
+
+class Actor
 end
 
 
