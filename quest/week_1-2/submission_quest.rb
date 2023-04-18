@@ -51,7 +51,8 @@ class GameManager
     end
 end
 
-class Actor
+class player
+    
 end
 
 
