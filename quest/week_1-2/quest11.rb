@@ -361,7 +361,7 @@ class VendingMachine
         end
       end
       calc_deposit(-(item.price))
-      item.drink_name
+      item.name
     end
   end
   
@@ -411,24 +411,24 @@ end
 
 # 商品の名前と価格に対して責任を持つ
 class Item
-  attr_reader :drink_name, :price, :tag
+  attr_reader :name, :price, :tag
 
-  def initialize(drink_name)
-    @drink_name = drink_name
-    @price = set_price(drink_name)
+  def initialize(name)
+    @name = name
+    @price = set_price(name)
     @tag = nil
   end
 
   # 商品名に対応する価格を返す
-  def set_price(drink_name)
+  def set_price(name)
   end
 
 end
 
 # コーラとサイダーがある
 class Drink < Item
-  def set_price(drink_name)
-    case drink_name
+  def set_price(name)
+    case name
     when "cola"
       150
     when "cider"
@@ -438,16 +438,16 @@ class Drink < Item
 
 end
 
-# ホットとアイスがある
+# コーヒーにはホットとアイスがある
 class CupCoffee < Item
 
-  def initialize(drink_name)
+  def initialize(name)
     super
     @tag = "coffee"
   end
 
-  def set_price(drink_name)
-    case drink_name
+  def set_price(name)
+    case name
     when "hot", "ice"
       100
     end
@@ -455,11 +455,20 @@ class CupCoffee < Item
 
 end
 
+class Snack < Item
+  def initialize
+    @name = "potato chips"
+    @price = 150
+  end
+end
 
-# press_button メソッドを実行すると、与えられた引数に応じた飲み物を返してください。
 
-hot_cup_coffee = CupCoffee.new('hot')
+
+# ▼サンプル呼び出し
+
+hot_cup_coffee = CupCoffee.new('hot');
 cider = Drink.new('cider')
+snack = Snack.new
 vending_machine = VendingMachine.new('サントリー')
 vending_machine.deposit_coin(100)
 vending_machine.deposit_coin(100)
@@ -469,28 +478,14 @@ puts vending_machine.press_button(hot_cup_coffee)
 vending_machine.add_cup(1)
 puts vending_machine.press_button(hot_cup_coffee)
 
+puts vending_machine.press_button(snack)
+vending_machine.deposit_coin(100)
+vending_machine.deposit_coin(100)
+puts vending_machine.press_button(snack)
 
 
-# ▼サンプル呼び出し
 
-# hot_cup_coffee = #{カップコーヒーのクラス}.new('hot');
-# cider = #{飲み物のクラス}.new('cider')
-# snack = #{スナック菓子のクラス}.new
-# vending_machine = VendingMachine.new('サントリー')
-# vending_machine.deposit_coin(100)
-# vending_machine.deposit_coin(100)
-# puts vending_machine.press_button(cider)
-
-# puts vending_machine.press_button(hot_cup_coffee)
-# vending_machine.add_cup(1)
-# puts vending_machine.press_button(hot_cup_coffee)
-
-# puts vending_machine.press_button(snack)
-# vending_machine.deposit_coin(100)
-# vending_machine.deposit_coin(100)
-# puts vending_machine.press_button(snack)
 # ▼サンプルアウトプット
-
 # cider
 #  # カップが貯まっていないので空文字が出力されます
 # hot cup coffee
