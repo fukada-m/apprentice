@@ -38,6 +38,11 @@ class GameManager
         deck.delete_at(0)
     end
 
+    # 得点を計算する
+    def calc_points(human)
+        # human.points += human.hand
+    end
+
     # 現在の得点を表示する
     def show_points(human)
         human.show_points
@@ -61,7 +66,7 @@ end
 class Human
     attr_accessor :hand, :points
     attr_reader :name 
-
+    
     def initialize
         @hand = 0
         @points = 0
@@ -74,7 +79,7 @@ class Human
 
     # 現在の得点を表示
     def show_points
-        print "#{name}の現在の得点は0です。"
+        print "#{name}の現在の得点は#{points}です。"
     end
 
     
@@ -86,7 +91,7 @@ class Player < Human
 
     def initialize
         super
-        @name ="あなた"
+        @name = "あなた"
         @isnext = true
     end 
 
@@ -113,10 +118,12 @@ gameManager.shuffle
 2.times do 
     gameManager.draw(gameManager.player)
     gameManager.delete_card
+    gameManager.calc_points(gameManager.player)
 end    
 2.times do 
     gameManager.draw(gameManager.dealer)
     gameManager.delete_card
+    gameManager.calc_points(gameManager.dealer)
 end    
 gameManager.show_points(gameManager.player)
 gameManager.want_next_card(gameManager.player)
