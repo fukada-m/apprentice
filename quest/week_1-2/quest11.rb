@@ -199,6 +199,147 @@
 # カップの在庫管理も行ってください。カップコーヒーが一つ注文されるとカップも在庫から一つ減ります。自動販売機が保持できるカップ数は最大100個とします
 # カップを追加できるようにしてください
 
+# # 飲み物を出すことに対して責任を持つ
+# class VendingMachine
+#   attr_accessor :deposit, :cup
+
+#   def initialize(manufacturer_name)
+#     @manufacturer_name = manufacturer_name
+#     @deposit = 0
+#     @cup = 0
+#   end
+
+# # 飲み物を排出する
+#   def press_button(item)
+#     if check_deposit(item)
+#       if is_coffee(item)
+#         if self.cup > 0
+#           sub_cup(1)
+#         else
+#           return
+#         end
+#       end
+#       calc_deposit(-(item.price))
+#       item.drink_name
+#     end
+#   end
+  
+
+
+#   # ディポジットが商品価格以上かチェックする
+#   def check_deposit(item)
+#     true if self.deposit >= item.price
+#   end
+
+#   # カップの個数を加算する
+#   def add_cup(number)
+#     self.cup += number
+#   end
+#   #カップの数を減らす 
+#   def sub_cup(number)
+#     self.cup -= number
+#   end
+
+#     # コーヒーかどうか確認する
+#   def is_coffee(item)
+#     true if item.tag == "coffee" 
+    
+#   end
+
+#   # お金を入れたらチェックして貯める
+#   def deposit_coin(coin)
+#     calc_deposit(coin) if check_coin(coin)
+#   end
+  
+#   # 投入されたコインが100円か確認する
+#   def check_coin(coin)
+#     true if coin == 100
+#   end
+  
+#   #ディポジットを計算する 
+#   def calc_deposit(value)
+#     self.deposit += value
+#   end
+  
+#   private def press_manufacturer_name
+#       @manufacturer_name
+#   end
+# end
+
+
+
+# # 商品の名前と価格に対して責任を持つ
+# class Item
+#   attr_reader :drink_name, :price, :tag
+
+#   def initialize(drink_name)
+#     @drink_name = drink_name
+#     @price = set_price(drink_name)
+#     @tag = nil
+#   end
+
+#   # 商品名に対応する価格を返す
+#   def set_price(drink_name)
+#   end
+
+# end
+
+# # コーラとサイダーがある
+# class Drink < Item
+#   def set_price(drink_name)
+#     case drink_name
+#     when "cola"
+#       150
+#     when "cider"
+#       100
+#     end
+#   end
+
+# end
+
+# # ホットとアイスがある
+# class CupCoffee < Item
+
+#   def initialize(drink_name)
+#     super
+#     @tag = "coffee"
+#   end
+
+#   def set_price(drink_name)
+#     case drink_name
+#     when "hot", "ice"
+#       100
+#     end
+#   end
+
+# end
+
+
+# # press_button メソッドを実行すると、与えられた引数に応じた飲み物を返してください。
+
+# hot_cup_coffee = CupCoffee.new('hot')
+# cider = Drink.new('cider')
+# vending_machine = VendingMachine.new('サントリー')
+# vending_machine.deposit_coin(100)
+# vending_machine.deposit_coin(100)
+# puts vending_machine.press_button(cider)
+
+# puts vending_machine.press_button(hot_cup_coffee)
+# vending_machine.add_cup(1)
+# puts vending_machine.press_button(hot_cup_coffee)
+# ▼サンプルアウトプット
+# cider
+# カップが貯まっていないので空文字が出力されます
+# hot cup coffee
+
+
+
+# 6. ポリモーフィズム
+# 自動販売機プログラムにスナック菓子を追加しましょう。下記の仕様を追加します。
+# ボタンを押すとポテトチップスが出るようにしましょう。ポテトチップスは150円とします。スナック菓子用のクラスを新規に作ることで対応してください。
+
+
+
 # 飲み物を出すことに対して責任を持つ
 class VendingMachine
   attr_accessor :deposit, :cup
@@ -209,27 +350,41 @@ class VendingMachine
     @cup = 0
   end
 
-# ボタンが押されたら飲み物を排出する
+# 飲み物を排出する
   def press_button(item)
     if check_deposit(item)
+      if is_coffee(item)
+        if self.cup > 0
+          sub_cup(1)
+        else
+          return
+        end
+      end
       calc_deposit(-(item.price))
       item.drink_name
     end
   end
   
+
+
   # ディポジットが商品価格以上かチェックする
   def check_deposit(item)
     true if self.deposit >= item.price
   end
-  
-  # カップの数をチェックする
-  def check_cup_number
-    true if self.cup >= 1 
-  end
 
-  # カップを増やす機能
+  # カップの個数を加算する
   def add_cup(number)
     self.cup += number
+  end
+  #カップの数を減らす 
+  def sub_cup(number)
+    self.cup -= number
+  end
+
+    # コーヒーかどうか確認する
+  def is_coffee(item)
+    true if item.tag == "coffee" 
+    
   end
 
   # お金を入れたらチェックして貯める
@@ -256,32 +411,40 @@ end
 
 # 商品の名前と価格に対して責任を持つ
 class Item
-  attr_reader :drink_name, :price
+  attr_reader :drink_name, :price, :tag
 
   def initialize(drink_name)
     @drink_name = drink_name
     @price = set_price(drink_name)
+    @tag = nil
   end
 
   # 商品名に対応する価格を返す
   def set_price(drink_name)
   end
+
 end
 
+# コーラとサイダーがある
 class Drink < Item
-  # 商品名に対応する価格を返す
   def set_price(drink_name)
-  case drink_name
-  when "cola"
-    150
-
-  when "cider"
-    100
+    case drink_name
+    when "cola"
+      150
+    when "cider"
+      100
+    end
   end
-end
+
 end
 
+# ホットとアイスがある
 class CupCoffee < Item
+
+  def initialize(drink_name)
+    super
+    @tag = "coffee"
+  end
 
   def set_price(drink_name)
     case drink_name
@@ -289,6 +452,7 @@ class CupCoffee < Item
       100
     end
   end
+
 end
 
 
@@ -304,16 +468,6 @@ puts vending_machine.press_button(cider)
 puts vending_machine.press_button(hot_cup_coffee)
 vending_machine.add_cup(1)
 puts vending_machine.press_button(hot_cup_coffee)
-# ▼サンプルアウトプット
-# cider
-# カップが貯まっていないので空文字が出力されます
-# hot cup coffee
-
-
-
-# 6. ポリモーフィズム
-# 自動販売機プログラムにスナック菓子を追加しましょう。下記の仕様を追加します。
-# ボタンを押すとポテトチップスが出るようにしましょう。ポテトチップスは150円とします。スナック菓子用のクラスを新規に作ることで対応してください。
 
 
 
