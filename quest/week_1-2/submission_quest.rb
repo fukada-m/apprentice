@@ -4,37 +4,35 @@ class GameManager
     attr_reader :dealer, :player
 
     def initialize
-        # カードを生成する
         @deck = []
         @player = Player.new
         @dealer = Dealer.new
-        create_card(deck)
-        
+        create_card
+        shuffle
     end
 
     # カードを作成する
-    private def create_card(deck)
+    private def create_card
         4.times do |index|
             mark = ["ハート", "ダイヤ", "スペード", "クローバー"]
             13.times do |num| 
                 deck.push(["#{mark[index]}の#{num + 1}", num + 1]) 
             end
         end
-        
     end
     
-        # カードをシャッフルする
-     def shuffle
+    # カードをシャッフルする
+    private def shuffle
         self.deck = deck.sort_by{rand}
         puts "ブラックジャックを開始します"
     end
 
-        # カードを引く
+    # カードを1枚引く
     def draw(human)
         human.draw(deck)
     end
 
-    # デッキからカードを削除する
+    # デッキから先頭のカードを削除する
     def delete_card
         deck.delete_at(0)
     end
@@ -49,7 +47,7 @@ class GameManager
         human.show_score
     end
 
-    # カードを引くか聞く
+    # カードを引くか質問する
     def want_next_card(player)
         player.want_next_card
     end
@@ -72,6 +70,7 @@ class Human
         @hand = 0
         @score = 0
     end
+
     # カードを引く
     def draw(deck)
         self.hand = deck[0]
@@ -83,9 +82,7 @@ class Human
         print "#{name}の現在の得点は#{score}です。"
     end
 
-    
 end
-
 
 class Player < Human
     attr_accessor :isnext
@@ -102,6 +99,7 @@ class Player < Human
         self.isnext = gets 
         puts isnext
     end
+
 end
 
 class Dealer < Human
@@ -114,9 +112,8 @@ class Dealer < Human
 end
 
 
-
+#----------------ここからアウトプット-------------------
 gameManager = GameManager.new
-gameManager.shuffle
 2.times do 
     gameManager.draw(gameManager.player)
     gameManager.calc_score(gameManager.player)
@@ -130,10 +127,14 @@ end
 gameManager.show_score(gameManager.player)
 gameManager.want_next_card(gameManager.player)
 
-if gameManager.player.isnext == "Y\n"
+while gameManager.player.isnext == "Y\n" do
     gameManager.draw(gameManager.player)
     gameManager.calc_score(gameManager.player)
     gameManager.delete_card
     gameManager.show_score(gameManager.player)
+    gameManager.want_next_card(gameManager.player)
 end
+
+
+
 
