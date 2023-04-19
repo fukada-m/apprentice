@@ -22,7 +22,7 @@
 14. [[Ruby][Level2] 外部ライブラリを使うことができる(advanced)](quest/week_1-2/quest14.rb)<br>
 15. [[Ruby][Level2] デバッガを活用してデバッグができる(advanced)](quest/week_1-2/quest15.rb)<br>
 16. [[Ruby][Level2] 静的解析ツールを使うことができる(advanced)](quest/week_1-2/quest16.rb)<br>
-17. [[提出 QUEST ブラックジャックゲーム]](quest/week_1-2/submission_quest.rb)<br>
+17. [[提出 QUEST ブラックジャックゲーム]](quest/week_1-2/submission-quest)<br>
 - [第1回技術ブログ]()
 
 # Week 3-4
