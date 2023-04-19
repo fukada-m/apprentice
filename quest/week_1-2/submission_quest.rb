@@ -73,6 +73,9 @@ class GameManager
 
     # 勝敗を判定する
     def judge
+        puts "あなたの得点は#{player.score}です。"
+        puts "ディーラーの得点は#{dealer.score}です。"
+        
     end
 
     # バースト処理
@@ -203,9 +206,8 @@ while gameManager.dealer.score < 17
     gameManager.delete_card
     gameManager.show_card(gameManager.dealer)
 end
-# プレイヤーの得点を表示
-# ディーラーの得点を表示
 # 勝敗判定
+gameManager.judge
 gameManager.exit
 
 
