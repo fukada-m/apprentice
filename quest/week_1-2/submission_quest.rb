@@ -32,6 +32,11 @@ class GameManager
         human.draw(deck)
     end
 
+    # Aかどうかチェックする
+    def check_A(human)
+        human.check_A(deck)
+    end
+    
     # カードを見せる
     def show_card(human)
         human.show_card
@@ -112,6 +117,7 @@ class Human
     def draw(deck)
         self.hand = deck[0]
     end
+
 
     # カードを見せる
     def show_card
