@@ -45,9 +45,9 @@ gameManager.want_next_card(gameManager.player)
 while gameManager.player.is_next == "Y\n" do
     player_draw_and_show_cards(gameManager)
     gameManager.show_score(gameManager.player)
-    if gameManager.player.score <= 21
+    if gameManager.player.score <= 21 || gameManager.score_down(gameManager.player)
         gameManager.want_next_card(gameManager.player)
-    else
+    elsif 
         gameManager.burst(gameManager.player)
         break
     end
@@ -62,6 +62,8 @@ if gameManager.player.is_burst
     # ディーラーは17以上になるまで引き続ける
     while gameManager.dealer.score < 17
         dealer_draw_and_show_cards(gameManager)
+        gameManager.score_down(gameManager.dealer) if gameManager.dealer.score > 21
+            
     end
     gameManager.judge
 end

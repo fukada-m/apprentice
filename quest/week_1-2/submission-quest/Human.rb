@@ -33,6 +33,9 @@ class Human
         puts "#{name}の現在の得点は#{score}です。"
     end
 
+    def score_down
+        rule_A.score_down
+    end
     # バースト処理
     def burst
         puts "#{name}はバーストしました、負けです。"

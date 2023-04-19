@@ -80,6 +80,14 @@ class GameManager
         human.score += 10 if human.score_up_check(deck)
     end
 
+    def score_down(human)
+        if human.score_down
+            human.score -= 10
+            human.show_score
+            true
+        end
+    end
+
     # 得点を計算する。カードの得点は最大10点
     def calc_score(human)
         if deck[0][1] > 10
