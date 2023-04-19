@@ -32,12 +32,21 @@ class GameManager
         human.draw(deck)
     end
 
+    # カードを見せる
+    def show_card(human)
+        human.show_card
+    end
+
+    def not_show_card(human)
+        human.not_show_card
+    end
+
     # デッキから先頭のカードを削除する
     def delete_card
         deck.delete_at(0)
     end
 
-    # 得点を計算する
+    # 得点を計算する。カードの得点は最大10点
     def calc_score(human)
         if deck[0][1] > 10
             human.score += 10
@@ -75,10 +84,14 @@ class Human
         @score = 0
     end
 
-    # カードを引く
+    # カードを1枚引く
     def draw(deck)
         self.hand = deck[0]
-        puts "#{self.name}の引いたカードは#{self.hand[0]}です"
+    end
+
+    # カードを見せる
+    def show_card
+        puts "#{self.name}の引いたカードは#{self.hand[0]}です。"
     end
 
     # 現在の得点を表示
@@ -96,8 +109,8 @@ class Player < Human
         @name = "あなた"
         @isnext = true
     end 
-
-    # カードを引くか質問する
+    
+    # カードをもう1枚引くか質問する
     def want_next_card
         print "カードを引きますか？（Y/N）"
         self.isnext = gets 
@@ -113,21 +126,35 @@ class Dealer < Human
         @name ="ディーラー"
     end
 
+    # カードを見せない
+    def not_show_card()
+        puts "ディーラーの引いた2枚目のカードはわかりません。"
+    end
+
 end
 
 
 #----------------ここからアウトプット-------------------
 gameManager = GameManager.new
+
 2.times do 
     gameManager.draw(gameManager.player)
     gameManager.calc_score(gameManager.player)
     gameManager.delete_card
-end    
-2.times do 
+    gameManager.show_card(gameManager.player)
+end   
+
+2.times do |num|
     gameManager.draw(gameManager.dealer)
     gameManager.calc_score(gameManager.dealer)
     gameManager.delete_card
+    if num < 1
+        gameManager.show_card(gameManager.dealer)
+    else
+        gameManager.not_show_card(gameManager.dealer)
+    end
 end    
+
 gameManager.show_score(gameManager.player)
 gameManager.want_next_card(gameManager.player)
 
@@ -135,6 +162,7 @@ while gameManager.player.isnext == "Y\n" do
     gameManager.draw(gameManager.player)
     gameManager.calc_score(gameManager.player)
     gameManager.delete_card
+    gameManager.show_card(gameManager.player)
     gameManager.show_score(gameManager.player)
     gameManager.want_next_card(gameManager.player)
 end
