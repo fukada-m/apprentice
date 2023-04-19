@@ -69,6 +69,11 @@ class GameManager
     def judge
     end
 
+    # バースト処理
+    def burst(human)
+        human.burst
+    end
+
     # ブラックジャックを修了する
     def exit
         puts "ブラックジャックを終了します"
@@ -100,6 +105,11 @@ class Human
         print "#{name}の現在の得点は#{score}です。"
     end
 
+    # バースト処理
+    def burst
+        puts "#{name}はバーストしました、負けです。"
+    end
+
 end
 
 class Player < Human
@@ -108,7 +118,7 @@ class Player < Human
     def initialize
         super
         @name = "あなた"
-        @isnext = true
+        @isnext = ""
     end 
     
     # カードをもう1枚引くか質問する
@@ -165,7 +175,12 @@ while gameManager.player.isnext == "Y\n" do
     gameManager.delete_card
     gameManager.show_card(gameManager.player)
     gameManager.show_score(gameManager.player)
-    gameManager.want_next_card(gameManager.player)
+    if gameManager.player.score <= 21
+        gameManager.want_next_card(gameManager.player)
+    else
+        gameManager.player.isnext = "N"
+        puts gameManager.burst(gameManager.player)
+    end
 end
 # ディーラーの２枚目を表示
 # ディーラーの得点を表示
