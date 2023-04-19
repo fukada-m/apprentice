@@ -71,6 +71,7 @@ class GameManager
 
     # ブラックジャックを修了する
     def exit
+        puts "ブラックジャックを終了します"
     end
 end
 
@@ -166,7 +167,12 @@ while gameManager.player.isnext == "Y\n" do
     gameManager.show_score(gameManager.player)
     gameManager.want_next_card(gameManager.player)
 end
-
-
+# ディーラーの２枚目を表示
+# ディーラーの得点を表示
+# ディーラーは17点以上になるまで引き続ける
+# プレイヤーの得点を表示
+# ディーラーの得点を表示
+# 勝敗判定
+gameManager.exit
 
 
