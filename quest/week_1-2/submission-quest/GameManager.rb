@@ -1,6 +1,5 @@
 require_relative "player"
 require_relative "dealer"
-require_relative "a_card"
 
 class GameManager
     attr_accessor :deck
@@ -10,8 +9,6 @@ class GameManager
         @deck = []
         @player = Player.new
         @dealer = Dealer.new
-        @a_card = A_card.new
-        @a_card.hoge
         create_card
         shuffle
         start
@@ -41,6 +38,9 @@ class GameManager
         human.draw(deck)
     end
 
+    def check_A(human)
+        human.check_A(deck)
+    end
     # カードを見せる
     def show_card(human)
         human.show_card
@@ -74,6 +74,10 @@ class GameManager
     # バースト処理
     def burst(human)
         human.burst
+    end
+
+    def score_up_check(human)
+        human.score += 10 if human.score_up_check(deck)
     end
 
     # 得点を計算する。カードの得点は最大10点

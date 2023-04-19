@@ -1,15 +1,26 @@
+require_relative "rule_a"
+
 class Human
     attr_accessor :hand, :score
-    attr_reader :name 
+    attr_reader :name, :rule_A 
     
     def initialize
         @hand = 0
         @score = 0
+        @rule_A = Rule_A.new
     end
 
     # カードを1枚引く
     def draw(deck)
         self.hand = deck[0]
+    end
+
+    def check_A(deck)
+        rule_A.check_A(deck)
+    end
+
+    def score_up_check(deck)
+        rule_A.score_up_check(deck)
     end
 
     # カードを見せる

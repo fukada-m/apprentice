@@ -1,8 +1,10 @@
-require_relative "gameManager"
+require_relative "GameManager"
 
 # プレイヤーがカードを引いて公開する
 def player_draw_and_show_cards(gameManager)
     gameManager.draw(gameManager.player)
+    gameManager.check_A(gameManager.player)
+    gameManager.score_up_check(gameManager.player)
     gameManager.calc_score(gameManager.player)
     gameManager.delete_card
     gameManager.show_card(gameManager.player)
@@ -11,6 +13,8 @@ end
 # ディーラーがカードを引いて公開する
 def dealer_draw_and_show_cards(gameManager, num = 0)
     gameManager.draw(gameManager.dealer)
+    gameManager.check_A(gameManager.dealer)
+    gameManager.score_up_check(gameManager.dealer)
     gameManager.calc_score(gameManager.dealer)
     gameManager.delete_card
     if num < 1
