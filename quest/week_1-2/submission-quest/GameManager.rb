@@ -1,7 +1,7 @@
 require_relative "player"
 require_relative "dealer"
 
-class GameManager 
+class GameManager
     attr_accessor :deck
     attr_reader :dealer, :player
 
@@ -11,6 +11,7 @@ class GameManager
         @dealer = Dealer.new
         create_card
         shuffle
+        start
     end
 
     # カードを作成する
@@ -26,6 +27,9 @@ class GameManager
     # カードをシャッフルする
     private def shuffle
         self.deck = deck.sort_by{rand}
+    end
+    
+    private def start
         puts "ブラックジャックを開始します"
     end
 
@@ -34,6 +38,9 @@ class GameManager
         human.draw(deck)
     end
 
+    def check_A(human)
+        human.check_A(deck)
+    end
     # カードを見せる
     def show_card(human)
         human.show_card
@@ -54,15 +61,6 @@ class GameManager
         deck.delete_at(0)
     end
 
-    # 得点を計算する。カードの得点は最大10点
-    def calc_score(human)
-        if deck[0][1] > 10
-            human.score += 10
-        else
-            human.score += deck[0][1]
-        end
-    end
-
     # 現在の得点を表示する
     def show_score(human)
         human.show_score
@@ -71,6 +69,32 @@ class GameManager
     # カードを引くか質問する
     def want_next_card(player)
         player.want_next_card
+    end
+    
+    # バースト処理
+    def burst(human)
+        human.burst
+    end
+
+    def score_up_check(human)
+        human.score += 10 if human.score_up_check(deck)
+    end
+
+    def score_down(human)
+        if human.score_down
+            human.score -= 10
+            human.show_score
+            true
+        end
+    end
+
+    # 得点を計算する。カードの得点は最大10点
+    def calc_score(human)
+        if deck[0][1] > 10
+            human.score += 10
+        else
+            human.score += deck[0][1]
+        end
     end
 
     # 勝敗を判定する
@@ -87,11 +111,6 @@ class GameManager
         else
             puts "あなたの負けです!"
         end
-    end
-
-    # バースト処理
-    def burst(human)
-        human.burst
     end
 
     # ブラックジャックを終了する
