@@ -22,6 +22,7 @@ end
 # 得点を見せてもう１枚引くか聞く
 gameManager.show_score(gameManager.player)
 gameManager.want_next_card(gameManager.player)
+
 # カードを引くのを辞めるかバーストするまで引き続ける
 while gameManager.player.isnext == "Y\n" do
     gameManager.draw(gameManager.player)
@@ -36,7 +37,7 @@ while gameManager.player.isnext == "Y\n" do
         break
     end
 end
-# バーストしてたら修了する
+# バーストしてたら終了する
 if gameManager.player.isburst
     else
     # ディーラーの２枚目を表示
@@ -54,3 +55,4 @@ if gameManager.player.isburst
     gameManager.judge
 end
 gameManager.exit
+
