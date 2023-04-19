@@ -75,7 +75,12 @@ class GameManager
     def judge
         puts "あなたの得点は#{player.score}です。"
         puts "ディーラーの得点は#{dealer.score}です。"
-        if dealer.score > 21 || player.score > dealer.score
+        if dealer.score > 21 
+            puts "ディーラーはバーストしました。"
+            puts "あなたの勝ちです!"
+        elsif player.score == dealer.score
+            puts "引き分けです。" 
+        elsif player.score > dealer.score
             puts "あなたの勝ちです!"
         else
             puts "あなたの負けです!"
@@ -87,7 +92,7 @@ class GameManager
         human.burst
     end
 
-    # ブラックジャックを修了する
+    # ブラックジャックを終了する
     def exit
         puts "ブラックジャックを終了します"
     end
@@ -126,18 +131,25 @@ class Human
 end
 
 class Player < Human
-    attr_accessor :isnext
+    attr_accessor :isnext, :isburst
 
     def initialize
         super
         @name = "あなた"
         @isnext = ""
+        @isburst = false
     end 
     
     # カードをもう1枚引くか質問する
     def want_next_card
         puts "カードを引きますか？（Y/N）"
         self.isnext = gets 
+    end
+
+    # 以降の処理を抜けてブラックジャックジャックを修了するフラグを立てる
+    def burst
+        super
+        self.isburst = true
     end
 
 end
@@ -158,11 +170,11 @@ class Dealer < Human
     def open_card_No_2
         puts "ディーラーの引いた2枚目のカードは#{hand[0]}でした。"
     end
+
 end
 
 
 #----------------ここからアウトプット-------------------
-# todo　バーストするか勝敗がつくまで無限ループするようにする
 gameManager = GameManager.new
 # プレイヤーが2枚引く
 2.times do 
@@ -195,23 +207,28 @@ while gameManager.player.isnext == "Y\n" do
     if gameManager.player.score <= 21
         gameManager.want_next_card(gameManager.player)
     else
-        gameManager.player.isnext = "N"
-        puts gameManager.burst(gameManager.player)
+        gameManager.burst(gameManager.player)
+        break
     end
 end
-# ディーラーの２枚目を表示
-gameManager.open_card_No_2(gameManager.dealer)
-# ディーラーの得点を表示
-gameManager.show_score(gameManager.dealer)
-# ディーラーは17点以上になるまで引き続ける
-while gameManager.dealer.score < 17
-    gameManager.draw(gameManager.dealer)
-    gameManager.calc_score(gameManager.dealer)
-    gameManager.delete_card
-    gameManager.show_card(gameManager.dealer)
+# バーストしてたら修了する
+if gameManager.player.isburst
+    else
+    # ディーラーの２枚目を表示
+    gameManager.open_card_No_2(gameManager.dealer)
+    # ディーラーの得点を表示
+    gameManager.show_score(gameManager.dealer)
+    # ディーラーは17点以上になるまで引き続ける
+    while gameManager.dealer.score < 17
+        gameManager.draw(gameManager.dealer)
+        gameManager.calc_score(gameManager.dealer)
+        gameManager.delete_card
+        gameManager.show_card(gameManager.dealer)
+    end
+    # 勝敗判定
+    gameManager.judge
 end
-# 勝敗判定
-gameManager.judge
 gameManager.exit
+
 
 
