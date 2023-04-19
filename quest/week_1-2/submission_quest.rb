@@ -37,8 +37,14 @@ class GameManager
         human.show_card
     end
 
+    # カードを見せない
     def not_show_card(human)
         human.not_show_card
+    end
+
+    # 2枚目のカードを見せる
+    def open_card_No_2(human)
+        human.open_card_No_2
     end
 
     # デッキから先頭のカードを削除する
@@ -97,12 +103,12 @@ class Human
 
     # カードを見せる
     def show_card
-        puts "#{self.name}の引いたカードは#{self.hand[0]}です。"
+        puts "#{name}の引いたカードは#{hand[0]}です。"
     end
 
     # 現在の得点を表示
     def show_score
-        print "#{name}の現在の得点は#{score}です。"
+        puts "#{name}の現在の得点は#{score}です。"
     end
 
     # バースト処理
@@ -123,9 +129,8 @@ class Player < Human
     
     # カードをもう1枚引くか質問する
     def want_next_card
-        print "カードを引きますか？（Y/N）"
+        puts "カードを引きますか？（Y/N）"
         self.isnext = gets 
-        puts isnext
     end
 
 end
@@ -138,23 +143,28 @@ class Dealer < Human
     end
 
     # カードを見せない
-    def not_show_card()
+    def not_show_card
         puts "ディーラーの引いた2枚目のカードはわかりません。"
     end
 
+    # 2枚目のカードを見せる
+    def open_card_No_2
+        puts "ディーラーの引いた2枚目のカードは#{hand[0]}でした。"
+    end
 end
 
 
 #----------------ここからアウトプット-------------------
+# todo　バーストするか勝敗がつくまで無限ループするようにする
 gameManager = GameManager.new
-
+# プレイヤーが2枚引く
 2.times do 
     gameManager.draw(gameManager.player)
     gameManager.calc_score(gameManager.player)
     gameManager.delete_card
     gameManager.show_card(gameManager.player)
 end   
-
+# ディーラーが2枚引く
 2.times do |num|
     gameManager.draw(gameManager.dealer)
     gameManager.calc_score(gameManager.dealer)
@@ -165,10 +175,10 @@ end
         gameManager.not_show_card(gameManager.dealer)
     end
 end    
-
+# 得点を見せてもう１枚引くか聞く
 gameManager.show_score(gameManager.player)
 gameManager.want_next_card(gameManager.player)
-
+# カードを引くのを辞めるかバーストするまで引き続ける
 while gameManager.player.isnext == "Y\n" do
     gameManager.draw(gameManager.player)
     gameManager.calc_score(gameManager.player)
@@ -183,8 +193,16 @@ while gameManager.player.isnext == "Y\n" do
     end
 end
 # ディーラーの２枚目を表示
+gameManager.open_card_No_2(gameManager.dealer)
 # ディーラーの得点を表示
+gameManager.show_score(gameManager.dealer)
 # ディーラーは17点以上になるまで引き続ける
+while gameManager.dealer.score < 17
+    gameManager.draw(gameManager.dealer)
+    gameManager.calc_score(gameManager.dealer)
+    gameManager.delete_card
+    gameManager.show_card(gameManager.dealer)
+end
 # プレイヤーの得点を表示
 # ディーラーの得点を表示
 # 勝敗判定
