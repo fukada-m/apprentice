@@ -39,7 +39,11 @@ class GameManager
 
     # 得点を計算する
     def calc_score(human)
-        human.score += deck[0][1]
+        if deck[0][1] > 10
+            human.score += 10
+        else
+            human.score += deck[0][1]
+        end
     end
 
     # 現在の得点を表示する
