@@ -75,7 +75,11 @@ class GameManager
     def judge
         puts "あなたの得点は#{player.score}です。"
         puts "ディーラーの得点は#{dealer.score}です。"
-        
+        if dealer.score > 21 || player.score > dealer.score
+            puts "あなたの勝ちです!"
+        else
+            puts "あなたの負けです!"
+        end
     end
 
     # バースト処理
