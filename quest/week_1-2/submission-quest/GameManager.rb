@@ -19,6 +19,7 @@ class GameManager
         4.times do |index|
             mark = ["ハート", "ダイヤ", "スペード", "クローバー"]
             13.times do |num| 
+                # 例　["ハートの2", 2]
                 deck.push(["#{mark[index]}の#{num + 1}", num + 1]) 
             end
         end
@@ -37,10 +38,11 @@ class GameManager
     def draw(human)
         human.draw(deck)
     end
-
+    # Aを持っているか確認する
     def check_A(human)
         human.check_A(deck)
     end
+
     # カードを見せる
     def show_card(human)
         human.show_card
@@ -76,19 +78,23 @@ class GameManager
         human.burst
     end
 
+    # Aを11点にするか確認する
     def score_up_check(human)
         human.score += 10 if human.score_up_check(deck)
     end
 
+    # Aを1点として扱う
     def score_down(human)
         if human.score_down
             human.score -= 10
             human.show_score
             true
+        else
+            false
         end
     end
 
-    # 得点を計算する。カードの得点は最大10点
+    # 得点を計算する。カードの得点は原則最大10点
     def calc_score(human)
         if deck[0][1] > 10
             human.score += 10

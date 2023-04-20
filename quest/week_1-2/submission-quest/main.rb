@@ -17,6 +17,7 @@ def dealer_draw_and_show_cards(gameManager, num = 0)
     gameManager.score_up_check(gameManager.dealer)
     gameManager.calc_score(gameManager.dealer)
     gameManager.delete_card
+    # 2枚目のカードは非公開
     if num < 1
         gameManager.show_card(gameManager.dealer)
     else
@@ -27,12 +28,9 @@ end
 # ゲームマネージャーのインスタンスを作成
 gameManager = GameManager.new
 
-# プレイヤーが2枚引く
 2.times do 
     player_draw_and_show_cards(gameManager)
 end   
-
-# ディーラーが2枚引く
 2.times do |num|
     dealer_draw_and_show_cards(gameManager, num)
 end    
@@ -45,6 +43,7 @@ gameManager.want_next_card(gameManager.player)
 while gameManager.player.is_next == "Y\n" do
     player_draw_and_show_cards(gameManager)
     gameManager.show_score(gameManager.player)
+    # スコアが21以上かつAが手札になければバーストする
     if gameManager.player.score <= 21 || gameManager.score_down(gameManager.player)
         gameManager.want_next_card(gameManager.player)
     elsif 
@@ -59,7 +58,7 @@ if gameManager.player.is_burst
     else
     gameManager.open_card_No_2(gameManager.dealer)
     gameManager.show_score(gameManager.dealer)
-    # ディーラーは17以上になるまで引き続ける
+    # ディーラーは17点以上になるまで引き続ける
     while gameManager.dealer.score < 17
         dealer_draw_and_show_cards(gameManager)
         gameManager.score_down(gameManager.dealer) if gameManager.dealer.score > 21
