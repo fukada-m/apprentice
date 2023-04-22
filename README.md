@@ -23,7 +23,7 @@
 15. [[Ruby][Level2] デバッガを活用してデバッグができる(advanced)](quest/week_1-2/quest15.rb)<br>
 16. [[Ruby][Level2] 静的解析ツールを使うことができる(advanced)](quest/week_1-2/quest16.md)<br>
 17. [[提出 QUEST ブラックジャックゲーム]](quest/week_1-2/submission-quest)<br>
-- [第1回技術ブログ](https://qiita.com/yami-yami/items/68f4412c06f775e1571b)
+- [第1回技術ブログDodkerでRubyの最低限の環境を作る](https://qiita.com/yami-yami/items/68f4412c06f775e1571b)
 
 # Week 3-4
 
