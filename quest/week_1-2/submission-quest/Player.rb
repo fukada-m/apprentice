@@ -1,25 +1,27 @@
 require_relative "human"
 
 class Player < Human
-    attr_accessor :is_next, :is_burst
+    attr_accessor :answer
 
-    def initialize
-        super
-        @name = "あなた"
-        @is_next = ""
-        @is_burst = false
-    end 
+    def initialize(name)
+        super(name)
+        @answer = ""
+    end
+
+    public
     
-    # カードをもう1枚引くか質問する
-    def want_next_card
+    def do_you_want_next_card?
+        do_you_want_nest_card
+        check_your_answer?
+    end
+    
+    private
+
+    def do_you_want_nest_card
         puts "カードを引きますか？（Y/N）"
-        self.is_next = gets 
+        self.answer = gets 
     end
-
-    # バーストしたフラグを立てる
-    def burst
-        super
-        self.is_burst = true
+    def check_your_answer?
+        true if answer == "Y\n"
     end
-
 end

@@ -1,44 +1,80 @@
-require_relative "rule_a"
-
 class Human
-    attr_accessor :hand, :score
-    attr_reader :name, :rule_A 
+    attr_accessor :hand, :score, :count_of_A
+    attr_reader :name
     
-    def initialize
-        @hand = 0
+    def initialize(name)
+        @name = name
+        @hand = ""
+        @count_of_A = 0
         @score = 0
-        @rule_A = Rule_A.new
     end
 
-    # カードを1枚引く
+    public
+    
     def draw(deck)
+        draw_a_card(deck)
+        calc_score
+        show_card
+    end
+    
+    def show_score
+        puts "#{name}の現在の得点は#{score}点です。"
+    end
+
+    def check_score?
+        true if score > 21
+    end
+    
+    def burst
+        puts "#{name}はバーストしました、負けです。"
+    end
+
+    def score_up
+        score_up_10
+        count_of_A_up
+    end
+    
+    def score_down
+        score_down_10
+        count_of_A_down
+    end
+    
+    def have_A?
+        true if self.count_of_A >= 1
+    end
+
+    private
+
+    def draw_a_card(deck)
         self.hand = deck[0]
     end
 
-    def check_A(deck)
-        rule_A.check_A(deck)
+    def calc_score
+        if hand[1] > 10
+            self.score += 10
+        else
+            self.score += hand[1]
+        end
     end
 
-    def score_up_check(deck)
-        rule_A.score_up_check(deck)
-    end
-
-    # カードを見せる
     def show_card
         puts "#{name}の引いたカードは#{hand[0]}です。"
     end
 
-    # 現在の得点を表示
-    def show_score
-        puts "#{name}の現在の得点は#{score}です。"
+    def score_up_10
+        self.score += 10
+    end
+    
+    def score_down_10
+        self.score -= 10
     end
 
-    def score_down
-        rule_A.score_down
+    def count_of_A_up
+        self.count_of_A += 1
     end
-    # バースト処理
-    def burst
-        puts "#{name}はバーストしました、負けです。"
+
+    def count_of_A_down
+        self.count_of_A -= 1
     end
 
 end
