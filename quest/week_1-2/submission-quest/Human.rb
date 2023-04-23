@@ -1,10 +1,11 @@
 class Human
-    attr_accessor :hand, :score
+    attr_accessor :hand, :score, :count_of_A
     attr_reader :name
     
     def initialize(name)
         @name = name
         @hand = ""
+        @count_of_A = 0
         @score = 0
     end
 
@@ -28,13 +29,18 @@ class Human
         puts "#{name}はバーストしました、負けです。"
     end
 
-
-    def check_A(deck)
-        rule_A.check_A(deck)
+    def score_up
+        score_up_10
+        count_of_A_up
     end
     
-    def score_up_check(deck)
-        rule_A.score_up_check(deck)
+    def score_down
+        score_down_10
+        count_of_A_down
+    end
+    
+    def have_A?
+        true if self.count_of_A >= 1
     end
 
     private
@@ -55,10 +61,20 @@ class Human
         puts "#{name}の引いたカードは#{hand[0]}です。"
     end
 
+    def score_up_10
+        self.score += 10
+    end
     
+    def score_down_10
+        self.score -= 10
+    end
 
-    def score_down
-        rule_A.score_down
+    def count_of_A_up
+        self.count_of_A += 1
+    end
+
+    def count_of_A_down
+        self.count_of_A -= 1
     end
 
 end

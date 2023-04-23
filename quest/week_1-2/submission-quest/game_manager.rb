@@ -28,10 +28,13 @@ class GameManager
         while do_you_want_next_card?
             draw_and_show_cards(player)
             show_score(player)
-            # スコアが21以上かつAが手札になければバーストする
-            if check_score?(player)# || gameManager.score_down(gameManager.player)
-                burst(player)
-                break
+            if check_score?(player) 
+                if have_A?(player)
+                    score_down(player) 
+                else
+                    burst(player)
+                    break
+                end
             end
         end
         # プレイヤーがバーストしてたらこの処理は行わない
@@ -55,11 +58,13 @@ class GameManager
     
     def draw_and_show_cards(human)
         human.draw(deck.deck)
+        score_up(human) if check_A?
         deck.delete_card
     end
 
     def draw_and_hide_cards
         dealer.draw_and_hide_cards(deck.deck)
+        score_up(dealer) if check_A?
         deck.delete_card
     end
 
@@ -101,25 +106,22 @@ class GameManager
         end
     end
 
-    # Aを持っているか確認する
-    def check_A(human)
-        human.check_A(deck)
+    def check_A?
+        rule_A.check_A?(deck.deck)
     end
 
-    # Aを11点にするか確認する
-    def score_up_check(human)
-        human.score += 10 if human.score_up_check(deck)
+    def score_up(human)
+        human.score_up
     end
 
-    # Aを1点として扱う
+    def have_A?(human)
+        human.have_A?
+    end
+
     def score_down(human)
-        if human.score_down
-            human.score -= 10
-            human.show_score
-            true
-        else
-            false
-        end
+        human.score_down
+        puts "しかし、あなたはAをもっていました。Aを1として扱います"
+        human.show_score
     end
 
 end
