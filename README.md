@@ -31,22 +31,22 @@
 # Week 3-4
 1. [[学習力][Level1] ゴールから逆算して学ぶことができる](my_plan.md)
 2. [コミュニケーション][Level2] 読みやすいドキュメントを書ける=>成果物は自分の技術ブログです
-3. [linux][Level1] Linux が何かを説明できる(quest/week-3-4/quest3.md)
+3. [[linux][Level1] Linux が何かを説明できる](quest/week-3-4/quest3.md)
 4. [linux][Level1] Linux の環境を用意することができる。成果物はありません
-5. [linux][Level1] ディレクトリを操作できる
-6. [linux][Level1] マニュアルを確認できる
-7. [linux][Level1] ファイルを操作できる
-8. [linux][Level2] 標準入出力を扱える
-9. [linux][Level2] パーミッションを操作できる
-10. [linux][Level3] プロセス・ジョブを管理できる
-11. [linux][Level3] シェルスクリプトを書くことができる
-12. [linux][Level3] Linux をローカルで使うことができる(advanced)
-13. [Git] [Level1] コミットができる
-14. [Git] [Level1] 変更状況を確認できる
-15. [Git] [Level1] 変更を元に戻すことができる
-16. [Git] [Level2] GitHub を使って開発を進めることができる
-17. [Git] [Level1] ブランチを利用して開発を進めることができる
-18. [Git] [Level1] GitHub フローに従って開発を進めることができる
+5. [[linux][Level1] ディレクトリを操作できる](quest/week-3-4/quest5.md)
+6. [[linux][Level1] マニュアルを確認できる]
+7. [[linux][Level1] ファイルを操作できる]
+8. [[linux][Level2] 標準入出力を扱える]
+9. [[linux][Level2] パーミッションを操作できる]
+10. [[linux][Level3] プロセス・ジョブを管理できる]
+11. [[linux][Level3] シェルスクリプトを書くことができる]
+12. [[linux][Level3] Linux をローカルで使うことができる(advanced)]
+13. [[Git] [Level1] コミットができる]
+14. [[Git] [Level1] 変更状況を確認できる]
+15. [[Git] [Level1] 変更を元に戻すことができる]
+16. [[Git] [Level2] GitHub を使って開発を進めることができる]
+17. [[Git] [Level1] ブランチを利用して開発を進めることができる]
+18. [[Git] [Level1] GitHub フローに従って開発を進めることができる]
 - [第二回技術ブログ]
 
 
