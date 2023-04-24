@@ -23,7 +23,9 @@ class Human
   end
 
   def over21?
-    true if score > 21
+    return unless score > 21
+
+    true
   end
 
   def burst
