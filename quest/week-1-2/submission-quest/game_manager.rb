@@ -52,13 +52,6 @@ class GameManager
     end
     show_score(cpu2) unless over21?(cpu2)
 
-    # ディーラーにも聞く
-    while does_cpu_wants_next_card?(cpu2)
-      draw_and_show_cards(cpu2)
-      burst_processing(cpu2)
-      break if over21?(cpu2)
-    end
-
     open_card_no_2
     show_score(dealer)
 
