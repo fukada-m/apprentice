@@ -31,8 +31,8 @@
 # Week 3-4
 1. [[学習力][Level1] ゴールから逆算して学ぶことができる](my_plan.md)
 2. [コミュニケーション][Level2] 読みやすいドキュメントを書ける=>成果物は自分の技術ブログです
-3. [linux][Level1] Linux が何かを説明できる
-4. [linux][Level1] Linux の環境を用意することができる
+3. [linux][Level1] Linux が何かを説明できる(quest/week-3-4/quest3.md)
+4. [linux][Level1] Linux の環境を用意することができる。成果物はありません
 5. [linux][Level1] ディレクトリを操作できる
 6. [linux][Level1] マニュアルを確認できる
 7. [linux][Level1] ファイルを操作できる
