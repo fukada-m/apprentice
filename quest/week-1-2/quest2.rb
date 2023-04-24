@@ -4,6 +4,6 @@ p "好きな数字を入力してください:"
 user_input_val = gets.chomp
 
 # 整数に変換して値を２倍にする
-user_input_val = user_input_val.to_i * 2
+user_input_val = user_input_val.to_i 
 
 puts "2倍の数値です：#{user_input_val}"
