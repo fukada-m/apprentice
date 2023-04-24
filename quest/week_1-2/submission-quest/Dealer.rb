@@ -2,6 +2,7 @@
 
 require_relative 'human'
 
+# ディーラー特有の機能を定義したクラスです。
 class Dealer < Human
   def draw_and_hide_cards(deck)
     draw_a_card(deck)

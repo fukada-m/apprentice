@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# デッキの作成、Aのチェック、カードの削除ができます。
 class Deck
   attr_accessor :deck
 
@@ -14,6 +15,10 @@ class Deck
 
   def delete_card
     deck.delete_at(0)
+  end
+
+  def check_a?
+    true if deck[0][1] == 1
   end
 
   private

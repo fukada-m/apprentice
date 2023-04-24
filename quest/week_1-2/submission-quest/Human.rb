@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
+# プレイヤーとディーラーの両方に共通する機能をまとめたスーパークラスです。
 class Human
-  attr_accessor :hand, :score, :count_of_A
+  attr_accessor :hand, :score, :count_of_a
   attr_reader :name
 
   def initialize(name)
     @name = name
     @hand = ''
-    @count_of_A = 0
+    @count_of_a = 0
     @score = 0
   end
 
@@ -31,22 +32,22 @@ class Human
 
   def score_up
     score_up_10
-    count_of_A_up
+    count_of_a_up
   end
 
   def score_down
     score_down_10
-    count_of_A_down
+    count_of_a_down
   end
 
-  def have_A?
-    true if count_of_A >= 1
+  def have_a?
+    true if count_of_a >= 1
   end
 
   private
 
   def draw_a_card(deck)
-    self.hand = deck[0]
+    self.hand = deck.deck[0]
   end
 
   def calc_score
@@ -69,11 +70,11 @@ class Human
     self.score -= 10
   end
 
-  def count_of_A_up
-    self.count_of_A += 1
+  def count_of_a_up
+    self.count_of_a += 1
   end
 
-  def count_of_A_down
-    self.count_of_A -= 1
+  def count_of_a_down
+    self.count_of_a -= 1
   end
 end
