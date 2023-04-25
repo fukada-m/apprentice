@@ -2,9 +2,8 @@
 アプレンティスのクエストを管理するリポジトリです
 
 リンクは各クエストのファイルに繋がってます
-- 例quest/week_x-x/questファイル
+- 例quest/week-x-x/questファイル
 
-.gitignoreにRubyのテンプレートを設定してあります
 ## [日報](daily-report)
 ## [マイプラン（アプレンティス期間中に勉強することをまとめてます。）](my_plan.md)
 
