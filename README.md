@@ -47,7 +47,7 @@
 16. [[Git] [Level2] GitHub を使って開発を進めることができる]
 17. [[Git] [Level1] ブランチを利用して開発を進めることができる]
 18. [[Git] [Level1] GitHub フローに従って開発を進めることができる]
-- [第二回技術ブログ]
+- [第二回技術ブログ](https://qiita.com/yami-yami/items/6f0f60df61ad79059fd8)
 
 
 
