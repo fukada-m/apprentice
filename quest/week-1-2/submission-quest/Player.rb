@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative 'human'
+require_relative 'participant'
 
 # ユーザー特有の操作を定義したクラスです。
-class Player < Human
+class Player < Participant
   attr_accessor :answer
 
   def initialize(name)
@@ -11,19 +11,27 @@ class Player < Human
     @answer = ''
   end
 
-  def do_you_want_next_card?
-    do_you_want_nest_card
-    check_your_answer?
-  rescue StandardError
-    puts 'YかNで入力してください'
-    retry
+  def ask_to_draw_card(deck)
+    while want_next_card?
+      draw_and_show_card(deck)
+      show_score
+      process_with_ace
+      if over21?
+        burst
+        return
+      end
+    end
   end
 
   private
 
-  def do_you_want_nest_card
+  def want_next_card?
     puts 'カードを引きますか？（Y/N）'
     self.answer = gets.upcase
+    check_your_answer?
+  rescue StandardError
+    puts 'YかNで入力してください'
+    retry
   end
 
   def check_your_answer?

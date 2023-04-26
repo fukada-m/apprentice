@@ -1,15 +1,12 @@
 # frozen_string_literal: true
 
-require_relative 'human'
+require_relative 'participant'
 
-class Cpu < Human
-  def does_cpu_wants_next_card?
-    separate_processing_by_name?
-  end
-
+# CPU特有の機能を定義したクラスです。
+class Cpu < Participant
   private
 
-  def separate_processing_by_name?
+  def want_next_card?
     case name
     when 'CPU1' then true if score < 15
     when 'CPU2' then true if score < 19
