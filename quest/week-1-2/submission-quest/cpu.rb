@@ -2,6 +2,7 @@
 
 require_relative 'participant'
 
+# CPU特有の機能を定義したクラスです。
 class Cpu < Participant
   private
 

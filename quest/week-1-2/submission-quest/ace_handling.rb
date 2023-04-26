@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-#Aを持っている際に得点が21点を超えた場合に処理をするモジュール
+# Aを持っている際に得点が21点を超えた場合に行う処理のモジュール
 module AceHandling
   def process_with_ace
     return unless over21?

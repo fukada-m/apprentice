@@ -2,6 +2,7 @@
 
 require_relative 'game'
 require 'debug'
+require 'pry-byebug'
 
 game = Game.new
 game.start

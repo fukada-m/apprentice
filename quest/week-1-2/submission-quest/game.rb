@@ -34,11 +34,6 @@ class Game
     ask_dealer_to_draw_card
   end
 
-  def victory_judge
-    puts '勝敗判定をします。'
-    judge
-  end
-
   def end
     puts 'ブラックジャックを終了します'
   end

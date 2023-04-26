@@ -2,26 +2,32 @@
 
 # 勝敗を判定するモジュール
 module Judge
+  def victory_judge
+    puts '勝敗判定をします。'
+    calc_final_score
+    judge(calc_max_score)
+  end
+
   private
 
-  def judge
-    player.score = 0 if player.over21?
-    cpu1.score = 0 if cpu1.over21?
-    cpu2.score = 0 if cpu2.over21?
-    dealer.score = 0 if dealer.over21?
-    player.show_score
-    cpu1.show_score
-    cpu2.show_score
-    dealer.show_score
+  def calc_final_score
+    [player, cpu1, cpu2, dealer].each do |participant|
+      participant.score = 0 if participant.over21?
+      participant.show_score
+    end
+  end
 
-    if player.score >= cpu1.score && player.score >= cpu2.score && player.score >= dealer.score
-      puts 'あなたの勝ちです!'
-    elsif cpu1.score >= cpu2.score && cpu1.score >= dealer.score
-      puts 'CPU1の勝ちです。'
-    elsif cpu2.score >= dealer.score
-      puts 'CPU2の勝ちです。'
-    else
-      puts 'ディーラーの勝ちです。'
+  def calc_max_score
+    [player.score, cpu1.score, cpu2.score, dealer.score].max
+  end
+
+  def judge(max)
+    case max
+    when player.score then puts 'あなたの勝ちです!'
+    when dealer.score then puts 'ディーラーの勝ちです。'
+    when cpu1.score then puts 'CPU1の勝ちです。'
+    when cpu2.score then puts 'CPU2の勝ちです。'
+
     end
   end
 end
