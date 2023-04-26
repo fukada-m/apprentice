@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # プレイヤーとディーラーの両方に共通する機能をまとめたスーパークラスです。
-class Human
+class GameActor
   attr_accessor :hand, :score, :count_of_a
   attr_reader :name
 

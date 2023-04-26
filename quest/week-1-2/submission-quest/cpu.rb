@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'human'
+require_relative 'game_actor'
 
-class Cpu < Human
+class Cpu < GameActor
   def does_cpu_wants_next_card?
     separate_processing_by_name?
   end

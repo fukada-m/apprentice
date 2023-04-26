@@ -8,7 +8,7 @@ class Deck
     @deck = []
   end
 
-  def create_deck
+  def build_deck
     create_cards
     shuffle
   end

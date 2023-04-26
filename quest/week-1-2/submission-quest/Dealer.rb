@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative 'human'
+require_relative 'game_actor'
 
 # ディーラー特有の機能を定義したクラスです。
-class Dealer < Human
+class Dealer < GameActor
   def draw_and_hide_cards(deck)
     draw_a_card(deck)
     calc_score

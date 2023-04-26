@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative 'human'
+require_relative 'game_actor'
 
 # ユーザー特有の操作を定義したクラスです。
-class Player < Human
+class Player < GameActor
   attr_accessor :answer
 
   def initialize(name)
