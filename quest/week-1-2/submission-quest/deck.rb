@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# デッキの作成、Aのチェック、カードの削除ができます。
+# デッキの作成、カードの削除ができます。
 class Deck
   attr_accessor :deck
 
@@ -9,25 +9,20 @@ class Deck
   end
 
   def build_deck
-    create_cards
+    create_card
     shuffle
   end
 
-  def delete_card
+  def delete_top_card
     deck.delete_at(0)
-  end
-
-  def check_a?
-    true if deck[0][1] == 1
   end
 
   private
 
-  def create_cards
+  def create_card
     4.times do |index|
       mark = %w[ハート ダイヤ スペード クローバー]
       13.times do |num|
-        # 例　["ハートの2", 2]
         deck.push(["#{mark[index]}の#{num + 1}", num + 1])
       end
     end
