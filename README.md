@@ -7,9 +7,7 @@
 ## [日報](daily-report)
 ## [マイプラン（アプレンティス期間中に勉強することをまとめてます。）](my_plan.md)
 
-## 技術ブログ
-- [DodkerでRubyの最低限の環境を作るQiita](https://qiita.com/yami-yami/items/68f4412c06f775e1571b)
-- [Pryの使い方まとめQiita](https://qiita.com/yami-yami/items/6f0f60df61ad79059fd8)
+## [技術ブログ](https://qiita.com/yami-yami)
 
 # Week 1-2　
 1. [[学習力][Level1] 続的に学習時間を確保できる](quest/week-1-2/quest1.md)<br>
@@ -28,7 +26,7 @@
 14. [[Ruby][Level2] 外部ライブラリを使うことができる(advanced)](quest/week-1-2/quest14.rb)<br>
 15. [[Ruby][Level2] デバッガを活用してデバッグができる(advanced)](quest/week-1-2/quest15.rb)<br>
 16. [[Ruby][Level2] 静的解析ツールを使うことができる(advanced)](quest/week-1-2/quest16.md)<br>
-17. [[提出 QUEST ブラックジャックゲーム]](quest/week-1-2/submission-quest)<br>
+17. **[[提出 QUEST ブラックジャックゲーム]](quest/week-1-2/submission-quest)<br>**
 
 
 # Week 3-4
