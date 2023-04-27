@@ -1,18 +1,13 @@
 require 'minitest/autorun'
 
+def pati(n)
+	n.to_i * 2
+end
+
 class SampleTest < Minitest::Test
 	#メソッド名は'test'から必ず始める
-	def test_sample
-        a = 0
-        b = 'pati'
-		# b == a　ならパス
-		assert_equal 'RUBY', 'ruby'.upcase
-        assert "RUBY" == "ruby".upcase
-
-		# aが真ならパス
-		assert a == 0
-
-		# bが偽ならパス
-		refute b == ""
-    end
+	def test_pati
+		assert_equal 2, pati('1')
+		assert_equal 10, pati('5')
+	end
 end
