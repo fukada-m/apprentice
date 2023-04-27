@@ -9,10 +9,10 @@ echo パスワードを入力してください:
 read pass
 echo Thank you!
 
-echo "service name" >> pass_list.txt 
-echo $service_name >> pass_list.txt
-echo "user name" >> pass_list.txt
-echo $user_name >> pass_list.txt
-echo "pass" >> pass_list.txt
-echo $pass >> pass_list.txt
-echo "" >> pass_list.txt
+for word in "service name" $service_name "user name" $user_name "pass" $pass ""
+do
+    echo $word >> pass_list.txt 
+done
+
+
+
