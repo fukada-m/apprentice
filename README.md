@@ -6,7 +6,6 @@
 
 ## [日報](daily-report)
 ## [マイプラン（アプレンティス期間中に勉強することをまとめてます。）](my_plan.md)
-
 ## [技術ブログ](https://qiita.com/yami-yami)
 
 # Week 1-2　
