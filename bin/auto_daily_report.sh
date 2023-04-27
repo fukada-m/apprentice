@@ -1,4 +1,4 @@
 #!/bin/bash
 
 today=$(date +%Y%m%d)
-cp /home/fukada/apprentice/daily-report/daily-report-template.md /home/fukada/apprentice/daily-report/2023April/$today.md
+cp /users/mitsuharu/Desktop/apprentice/daily-report/daily-report-template.md /users/mitsuharu/Desktop/apprentice/daily-report/2023April/$today.md
