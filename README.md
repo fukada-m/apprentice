@@ -34,19 +34,20 @@
 3. [[linux][Level1] Linux が何かを説明できる](quest/week-3-4/quest3.md)
 4. [linux][Level1] Linux の環境を用意することができる。成果物はありません
 5. [[linux][Level1] ディレクトリを操作できる](quest/week-3-4/quest5.md)
-6. [[linux][Level1] マニュアルを確認できる]
-7. [[linux][Level1] ファイルを操作できる]
-8. [[linux][Level2] 標準入出力を扱える]
-9. [[linux][Level2] パーミッションを操作できる]
-10. [[linux][Level3] プロセス・ジョブを管理できる]
-11. [[linux][Level3] シェルスクリプトを書くことができる]
-12. [[linux][Level3] Linux をローカルで使うことができる(advanced)]
-13. [[Git] [Level1] コミットができる]
-14. [[Git] [Level1] 変更状況を確認できる]
-15. [[Git] [Level1] 変更を元に戻すことができる]
-16. [[Git] [Level2] GitHub を使って開発を進めることができる]
-17. [[Git] [Level1] ブランチを利用して開発を進めることができる]
-18. [[Git] [Level1] GitHub フローに従って開発を進めることができる]
+6. [[linux][Level1] マニュアルを確認できる](quest/week-3-4/quest6.md)
+7. [[linux][Level1] ファイルを操作できる](quest/week-3-4/quest7.md)
+8. [[linux][Level2] 標準入出力を扱える](quest/week-3-4/quest8.md)
+9. [[linux][Level2] パーミッションを操作できる](quest/week-3-4/quest9.md)
+10. [[linux][Level3] プロセス・ジョブを管理できる](quest/week-3-4/quest10.md)
+11. [[linux][Level3] シェルスクリプトを書くことができる](quest/week-3-4/quest11/)
+12. [linux][Level3] Linux をローカルで使うことができる(advanced)skipped
+13. [Git] [Level1] コミットができるskipped
+14. [Git] [Level1] 変更状況を確認できるskipped
+15. [Git] [Level1] 変更を元に戻すことができるskipped
+16. [Git] [Level2] GitHub を使って開発を進めることができるskipped
+17. [Git] [Level1] ブランチを利用して開発を進めることができるskipped
+18. [Git] [Level1] GitHub フローに従って開発を進めることができるskipped
+19. [**[提出クエストパスワードマネージャー]**](quest/week-3-4/submission_quest/)
 
 
 # Week 5-6
