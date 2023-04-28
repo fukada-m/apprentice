@@ -1,1 +1,4 @@
-sss
+
+サービス名:aws
+ユーザー名:deii
+パスワード:uginei8
