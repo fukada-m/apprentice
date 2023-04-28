@@ -14,13 +14,13 @@ input_data()
 
 write_pass_list()
 {
-    for word in "サービス名:$service_name" "ユーザー名:$user_name" "パスワード:$password" ""
+    for word in "サービス名:$service_name" "ユーザー名:$user_name" "パスワード:$password"
     do
         echo $word >> /home/fukada/apprentice/quest/week-3-4/submission_quest/pass_list.txt
     done
 }
 
-set_pass()
+save_pass()
 {
     input_data
     write_pass_list
@@ -54,7 +54,7 @@ do
     echo $choose_option
     read choice
     if [ "$choice" = "Add Password" ]; then
-        set_pass
+        save_pass
     elif [ "$choice" = "Get Password" ]; then
         read_pass
     elif [ "$choice" = "Exit" ]; then
