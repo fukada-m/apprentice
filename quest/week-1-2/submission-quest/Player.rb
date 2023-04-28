@@ -27,7 +27,7 @@ class Player < Participant
 
   def want_next_card?
     puts 'カードを引きますか？（Y/N）'
-    self.answer = gets.upcase
+    self.answer = gets.chomp.upcase
     check_your_answer?
   rescue StandardError
     puts 'YかNで入力してください'
@@ -35,9 +35,9 @@ class Player < Participant
   end
 
   def check_your_answer?
-    if answer == "Y\n"
+    if answer == "Y"
       true
-    elsif answer == "N\n"
+    elsif answer == "N"
       false
     else
       raise
