@@ -3,12 +3,9 @@ loop=true
 
 input_data()
 {
-    echo "サービス名を入力してください："
-    read service_name
-    echo "ユーザー名を入力してください:"
-    read user_name
-    echo "パスワードを入力してください:"
-    read password
+    read -p "サービス名を入力してください：" service_name
+    read -p "ユーザー名を入力してください:" user_name
+    read -p "パスワードを入力してください:" -s password
     echo "Thank you!"
 }
 
