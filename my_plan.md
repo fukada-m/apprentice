@@ -111,6 +111,6 @@
     - ~~Dockerfileでできることを調べる~~
     - ~~docker-composeがどんなものか調べる~~
     - ~~コンテナを1つ建てて使ってみる~~
-    - マンガでわかるDockerとDocker&Kubernetesきほんのきほんの1、2章を読んで全体像を把握する
+    - マンガでわかるDockerとDocker&Kubernetesきほんのきほん1、2章を読んで全体像を把握する
     - docker-composeを使って複数コンテナにネットワークを構築する
 
