@@ -1,12 +1,11 @@
 # 概要 
 アプレンティスのクエストを管理するリポジトリです
 
-リンクは各クエストのファイルに繋がってます
-- 例quest/week-x-x/questファイル
-
 ## [日報](daily-report)
 ## [マイプラン（アプレンティス期間中に勉強することをまとめてます。）](my_plan.md)
 ## [技術ブログ](https://qiita.com/yami-yami)
+
+
 
 # Week 1-2　
 1. [[学習力][Level1] 続的に学習時間を確保できる](quest/week-1-2/quest1.md)<br>
@@ -53,4 +52,21 @@
 # Week 5-6
 
 
-
+# ディレクトリ構成
+<pre>
+    root
+    ├── dailay-report
+    │    ├──2023April
+    │    │  |── 20230412.md
+    │    │──2023May
+    │    └── daily-report-template
+    └── quest
+    │    ├── week-1-2
+    │    │   └── quest1
+    │    │   └── quest2
+    │    └── week-3-4
+    │        └── quest1
+    └──my_plan.md
+</pre>
+リンクは各クエストのファイルに繋がってます
+- 例 /quest/week-x-x/各questのファイル
