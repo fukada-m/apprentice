@@ -47,7 +47,7 @@
 16. [Git] [Level2] GitHub を使って開発を進めることができるskipped
 17. [Git] [Level1] ブランチを利用して開発を進めることができるskipped
 18. [Git] [Level1] GitHub フローに従って開発を進めることができるskipped
-19. [**[提出　Quest　パスワードマネージャー]**](quest/week-3-4/submission_quest/)
+19. **[[提出 QUEST パスワードマネージャー]](quest/week-3-4/submission_quest/)**
 
 
 # Week 5-6
