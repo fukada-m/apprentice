@@ -2,7 +2,7 @@ FROM ruby:3.2.2
 
 WORKDIR /home/apprentice
 
-COPY ./src /home/apprentice
+COPY ./src /home
 
 RUN git config --global user.email "fukada.m888@gmail.com" && \
     git config --global user.name "mitsuharu_fukada" && \
@@ -18,6 +18,7 @@ RUN git config --global user.email "fukada.m888@gmail.com" && \
     git config --global alias.sw switch && \
     git config --global alias.st stash && \
     git config --global alias.b branch && \
+    # Linuxを日本語化する
     apt update && \
     apt install -y locales locales-all && \
     rm -rf /var/lib/apt/lists/*
