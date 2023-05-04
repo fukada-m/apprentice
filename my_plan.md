@@ -101,10 +101,10 @@
     - ~~docker-composeがどんなものか調べる~~
     - ~~コンテナを1つ建てて使ってみる~~
     - ~~Dockerfileを使ってコンテナ環境を構築できるようになる~~
-    - docker-composeを使って複数コンテナにネットワークを構築する
+    - ~~docker-composeを使って複数コンテナにネットワークを構築する~~
     - Railsの環境をDockerで構築してみる
 
-## 2. DockerでCI/CDする
+## 2. DockerでCI/CDをする
 - **期限**　Week13-14の開始時
 - **ゴール**ポートフォリオにCI/CDを導入する
 - CI/CDについて調べる
