@@ -13,7 +13,7 @@ services:
     image: apprentice/postgres:1.0
     container_name: postgres
     volumes:
-      - /Users/mitsuharu/Desktop/apprentice/postgres_db_data:/var/lib/postgresql/data
+      - /Users/mitsuharu/Desktop/apprentice/docker/PostgreSQL/src/postgres_db_data:/var/lib/postgresql/data
     networks:
       - my_network
 networks:
