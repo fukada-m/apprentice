@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  ap:
+    image: apprentice/ruby:1.0
+    container_name: ruby_git
+    stdin_open: true
+    tty: true
+    volumes:
+      - /Users/mitsuharu/Desktop/apprentice/:/home/apprentice
+    networks:
+      - my_network
+  db:
+    image: apprentice/postgres:1.0
+    container_name: postgres
+    volumes:
+      - /Users/mitsuharu/Desktop/apprentice/postgres_db_data:/var/lib/postgresql/data
+    networks:
+      - my_network
+networks:
+  my_network:
