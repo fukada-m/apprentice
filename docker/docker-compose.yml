@@ -1,8 +1,10 @@
 version: "3.8"
 services:
   ap:
-    image: apprentice/ruby:1.0
-    container_name: ruby_git
+    image: apprentice/ruby:1.2
+    container_name: ruby
+    ports:
+      - "3000:3000"
     stdin_open: true
     tty: true
     volumes:
