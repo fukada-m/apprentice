@@ -39,4 +39,26 @@
 -- SELECT shohin_mei, hanbai_tanka, (hanbai_tanka +100) * 2 AS "hanbai_tanka_x2"
 -- FROM Shohin;
 
-SELECT 'ぱち' AS "ぱっち";
+-- SELECT DISTINCT shohin_mei, hanbai_tanka, shiire_tanka
+-- from shohin
+-- WHERE hanbai_tanka - shiire_tanka > 500;
+
+
+
+-- SELECT shohin_mei, tourokubi
+-- FROM Shohin
+-- WHERE tourokubi > '2009-04-28';
+
+-- select shohin_mei, hanbai_tanka, shiire_tanka
+-- from shohin
+-- where NOT shiire_tanka < 500;
+
+-- select shohin_mei, hanbai_tanka, shiire_tanka
+-- from shohin
+-- where  shiire_tanka > 500 AND shiire_tanka = 500;
+
+
+SELECT shohin_mei, shohin_bunrui, hanbai_tanka * 0.9 - shiire_tanka AS rieki
+FROM Shohin
+WHERE hanbai_tanka * 0.9  - shiire_tanka > 100
+AND (shohin_bunrui = '事務用品'or shohin_bunrui = 'キッチン用品');
