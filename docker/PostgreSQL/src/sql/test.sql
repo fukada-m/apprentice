@@ -29,3 +29,6 @@
 --     mail_address CHAR(20)
 -- );
 -- ALTER TABLE Jyushoroku ADD COLUMN yubin_bango CHAR(8) NOT NULL;
+-- 
+-- SELECT shohin_id AS "ID", shohin_mei AS "商品名", shiire_tanka AS "仕入単価"
+-- FROM shohin;
