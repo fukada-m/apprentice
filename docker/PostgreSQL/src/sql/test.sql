@@ -32,3 +32,11 @@
 -- 
 -- SELECT shohin_id AS "ID", shohin_mei AS "商品名", shiire_tanka AS "仕入単価"
 -- FROM shohin;
+
+-- SELECT shohin_id AS "ID", 'ぱちぱち' AS misaki
+-- FROM Shohin;
+
+-- SELECT shohin_mei, hanbai_tanka, (hanbai_tanka +100) * 2 AS "hanbai_tanka_x2"
+-- FROM Shohin;
+
+SELECT 'ぱち' AS "ぱっち";
