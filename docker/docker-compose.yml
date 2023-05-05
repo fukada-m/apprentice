@@ -14,6 +14,7 @@ services:
     container_name: postgres
     volumes:
       - /Users/mitsuharu/Desktop/apprentice/docker/PostgreSQL/src/postgres_db_data:/var/lib/postgresql/data
+      - /Users/mitsuharu/Desktop/apprentice/docker/PostgreSQL/src/sql:/home
     networks:
       - my_network
 networks:
