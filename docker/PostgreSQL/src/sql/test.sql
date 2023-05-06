@@ -67,5 +67,5 @@
 -- FROM Shohin
 -- WHERE shiire_tanka IS NULL;
 
-SELECT COUNT(DISTINCT shohin_bunrui)
+SELECT sum(hanbai_tanka, shiire_tanka)
 FROM Shohin;
