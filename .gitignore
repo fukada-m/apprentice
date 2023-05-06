@@ -58,3 +58,4 @@ build-iPhoneSimulator/
 /quest/week-5-6/practice.rb
 tdd
 postgres_db_data
+test.sql
