@@ -67,5 +67,10 @@
 -- FROM Shohin
 -- WHERE shiire_tanka IS NULL;
 
-SELECT sum(hanbai_tanka, shiire_tanka)
-FROM Shohin;
+-- todo 日報　ブログ読む　select文をあげる
+
+SELECT  shohin_bunrui AS "分類"
+FROM Shohin
+GROUP by "分類"
+
+
