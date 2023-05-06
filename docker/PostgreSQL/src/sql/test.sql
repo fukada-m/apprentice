@@ -58,7 +58,14 @@
 -- where  shiire_tanka > 500 AND shiire_tanka = 500;
 
 
-SELECT shohin_mei, shohin_bunrui, hanbai_tanka * 0.9 - shiire_tanka AS rieki
-FROM Shohin
-WHERE hanbai_tanka * 0.9  - shiire_tanka > 100
-AND (shohin_bunrui = '事務用品'or shohin_bunrui = 'キッチン用品');
+-- SELECT shohin_mei, shohin_bunrui, hanbai_tanka * 0.9 - shiire_tanka AS rieki
+-- FROM Shohin
+-- WHERE hanbai_tanka * 0.9  - shiire_tanka > 100
+-- AND (shohin_bunrui = '事務用品'or shohin_bunrui = 'キッチン用品');
+
+-- SELECT shohin_mei
+-- FROM Shohin
+-- WHERE shiire_tanka IS NULL;
+
+SELECT COUNT(DISTINCT shohin_bunrui)
+FROM Shohin;
