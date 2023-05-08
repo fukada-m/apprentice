@@ -1,8 +1,8 @@
 # 概要 
 アプレンティスのクエストを管理するリポジトリです
 
-## [日報](daily-report)
-## [マイプラン（アプレンティス期間中に勉強することをまとめてます。）](my_plan.md)
+## [日報](report/daily-report)
+## [マイプラン（アプレンティス期間中に勉強することをまとめてます。）](report/my_plan.md)
 ## [技術ブログ](https://qiita.com/yami-yami)
 
 
