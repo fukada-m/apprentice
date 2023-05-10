@@ -60,3 +60,4 @@ tdd
 postgres_db_data
 test.sql
 docker/MySQL/src/data/
+docker/MySQL/src/query/query_mysql.sql
