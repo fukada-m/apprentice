@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: my_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: yami
+      MYSQL_DATABASE: apprentice
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./src/data:/var/lib/mysql
