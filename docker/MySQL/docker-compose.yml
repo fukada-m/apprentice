@@ -11,3 +11,4 @@ services:
       - "3306:3306"
     volumes:
       - ./src/data:/var/lib/mysql
+      - ./src/query:/home
