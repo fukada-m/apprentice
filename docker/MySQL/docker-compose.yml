@@ -6,7 +6,6 @@ services:
     container_name: my_mysql
     environment:
       MYSQL_ROOT_PASSWORD: yami
-      MYSQL_DATABASE: apprentice
     ports:
       - "3306:3306"
     volumes:
