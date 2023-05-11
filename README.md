@@ -51,17 +51,17 @@
 
 # Week 5-6
 1. [[データベース][Level1]データベース関連の基本的な用語を説明できる](quest/week-5-6/quest1.md)
-2. [[SQL][Level1] データベースを作成・指定・削除できる]
-2. [[SQL][Level1] ユーザーを作成・権限付与・削除できる]
-3. [[SQL][Level1] テーブルを作成・修正・削除できる]
-4. [[SQL][Level1] データを登録・検索・更新・削除できる]
-5. [[SQL][Level2] データを検索できる]
-6. [[SQL][Level2] データを絞り込むことができる]
-7. [[SQL][Level2] 検索結果の並び替えができる]
-8. [[SQL][Level2] データを集計できる]
-9. [[SQL][Level2] データをグルーピングできる]
-10. [[SQL][Level2] テーブルを結合できる]
-11. [[SQL][Level2] スタイルガイドに則ってクエリを書ける]
+2. [[SQL][Level1] データベースを作成・指定・削除できる](quest/week-5-6/quest2.md)
+2. [[SQL][Level1] ユーザーを作成・権限付与・削除できる](quest/week-5-6/quest3.md)
+3. [[SQL][Level1] テーブルを作成・修正・削除できる](quest/week-5-6/quest4.md)
+4. [[SQL][Level1] データを登録・検索・更新・削除できる](quest/week-5-6/quest5.md)
+5. [[SQL][Level2] データを検索できる](quest/week-5-6/quest6.md)
+6. [[SQL][Level2] データを絞り込むことができる](quest/week-5-6/quest7.md)
+7. [[SQL][Level2] 検索結果の並び替えができる](quest/week-5-6/quest8.md)
+8. [[SQL][Level2] データを集計できる](quest/week-5-6/quest9.md)
+9. [[SQL][Level2] データをグルーピングできる](quest/week-5-6/quest10.md)
+10. [[SQL][Level2] テーブルを結合できる](quest/week-5-6/quest11.md)
+11. [SQL][Level2] スタイルガイドに則ってクエリを書ける　具体的な成果物はありません
 12. [[SQL][Level3] サブクエリを使うことができる(advanced)]
 13. [[SQL][Level3] 条件分岐ができる(advanced)]
 14. [[SQL][Level3] 実行計画を確認できる(advanced)]
