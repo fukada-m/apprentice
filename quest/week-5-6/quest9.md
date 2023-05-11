@@ -5,6 +5,8 @@
 給与情報(salaries テーブル)から、全データの給与の合計値を求めてください。
 
 A.
+SELECT SUM(salary)
+FROM salaries;
 
 ## 2. 列の平均値
 
