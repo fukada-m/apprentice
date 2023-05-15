@@ -77,43 +77,42 @@ A.
 テーブル：purchase_history
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
 | ---- | ---- | ---- | ---- | ---- | ---- |
-|user_id|
-|order_id|
-|goods_id|
-|price|
-|quantity|
+|order_id|int(8)||PRIMARY||YES|
+|goods_id|int(4)||PRIMARY||YES|
+|price|int(8)|||||
+|quantity|int(4)|||||
 
-- 外部キー制約：user_idに対して、usersテーブルのuser_idカラム
-            　order_idに対して、ordersテーブルのorder_idカラム
-
-テーブル：users
-|カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
-| ---- | ---- | ---- | ---- | ---- | ---- |
-|user_id|
-|user_name|
-
-- 外部キー制約：
+- 外部キー制約：order_idに対して、ordersテーブルのorder_idカラム
+              goods_idに対して、goodsテーブルのgoods_idカラム
 
 テーブル：orders
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
 | ---- | ---- | ---- | ---- | ---- | ---- |
-|order_id|
-|order_date|
+|order_id|int(8)||PRIMARY||YES|
+|user_id|int(8)||INDEX|||
+|order_date|date|||||
 
+- 外部キー制約：user_idに対して、usersテーブルのuser_idカラム
+
+テーブル：users
+|カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
+| ---- | ---- | ---- | ---- | ---- | ---- |
+|user_id|int(8)||PRIMARY||YES|
+|user_name|varchar(32)||INDEX|||
 
 テーブル：goods
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
 | ---- | ---- | ---- | ---- | ---- | ---- |
-|goods_id|
-|goods_name|
-|goods_category_id|
-|price|
-|stock|
+|goods_id|int(4)||PRIMARY||YES|
+|goods_name|varchar(32)||INDEX
+|goods_category_id|int(4)||||
+|price|int(8)|yes||||
+|stock|int(4)|yes||||
 
-- 外部キー制約：
+- 外部キー制約：goods_category_idに対して、goods_categoryテーブルのgoods_category_idカラム
 
 テーブル：goods_category
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
 | ---- | ---- | ---- | ---- | ---- | ---- |
-|good_category_id|
-|goods_category_name|
+|good_category_id|int(4)||PRIMARY||YES|
+|goods_category_name|varchar(32)|||||
