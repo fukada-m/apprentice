@@ -3,7 +3,6 @@
 
 ## [日報](report/daily-report)
 ## [週間計画](report/weekly-plan/)
-## [マイプラン（アプレンティス期間中に勉強することをまとめてます。）](report/my_plan.md)
 ## [技術ブログ](https://qiita.com/yami-yami)
 
 
