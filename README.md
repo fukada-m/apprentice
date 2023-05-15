@@ -1,9 +1,9 @@
 # 概要 
 アプレンティスのクエストを管理するリポジトリです
 
-## [日報](report/daily-report)
-## [週間計画](report/weekly-plan/)
-## [技術ブログ](https://qiita.com/yami-yami)
+### [日報](report/daily-report)
+### [週間計画](report/weekly-plan/)
+### [技術ブログ](https://qiita.com/yami-yami)
 
 
 
