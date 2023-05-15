@@ -2,6 +2,7 @@
 アプレンティスのクエストを管理するリポジトリです
 
 ## [日報](report/daily-report)
+## [週間計画](report/weekly-plan/)
 ## [マイプラン（アプレンティス期間中に勉強することをまとめてます。）](report/my_plan.md)
 ## [技術ブログ](https://qiita.com/yami-yami)
 
@@ -52,28 +53,28 @@
 # Week 5-6
 1. [[データベース][Level1]データベース関連の基本的な用語を説明できる](quest/week-5-6/quest1.md)
 2. [[SQL][Level1] データベースを作成・指定・削除できる](quest/week-5-6/quest2.md)
-2. [[SQL][Level1] ユーザーを作成・権限付与・削除できる](quest/week-5-6/quest3.md)
-3. [[SQL][Level1] テーブルを作成・修正・削除できる](quest/week-5-6/quest4.md)
-4. [[SQL][Level1] データを登録・検索・更新・削除できる](quest/week-5-6/quest5.md)
-5. [[SQL][Level2] データを検索できる](quest/week-5-6/quest6.md)
-6. [[SQL][Level2] データを絞り込むことができる](quest/week-5-6/quest7.md)
-7. [[SQL][Level2] 検索結果の並び替えができる](quest/week-5-6/quest8.md)
-8. [[SQL][Level2] データを集計できる](quest/week-5-6/quest9.md)
-9. [[SQL][Level2] データをグルーピングできる](quest/week-5-6/quest10.md)
-10. [[SQL][Level2] テーブルを結合できる](quest/week-5-6/quest11.md)
-11. [SQL][Level2] スタイルガイドに則ってクエリを書ける　具体的な成果物はありません
-12. [[SQL][Level3] サブクエリを使うことができる(advanced)]
-13. [[SQL][Level3] 条件分岐ができる(advanced)]
-14. [[SQL][Level3] 実行計画を確認できる(advanced)]
-15. [[SQL][Level3] N＋1問題の対策ができる(advanced)]
-16. [[データベース][Level2] データベース設計の流れを説明できる]
-17. [[データベース][Level2] エンティティを定義できる]
-18. [[データベース][Level2] データベースを正規化できる]
-18. [[データベース][Level2] ER 図を書くことができる]
-20. [[データベース][Level2] テーブルを定義できる]
-21. [[データベース][Level2] インデックスを設定できる]
-22. [[データベース][Level3] トランザクションについて説明できる(advanced)]
-23. [[データベース][Level3] 同時実行制御について説明できる(advanced)]
+3. [[SQL][Level1] ユーザーを作成・権限付与・削除できる](quest/week-5-6/quest3.md)
+4. [[SQL][Level1] テーブルを作成・修正・削除できる](quest/week-5-6/quest4.md)
+5. [[SQL][Level1] データを登録・検索・更新・削除できる](quest/week-5-6/quest5.md)
+6. [[SQL][Level2] データを検索できる](quest/week-5-6/quest6.md)
+7. [[SQL][Level2] データを絞り込むことができる](quest/week-5-6/quest7.md)
+8. [[SQL][Level2] 検索結果の並び替えができる](quest/week-5-6/quest8.md)
+9. [[SQL][Level2] データを集計できる](quest/week-5-6/quest9.md)
+10. [[SQL][Level2] データをグルーピングできる](quest/week-5-6/quest10.md)
+11. [[SQL][Level2] テーブルを結合できる](quest/week-5-6/quest11.md)
+12. [SQL][Level2] スタイルガイドに則ってクエリを書ける　具体的な成果物はありません
+13. [[SQL][Level3] サブクエリを使うことができる(advanced)]
+14. [[SQL][Level3] 条件分岐ができる(advanced)]
+15. [[SQL][Level3] 実行計画を確認できる(advanced)]
+16. [[SQL][Level3] N＋1問題の対策ができる(advanced)]
+17. [[データベース][Level2] データベース設計の流れを説明できる](quest/week-5-6/quest17.md)
+18. [[データベース][Level2] エンティティを定義できる](quest/week-5-6/quest18.md)
+19. [[データベース][Level2] データベースを正規化できる](quest/week-5-6/quest19.md)
+20. [[データベース][Level2] ER 図を書くことができる](https://www.notion.so/20-f318f151d2d344948253a2ca79d8b240?pvs=4)
+21. [[データベース][Level2] テーブルを定義できる]
+22. [[データベース][Level2] インデックスを設定できる]
+23. [[データベース][Level3] トランザクションについて説明できる(advanced)]
+24. [[データベース][Level3] 同時実行制御について説明できる(advanced)]
 
 # ディレクトリ構成
 <pre>
