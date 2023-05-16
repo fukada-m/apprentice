@@ -62,7 +62,7 @@
 10. [[SQL][Level2] データをグルーピングできる](quest/week-5-6/quest10.md)
 11. [[SQL][Level2] テーブルを結合できる](quest/week-5-6/quest11.md)
 12. [SQL][Level2] スタイルガイドに則ってクエリを書ける　具体的な成果物はありません
-13. [[SQL][Level3] サブクエリを使うことができる(advanced)]
+13. [[SQL][Level3] サブクエリを使うことができる(advanced)](quest/week-5-6/quest13.md)
 14. [[SQL][Level3] 条件分岐ができる(advanced)]
 15. [[SQL][Level3] 実行計画を確認できる(advanced)]
 16. [[SQL][Level3] N＋1問題の対策ができる(advanced)]
@@ -70,8 +70,8 @@
 18. [[データベース][Level2] エンティティを定義できる](quest/week-5-6/quest18.md)
 19. [[データベース][Level2] データベースを正規化できる](quest/week-5-6/quest19.md)
 20. [[データベース][Level2] ER 図を書くことができる](https://www.notion.so/20-f318f151d2d344948253a2ca79d8b240?pvs=4)
-21. [[データベース][Level2] テーブルを定義できる]
-22. [[データベース][Level2] インデックスを設定できる]
+21. [[データベース][Level2] テーブルを定義できる](quest/week-5-6/quest21.md)
+22. [[データベース][Level2] インデックスを設定できる](quest/week-5-6/quest22.md)
 23. [[データベース][Level3] トランザクションについて説明できる(advanced)]
 24. [[データベース][Level3] 同時実行制御について説明できる(advanced)]
 
