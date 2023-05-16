@@ -4,10 +4,12 @@
 1. テーブルの作成
 任意のテーブルを作成してください。テーブルのカラムは自由に作成してください。
 
-A. CREATE TABLE Test(
-    id INT NOT NULL,
-    name VARCHAR(40) NOT NULL,
-    PRIMARY KEY(id)
+A. 
+
+CREATE TABLE Test(
+  PRIMARY KEY(id),
+       id INT NOT NULL,
+     name VARCHAR(40) NOT NULL
 );
 
 2. テーブルの表示

@@ -12,8 +12,10 @@ A. CREATE USER 'username'@'host' IDENTIFIED BY 'password';
 
 ユーザーを作成できたことを確認するために、ユーザーの一覧を表示してください。
 
-A. SELECT user, host 
-   FROM mysql.user;
+A. 
+
+SELECT user, host <br>
+  FROM mysql.user;
 
 ## 3. ユーザーへの権限付与
 
@@ -41,5 +43,7 @@ A. DROP USER 'username'@'host';
 
 今後は root ユーザーは基本的に使用せず、今回作成したユーザーを使用してください。
 
-A. CREATE USER 'fukada'@'localhost' IDENTIFIED BY 'password';
-   GRANT ALL PRIVILEGES ON apprentice.* TO 'fukada'@'localhost';
+A. 
+
+CREATE USER 'fukada'@'localhost' IDENTIFIED BY 'password'; <br>
+GRANT ALL PRIVILEGES ON apprentice.* TO 'fukada'@'localhost';
