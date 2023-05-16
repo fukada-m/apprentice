@@ -5,12 +5,13 @@
 従業員番号が10001から10010のうち、全給与レコードの平均給与より給与が大きいレコードの従業員番号と給与を、サブクエリを使用して取得してください。
 
 A. 
-SELECT E.emp_no, S.salary
-  FROM employees AS E INNER JOIN salaries AS S 
-    ON E.emp_no = S.emp_no
- WHERE E.emp_no BETWEEN 10001 AND 10010
-   AND S.salary >= (SELECT AVG(salary)
-                     FROM salaries );
+
+SELECT E.emp_no, S.salary<br>
+  FROM employees AS E INNER JOIN salaries AS S<br>
+    ON E.emp_no = S.emp_no<br>
+ WHERE E.emp_no BETWEEN 10001 AND 10010<br>
+   AND S.salary >= (SELECT AVG(salary)<br>
+                      FROM salaries );<br>
 
 ## 2. 重複なし
 
