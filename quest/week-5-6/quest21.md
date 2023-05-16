@@ -117,3 +117,5 @@ A.
 | ---- | ---- | ---- | ---- | ---- | ---- |
 |good_category_id|int(4)||PRIMARY||YES|
 |goods_category_name|varchar(32)|||||
+
+
