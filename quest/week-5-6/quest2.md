@@ -41,7 +41,7 @@ A. USE apprentice;
 
 作成したデータベースを削除しましょう。削除後、削除できていることを確認してください。
 
-DROP DATABASE apprentice;
+DROP DATABASE apprentice;<br>
 SHOW DATABASES;
 
 ## 7. データベースの再作成
