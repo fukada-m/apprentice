@@ -77,9 +77,9 @@ A.
 テーブル：purchase_history
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
 | ---- | ---- | ---- | ---- | ---- | ---- |
-|order_id|int(8)||PRIMARY||YES|
-|goods_id|int(4)||PRIMARY||YES|
-|user_id|int(8)||PRIMARY||YES|
+|order_id|int(8)||PRIMARY|||
+|goods_id|int(4)||PRIMARY|||
+|user_id|int(8)||PRIMARY|||
 |price|int(8)|||||
 |quantity|int(4)|||||
 
