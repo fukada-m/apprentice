@@ -79,17 +79,18 @@ A.
 | ---- | ---- | ---- | ---- | ---- | ---- |
 |order_id|int(8)||PRIMARY||YES|
 |goods_id|int(4)||PRIMARY||YES|
+|user_id|int(8)||PRIMARY||YES|
 |price|int(8)|||||
 |quantity|int(4)|||||
 
 - 外部キー制約：order_idに対して、ordersテーブルのorder_idカラム
               goods_idに対して、goodsテーブルのgoods_idカラム
+              user_idに対して、usersテーブルのuser_idカラム
 
 テーブル：orders
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
 | ---- | ---- | ---- | ---- | ---- | ---- |
 |order_id|int(8)||PRIMARY||YES|
-|user_id|int(8)||INDEX|||
 |order_date|date|||||
 
 - 外部キー制約：user_idに対して、usersテーブルのuser_idカラム
