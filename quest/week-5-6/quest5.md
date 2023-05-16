@@ -4,23 +4,26 @@
 
 作成済みのテーブルに対して、任意のデータを一行分追加してください。
 
-A. INSERT INTO Test VALUES(1, '深田'),
-                          (2, '岡田');
+A. INSERT INTO Test VALUES(1, '深田');
 
 ## 2. データの検索
 
 データを追加したテーブルに対して、すべてのデータを検索して出力してください。
 
- A. SELECT *
-    FROM Test;
+ A. 
+ 
+ SELECT * <br>
+   FROM Test;
 
 ## 3. データの更新
 
 追加済みのデータのある行の値を別の値に更新してください。
 
-A. UPDATE Test
-   SET name = '藤田'
-   WHERE id = 2;
+A. 
+
+UPDATE Test <br>
+   SET name = '藤田' <br>
+ WHERE id = 2;
 
 ## 4. データの削除
 
