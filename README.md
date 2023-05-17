@@ -3,6 +3,7 @@
 
 ### [日報](report/daily-report)
 ### [週間計画](report/weekly-plan/)
+### [自分用のWiki](https://www.notion.so/root-1764084d880f4d6ab8a5e853f5608eb4?pvs=4)
 ### [技術ブログ](https://qiita.com/yami-yami)
 
 
