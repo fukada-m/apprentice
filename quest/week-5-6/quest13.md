@@ -48,12 +48,19 @@ SELECT E.emp_no, MAX(S.salary) AS max_salary
 
 A.
 ```sql
+CREATE VIEW view_min_birth_date ( min_birth_date, gender )
+AS
+SELECT MIN(birth_date), gender
+  FROM employees 
+ GROUP BY gender;
+
 SELECT emp_no, gender, birth_date 
-  FROM employees AS E1 
- WHERE (E1.gender, birth_date) IN (SELECT E2.gender, MIN(birth_date) 
-                                     FROM employees AS E2 
-                                    WHERE E1.gender = E2.gender 
-                                    GROUP BY E2.gender ); 
+  FROM employees AS E
+ WHERE birth_date IN (SELECT min_birth_date
+                        FROM view_min_birth_date AS V
+                        WHERE E.birth_date = V.min_birth_date
+                        AND E.gender = V.gender)
+                        ORDER BY E.gender, E.emp_no; 
 ```
 
 ## 5. 一番若い従業員
