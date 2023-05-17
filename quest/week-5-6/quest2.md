@@ -35,14 +35,20 @@ A. SHOW DATABASES;
 
 今後あるデータベース上で操作をする場合、データベースの指定をしてから操作をしていきます。
 
-A. USE apprentice;
+A. 
+```sql
+USE apprentice;
+```
 
 ## 6. データベースの削除
 
 作成したデータベースを削除しましょう。削除後、削除できていることを確認してください。
 
-DROP DATABASE apprentice;<br>
+A. 
+```sql
+DROP DATABASE apprentice;
 SHOW DATABASES;
+```
 
 ## 7. データベースの再作成
 
@@ -50,4 +56,7 @@ SHOW DATABASES;
 
 今後、作成したデータベースを指定して作業します。
 
-A. CREATE DATABASE apprentice;
+A. 
+```sql
+CREATE DATABASE apprentice;
+```
