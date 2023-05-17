@@ -5,30 +5,40 @@
 employees データベースの employees テーブルに対して、誕生日が1961年8月3日のレコードを取得してください。その際に、EXPLAIN ANALYZE ステートメントを利用することで、実行時間を計測してください。
 
 A.
-
+```sql
 EXPLAIN ANALYZE SELECT *
                   FROM employees
                  WHERE birth_date = '1961-08-03'
+```
 
 ## 2. インデックスの作成
 
 employees データベースの employees テーブルの birth_date カラムにインデックスを作成してください。
 
-A. CREATE INDEX birth_date ON employees(birth_date); 
+A. 
+```sql
+CREATE INDEX birth_date ON employees(birth_date); 
+```
 
 ## 3. インデックスの確認
 
 employees データベースの employees テーブルのインデックスを確認し、インデックスが作成されていることを確認してください。
 
-A. SHOW INDEX FROM employees;
+A. 
+```sql
+SHOW INDEX FROM employees;
+```
 
 ## 4. インデックスの効果の確認
 
 1と同じクエリを実行してください。その際に、EXPLAIN ANALYZE ステートメントを利用することで、実行時間を計測し、実行が高速化されていることを確認してください。
 
-A. EXPLAIN ANALYZE SELECT *
+A. 
+```sql
+EXPLAIN ANALYZE SELECT *
                   FROM employees
                  WHERE birth_date = '1961-08-03'
+```
 
 
 ## 5. インデックスの説明
@@ -42,8 +52,9 @@ A. インデックスを貼ることでデータに目次をつけたことに�
 作成したインデックスを削除してください。
 
 A.
-
+```sql
 DROP INDEX birth_date ON employees;
+```
 
 
 ## 7. ベストプラクティス
