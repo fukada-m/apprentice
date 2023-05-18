@@ -20,17 +20,18 @@ CREATE TABLE broadcast_times(
 
 CREATE TABLE channels(
     channel_id SERIAL PRIMARY KEY,
-    channel_name VARCHAR(32) UNIQUE
+    channel VARCHAR(32) UNIQUE
 );
 
 CREATE TABLE titles(
     title_id SERIAL PRIMARY KEY,
-    title_name VARCHAR(100) UNIQUE
+    title VARCHAR(50) UNIQUE,
+    title_detail VARCHAR(100)
 );
 
 CREATE TABLE genres(
     genre_id SERIAL PRIMARY KEY,
-    genre_name VARCHAR(32) UNIQUE
+    genre VARCHAR(32) UNIQUE
 );
 
 CREATE TABLE tv_program_list(

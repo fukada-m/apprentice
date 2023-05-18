@@ -1,68 +1,47 @@
 BEGIN TRANSACTION;
 
-INSERT INTO channels ( channel_name ) VALUES ( 'AbemaNews' );
-INSERT INTO channels ( channel_name ) VALUES ( 'AbemaSports' );
-INSERT INTO channels ( channel_name ) VALUES ( 'AbemaDrama' );
-INSERT INTO channels ( channel_name ) VALUES ( 'AbemaAnime' );
-INSERT INTO channels ( channel_name ) VALUES ( 'AbemaVariety' );
+INSERT INTO channels ( channel ) VALUES ( 'AbemaNews' );
+INSERT INTO channels ( channel ) VALUES ( 'AbemaAnime' );
+
+COMMIT;
+
+BEGIN TRANSACTION;
+
+INSERT INTO genres ( genre ) VALUES ( 'ドラマ' );
+INSERT INTO genres ( genre ) VALUES ( 'スポーツ' );
+INSERT INTO genres ( genre ) VALUES ( 'コメディ' );
+INSERT INTO genres ( genre ) VALUES ( 'アクション' );
+INSERT INTO genres ( genre ) VALUES ( 'ロマンス' );
+INSERT INTO genres ( genre ) VALUES ( 'ミステリー' );
+INSERT INTO genres ( genre ) VALUES ( 'バラエティ' );
+INSERT INTO genres ( genre ) VALUES ( 'サイエンス' );
+INSERT INTO genres ( genre ) VALUES ( 'ニュース' );
+
+COMMIT;
+
+BEGIN TRANSACTION;
+
+INSERT INTO titles ( title ,titel_detal) VALUES( '終末のパズルマスター', '知識と謎解きが求められる未来世界を舞台に、
+少年パズルマスターの成長と友情の物語。複雑なパズルを解き明かし、世界を救うために奮闘します。' );
+
+INSERT INTO titles ( title ,titel_detal) VALUES( 'ドラゴンの伝説', '異世界に生きるドラゴンと少年の絆を描いた冒険ファンタジー。未知の力と友情を通じて、彼らは世界のバランスを保つために戦います。' );
+
+INSERT INTO titles ( title ,titel_detal) VALUES( 'メカニカルシティ', '巨大なメカと科学の力を駆使して、未来都市を救う若者たちの壮大な物語。機械と人間の共存と対立を描きます。' );
+
+INSERT INTO titles ( title ,titel_detal) VALUES( '幽霊退治団', '現代社会で暮らす平凡な高校生が、幽霊との奇妙な遭遇をきっかけに、自分たちだけの退治団を結成。コミカルかつスリリングな日々を描きます。' );
+
+INSERT INTO titles ( title ,titel_detal) VALUES( '時空の勇者', '時空を超えて様々なエポックに旅する少年の冒険。過去と未来の英雄たちと共に、時間の流れを歪める強大な敵と対峙します。' );
+
+INSERT INTO titles ( title ,titel_detal) VALUES( '魔法学校の新生', '新入生の少女が魔法学校での生活を通じて友情、愛、そして自分自身の強さを発見するストーリー。繊細な描写と壮大な魔法世界を楽しむことができます。' );
+
 
 COMMIT;
 
 
-BEGIN TRANSACTION;
-
-INSERT INTO titles ( title_name ) VALUES( 'ドラマシティ' );
-INSERT INTO titles ( title_name ) VALUES( 'スポーツマスター' );
-INSERT INTO titles ( title_name ) VALUES( 'コメディライブ' );
-INSERT INTO titles ( title_name ) VALUES( 'アクションヒーローズ' );
-INSERT INTO titles ( title_name ) VALUES( '恋愛物語' );
-INSERT INTO titles ( title_name ) VALUES( 'ミステリーズ' );
-INSERT INTO titles ( title_name ) VALUES( '冒険の旅' );
-INSERT INTO titles ( title_name ) VALUES( 'バラエティ王' );
-INSERT INTO titles ( title_name ) VALUES( 'サイエンスワールド' );
-INSERT INTO titles ( title_name ) VALUES( 'ファッションクイーン' );
-
-COMMIT;
 
 
 BEGIN TRANSACTION;
 
-INSERT INTO genre ( genre_name ) VALUES ( 'ドラマ' );
-INSERT INTO genre ( genre_name ) VALUES ( 'スポーツ' );
-INSERT INTO genre ( genre_name ) VALUES ( 'コメディ' );
-INSERT INTO genre ( genre_name ) VALUES ( 'アクション' );
-INSERT INTO genre ( genre_name ) VALUES ( 'ロマンス' );
-INSERT INTO genre ( genre_name ) VALUES ( 'ミステリー' );
-INSERT INTO genre ( genre_name ) VALUES ( 'バラエティ' );
-INSERT INTO genre ( genre_name ) VALUES ( 'サイエンス' );
-INSERT INTO genre ( genre_name ) VALUES ( 'ファッション' );
-
-COMMIT;
-
-
-BEGIN TRANSACTION;
-
-INSERT INTO tv_program_details VALUES (1, 1, 'ドラマシティは、感動的なストーリーと演技によって視聴者の心を揺さぶる、
-感動系ドラマの集まりです。毎回異なる舞台とキャストを持つエピソードをお届けし、人間ドラマの魅力に浸ることができます。');
-INSERT INTO tv_program_details VALUES (2, 2, 'スポーツマスターは、スポーツ愛好家に向けた情報とエンターテイメントが満載の番組です。
-各種競技の最新ニュースや試合ハイライト、選手のインタビューなど、スポーツ界のトピックスを幅広くカバーしています。');
-INSERT INTO tv_program_details VALUES (3, 3, 'コメディライブは、笑いとユーモアに満ちたエンターテイメント番組です。
-一流のコメディアンたちが繰り広げる即興劇やコント、視聴者参加型の笑いのミッションなど、楽しさ溢れるコメディパフォーマンスをお届けします。');
-INSERT INTO tv_program_details VALUES (4, 4, 'アクションヒーローズは、スリリングなアクションシーンとヒーローたちの勇敢な冒険を描いた番組です。
-強力な敵との戦い、壮大なスケールのバトル、そしてヒーローたちの成長と絆に感動することができます。');
-INSERT INTO tv_program_details VALUES (5, 5, '恋愛物語は、胸キュンとドキドキが詰まったロマンティックなストーリーをお届けする番組です。
-恋に落ちる喜びや切なさ、恋人たちの成長や困難を通じて、愛の力と人間の心の美しさを描きます。');
-INSERT INTO tv_program_details VALUES (6, 6, 'ミステリーズは、謎と推理が魅力の番組です。
-鋭い観察力と推理力を持つ主人公たちが、犯罪や事件の真相を解明していく様子を描きます。
-視聴者は謎解きに興奮し、驚きとスリルに満ちたストーリーに引き込まれることでしょう。');
-INSERT INTO tv_program_details VALUES (7, 7, '冒険の旅は、遥かなる未知の世界への冒険を追体験できる番組です。
-探検家や冒険者たちが未踏の地を訪れ、壮大な風景や危険な試練に立ち向かいます。視聴者は彼らの勇気と決断力に感銘を受け、未知への魅力を再発見することでしょう。');
-INSERT INTO tv_program_details VALUES (8, 8, 'バラエティ王は、笑いと楽しさが溢れるバラエティ番組です。さまざまなコーナーやゲーム、トークセッションなどを通じて、
-ゲストや出演者たちの魅力や才能を引き出します。視聴者は笑いに包まれながら、バラエティの魅力と多様性を楽しむことでしょう。');
-INSERT INTO tv_program_details VALUES (9, 9, 'サイエンスワールドは、科学と探求心がテーマの番組です。最新の科学技術や自然現象、宇宙の謎など、
-興味深いサイエンスの世界を紹介します。視聴者は驚異的な事実や実験に触れることで、科学の不思議さと面白さを体感することができます。');
-INSERT INTO tv_program_details VALUES (10, 10, 'ファッションクイーンは、最新のトレンドやスタイル、ファッションに関する情報を提供する番組です。
-有名なデザイナーやスタイリスト、モデルたちが登場し、ファッションショー、メイクアップテクニック、スタイリングのアドバイスなどを紹介します');
 
 COMMIT;
 
