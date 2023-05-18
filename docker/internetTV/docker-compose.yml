@@ -7,7 +7,7 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ./src/ruby/script:/home/internetTV/ruby
+      - ./src/ruby/script:/home/ruby
     networks:
       - my_network
   db:
@@ -16,7 +16,7 @@ services:
     container_name: postgres
     volumes:
       - ./src/postgres/data:/var/lib/postgresql/data
-      - ./src/postgres/sql:/home/internetTV/postgres
+      - ./src/postgres/sql:/home/postgres
     networks:
       - my_network
 networks:

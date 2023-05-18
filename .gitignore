@@ -109,3 +109,5 @@ lib*.pc
 /Release/
 /tmp_install/
 /portlock/
+
+data
