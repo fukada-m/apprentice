@@ -1,7 +1,6 @@
 
 BEGIN TRANSACTION;
 
-
 CREATE TABLE channels(
     channel_id SERIAL PRIMARY KEY,
     channel_name VARCHAR(100) UNIQUE
@@ -53,8 +52,6 @@ CREATE TABLE episodes(
     FOREIGN KEY (episode_detail_id) REFERENCES episode_details(episode_detail_id)
     
 );
-
-
 
 COMMIT;
 
