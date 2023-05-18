@@ -3,7 +3,7 @@ BEGIN TRANSACTION;
 
 CREATE TABLE channels(
     channel_id SERIAL PRIMARY KEY,
-    channel_name VARCHAR(100) UNIQUE
+    channel_name VARCHAR(32) UNIQUE
 );
 
 CREATE TABLE titles(
@@ -13,15 +13,7 @@ CREATE TABLE titles(
 
 CREATE TABLE genres(
     genre_id SERIAL PRIMARY KEY,
-    genre_name VARCHAR(100) UNIQUE
-);
-
-CREATE TABLE episode_details(
-    episode_detail_id SERIAL PRIMARY KEY,
-    episode_detail VARCHAR(100),
-    video_time TIME,
-    publication_date DATE,
-    views INTEGER DEFAULT 0
+    genre_name VARCHAR(32) UNIQUE
 );
 
 CREATE TABLE tv_program(
@@ -47,13 +39,19 @@ CREATE TABLE episodes(
     title_id INTEGER,
     season_num INTEGER ,
     episode_num INTEGER,
-    episode_detail_id INTEGER,
-    FOREIGN KEY (title_id) REFERENCES titles(title_id),
-    FOREIGN KEY (episode_detail_id) REFERENCES episode_details(episode_detail_id)
-    
+    episode_detail VARCHAR(100),
+    video_time TIME,
+    publication_date DATE,
+    views INTEGER DEFAULT 0,
+    FOREIGN KEY (title_id) REFERENCES titles(title_id)
 );
 
+CREATE INDEX channel_name_idx ON channels(channel_name);
+CREATE INDEX title_name_idx ON titles(title_name);
+CREATE INDEX genre_name_idx ON genres(genre_name);
+
 COMMIT;
+
 
 
 
