@@ -1,9 +1,9 @@
 ## テーブル：tv_program
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
 | ---- | ---- | ---- | ---- | ---- | ---- |
-|air_time|date||PRIMARY|||
+|air_time|timestamp||PRIMARY|||
 |channel_id|int(4)||PRIMARY||
-|title_id|int(8)||PRIMARY||
+|title_id|int(8)||||
 
 - 外部キー制約：
     - channnel_idに対して、channelsテーブルのchannel_idカラムから設定
@@ -14,7 +14,7 @@
 | ---- | ---- | ---- | ---- | ---- | ---- |
 |title_id|int(8)||PRIMARY|||
 |genre_id|int(4)||PRIMARY|||
-|program_details|varchar(100)|||||
+|program_detail|varchar(100)|||||
 
 - 外部キー制約：
     - title_idに対して、titlesテーブルのtitle_idカラムから設定
@@ -26,7 +26,7 @@
 |title_id|int(8)||PRIMARY|||
 |season_num|int(4)||PRIMARY|||
 |episode_num|int(4)||PRIMARY|||
-|episode_details_id|int(8)||||
+|episode_detail_id|int(8)||||
 
 
 
@@ -34,11 +34,11 @@
     - title_idに対して、titlesテーブルのtitle_idカラムから設定
     - episode_details_idに対して、episode_detailsテーブルのepisode_details_idカラムから設定
 
-## テーブル：channnels
+## テーブル：channels
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
 | ---- | ---- | ---- | ---- | ---- | ---- |
 |channel_id|int(4)||PRIMARY||YES|
-|channnel_name|varchar(32)||INDEX|||
+|channel_name|varchar(32)||INDEX|||
 
 - ユニークキー制約：channel_nameカラムに設定
 
@@ -61,8 +61,8 @@
 ## テーブル：episode_details
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
 | ---- | ---- | ---- | ---- | ---- | ---- |
-|episode_details_id|int(8)||PRIMARY||YES|
-|episode_details|varchar(100)||||
-|video_time|date|||||
+|episode_detail_id|int(8)||PRIMARY||YES|
+|episode_detail|varchar(100)||||
+|video_time|time|||||
 |publication_date|date|||||
 |views|int(8)||INDEX|0||

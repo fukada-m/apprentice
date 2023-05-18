@@ -1,6 +1,6 @@
 FROM postgres:15.2
 
-WORKDIR /home/internetTV/postgres
+WORKDIR /home/postgres
 
 ENV POSTGRES_USER=fukada
 ENV POSTGRES_PASSWORD=yami
