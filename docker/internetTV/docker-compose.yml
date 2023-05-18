@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  ap:
+    build: ./src/ruby
+    image: apprentice/ruby:1.3
+    container_name: ruby
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./src/ruby/script:/home/internetTV/ruby
+    networks:
+      - my_network
+  db:
+    build: ./src/postgres
+    image: apprentice/postgres:1.3
+    container_name: postgres
+    volumes:
+      - ./src/postgres/data:/var/lib/postgresql/data
+      - ./src/postgres/sql:/home/internetTV/postgres
+    networks:
+      - my_network
+networks:
+  my_network:
