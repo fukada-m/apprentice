@@ -62,9 +62,9 @@ CREATE TABLE title_genre(
 
 
 
-CREATE INDEX channel_idx ON channels(channel_name);
-CREATE INDEX title_idx ON titles(title_name);
-CREATE INDEX genre_idx ON genres(genre_name);
+CREATE INDEX channel_idx ON channels(channel);
+CREATE INDEX title_idx ON titles(title);
+CREATE INDEX genre_idx ON genres(genre);
 CREATE INDEX episode_idx ON episodes(episode);
 
 COMMIT;
