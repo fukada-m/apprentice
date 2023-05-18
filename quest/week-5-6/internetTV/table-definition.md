@@ -26,13 +26,13 @@
 |title_id|int(8)||PRIMARY|||
 |season_num|int(4)||PRIMARY|||
 |episode_num|int(4)||PRIMARY|||
-|episode_details|varchar(100)||||
-|video_time|date|||||
-|publication_date|date|||||
-|views|int(8)||INDEX|0||
+|episode_details_id|int(8)||||
+
+
 
 - 外部キー制約：
     - title_idに対して、titlesテーブルのtitle_idカラムから設定
+    - episode_details_idに対して、episode_detailsテーブルのepisode_details_idカラムから設定
 
 ## テーブル：channnels
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
@@ -57,3 +57,12 @@
 |genre_name|varchar||INDEX||
 
 - ユニークキー制約：genre_nameカラムに設定
+
+## テーブル：episode_details
+|カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
+| ---- | ---- | ---- | ---- | ---- | ---- |
+|episode_details_id|int(8)||PRIMARY||YES|
+|episode_details|varchar(100)||||
+|video_time|date|||||
+|publication_date|date|||||
+|views|int(8)||INDEX|0||
