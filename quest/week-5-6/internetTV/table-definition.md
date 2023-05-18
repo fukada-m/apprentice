@@ -35,7 +35,7 @@
 |episode_id|int||PRIMARY||YES|
 |season_num|int|||||
 |episode_num|int|||||
-|episode|varchar(50)|||||
+|episode|varchar(50)||INDEX|||
 |episode_detail|varchar(100)||||
 |video_time|time|||||
 |publication_date|date|||||
