@@ -9,7 +9,7 @@ CREATE TABLE episodes(
     episode_detail VARCHAR(100),
     video_time TIME,
     publication_date DATE,
-    views INTEGER DEFAULT 0,
+    views INTEGER DEFAULT 0
 );
 
 CREATE TABLE broadcast_times(
@@ -44,7 +44,7 @@ CREATE TABLE tv_program_list(
 );
 
 CREATE TABLE title_episode(
-    PRIMARY KEY(title_id, episode_id)
+    PRIMARY KEY(title_id, episode_id),
     title_id INTEGER,
     episode_id INTEGER,
     FOREIGN KEY (title_id) REFERENCES titles(title_id),
