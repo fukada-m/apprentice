@@ -1,5 +1,6 @@
 FROM postgres:15.2
 
+
 ENV POSTGRES_USER=fukada
 ENV POSTGRES_PASSWORD=yami
 ENV POSTGRES_DB=apprentice
