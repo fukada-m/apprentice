@@ -4,4 +4,4 @@ WORKDIR /home/postgres
 
 ENV POSTGRES_USER=fukada
 ENV POSTGRES_PASSWORD=yami
-ENV POSTGRES_DB=internetTV
+ENV POSTGRES_DB=internet_tv
