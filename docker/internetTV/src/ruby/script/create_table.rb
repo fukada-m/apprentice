@@ -13,31 +13,34 @@ class Create_table
     end
 
     def sql_test
-        result = @conn.exec("SELECT b.start_time, b.end_time, c.channel, t.title,t.title_detail, g.genre
-            FROM tv_program_list AS tv 
-           INNER JOIN broadcast_times AS b ON tv.broadcast_time_id = b.broadcast_time_id
-           INNER JOIN channels AS c ON tv.channel_id = c.channel_id
-           INNER JOIN title_genre AS tg ON tv.title_id = tg.title_id
-           INNER JOIN titles AS t ON t.title_id = tg.title_id
-           INNER JOIN genres AS g ON g.genre_id = tg.genre_id
-           WHERE c.channel_id = 2 
-             AND b.start_time BETWEEN '2023-05-18 00:00:00' AND '2023-05-18 23:59:59';")
+        result = @conn.exec("select * from genres; select * from titles;")
 
         result.each do |row|
             # puts "ID: #{row['id']}, Name: #{row['name']}"
-            puts "#{row['genre']}"
+            puts "#{row['genre']} #{row['title']}"
 
         end
         # @conn.close
     end
 
     def issue_sql(sql)
+        time = ""
         result = @conn.exec(sql)
 
-        puts "|start_time|end_time|channel|title|title_detail|genre|"
+        puts "5/18のアニメチャンネルの番組内容は"
         result.each do |row|
-            puts "#{row['start_time']}, #{row['end_time']}, #{row['channel']},#{row['title']},#{row['title_detail']},#{row['genre']}"
+            if time == row['start_time']
+                print ", #{row['genre']}"
+            else
+                puts "\n\n"
+                time = row['start_time']
+                puts "#{row['start_time']}~#{row['end_time']}"
+                puts "「タイトル」#{row['title']}"
+                puts "「説明」#{row['title_detail']}"
+                print "「ジャンル」#{row['genre']}"
+            end
         end
+        puts ""
         @conn.close
     end
 
@@ -65,6 +68,6 @@ end
 # file_read('./ruby/sql/insert_channel_and_genre.sql')
 # file_read('./ruby/sql/insert_anime_data.sql')
 create_table = Create_table.new
-create_table.issue_sql(file_read('./ruby/sql/show_sample_data.sql'))
-# create_table.sql_test
+# create_table.issue_sql(file_read('./ruby/sql/show_data_anime_05_18.sql'))
+create_table.sql_test
 
