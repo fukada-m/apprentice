@@ -1,4 +1,3 @@
--- チャンネルとジャンルを挿入
 BEGIN TRANSACTION;
 
 INSERT INTO channels  VALUES ( 1, 'Drama' );

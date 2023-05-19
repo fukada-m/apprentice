@@ -1,4 +1,3 @@
--- アニメ番組のデータ
 -- 終末のパズルマスター シーズン1 12話のデータ
 BEGIN TRANSACTION;
 
@@ -73,7 +72,6 @@ INSERT INTO title_genre VALUES ( 2, 5 );
 INSERT INTO title_genre VALUES ( 2, 6 );
 
 COMMIT;
-
 
 -- メカニカルシティ　シーズン1 12話
 BEGIN TRANSACTION;
@@ -182,7 +180,6 @@ INSERT INTO title_episode VALUES ( 5, 57 );
 INSERT INTO title_episode VALUES ( 5, 58 );
 INSERT INTO title_episode VALUES ( 5, 59 );
 INSERT INTO title_episode VALUES ( 5, 60 );
-
 
 INSERT INTO title_genre VALUES ( 5, 2);
 INSERT INTO title_genre VALUES ( 5, 5);

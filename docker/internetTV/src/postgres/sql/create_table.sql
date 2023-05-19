@@ -1,4 +1,3 @@
--- CREATE文
 BEGIN TRANSACTION;
 
 CREATE TABLE episodes(
@@ -59,8 +58,6 @@ CREATE TABLE title_genre(
     FOREIGN KEY (title_id) REFERENCES titles(title_id),
     FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
 );
-
-
 
 CREATE INDEX channel_idx ON channels(channel);
 CREATE INDEX title_idx ON titles(title);
