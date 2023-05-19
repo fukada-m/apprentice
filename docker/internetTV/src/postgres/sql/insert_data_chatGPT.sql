@@ -76,18 +76,18 @@ INSERT INTO episodes VALUES ( 22, 1, 10, '宿敵の影', '闇の力の主が姿�
 INSERT INTO episodes VALUES ( 23, 1, 11, '最終決戦へ', '全ての力を結集し、最終決戦へ', '00:30:00', '2023-03-19', 1005);
 INSERT INTO episodes VALUES ( 24, 1, 12, '伝説の終わり、新たな始まり', '戦いが終わり、新たな旅が始まる', '00:30:00', '2023-03-26', 0);
 
-INSERT INTO title_episode VALUES ( 2, 1 );
-INSERT INTO title_episode VALUES ( 2, 2 );
-INSERT INTO title_episode VALUES ( 2, 3 );
-INSERT INTO title_episode VALUES ( 2, 4 );
-INSERT INTO title_episode VALUES ( 2, 5 );
-INSERT INTO title_episode VALUES ( 2, 6 );
-INSERT INTO title_episode VALUES ( 2, 7 );
-INSERT INTO title_episode VALUES ( 2, 8 );
-INSERT INTO title_episode VALUES ( 2, 9 );
-INSERT INTO title_episode VALUES ( 2, 10 );
-INSERT INTO title_episode VALUES ( 2, 11 );
-INSERT INTO title_episode VALUES ( 2, 12 );
+INSERT INTO title_episode VALUES ( 2, 13 );
+INSERT INTO title_episode VALUES ( 2, 14 );
+INSERT INTO title_episode VALUES ( 2, 15 );
+INSERT INTO title_episode VALUES ( 2, 16 );
+INSERT INTO title_episode VALUES ( 2, 17 );
+INSERT INTO title_episode VALUES ( 2, 18 );
+INSERT INTO title_episode VALUES ( 2, 19 );
+INSERT INTO title_episode VALUES ( 2, 20 );
+INSERT INTO title_episode VALUES ( 2, 21 );
+INSERT INTO title_episode VALUES ( 2, 22 );
+INSERT INTO title_episode VALUES ( 2, 23 );
+INSERT INTO title_episode VALUES ( 2, 24 );
 
 INSERT INTO title_genre VALUES ( 2, 2 );
 INSERT INTO title_genre VALUES ( 2, 5 );
@@ -115,18 +115,18 @@ INSERT INTO episodes VALUES ( 34, 1, 10, '絆の証明', '友情の力で困難�
 INSERT INTO episodes VALUES ( 35, 1, 11, '未来への扉', '新たな技術を手に入れ、未来への扉が開く', '00:30:00', '2023-03-19', 1400);
 INSERT INTO episodes VALUES ( 36, 1, 12, '新たなる夢', '一つの冒険が終わり、次なる夢が始まる', '00:30:00', '2023-03-26', 0);
 
-INSERT INTO title_episode VALUES ( 3, 1 );
-INSERT INTO title_episode VALUES ( 3, 2 );
-INSERT INTO title_episode VALUES ( 3, 3 );
-INSERT INTO title_episode VALUES ( 3, 4 );
-INSERT INTO title_episode VALUES ( 3, 5 );
-INSERT INTO title_episode VALUES ( 3, 6 );
-INSERT INTO title_episode VALUES ( 3, 7 );
-INSERT INTO title_episode VALUES ( 3, 8 );
-INSERT INTO title_episode VALUES ( 3, 9 );
-INSERT INTO title_episode VALUES ( 3, 10 );
-INSERT INTO title_episode VALUES ( 3, 11 );
-INSERT INTO title_episode VALUES ( 3, 12 );
+INSERT INTO title_episode VALUES ( 3, 25 );
+INSERT INTO title_episode VALUES ( 3, 26 );
+INSERT INTO title_episode VALUES ( 3, 27 );
+INSERT INTO title_episode VALUES ( 3, 28 );
+INSERT INTO title_episode VALUES ( 3, 29 );
+INSERT INTO title_episode VALUES ( 3, 30 );
+INSERT INTO title_episode VALUES ( 3, 31 );
+INSERT INTO title_episode VALUES ( 3, 32 );
+INSERT INTO title_episode VALUES ( 3, 33 );
+INSERT INTO title_episode VALUES ( 3, 34 );
+INSERT INTO title_episode VALUES ( 3, 35 );
+INSERT INTO title_episode VALUES ( 3, 36 );
 
 INSERT INTO title_genre VALUES ( 3, 2);
 INSERT INTO title_genre VALUES ( 3, 5);
@@ -153,18 +153,18 @@ INSERT INTO episodes VALUES ( 46, 1, 10, '新たな力', '新たな力を手に�
 INSERT INTO episodes VALUES ( 47, 1, 11, '最終戦', '全ての力を結集して敵に立ち向かう', '00:30:00', '2022-11-12', 1500);
 INSERT INTO episodes VALUES ( 48, 1, 12, '和解と新たな挑戦', '戦いが終わり、新たな挑戦が待っている', '00:30:00', '2022-11-19', 0);
 
-INSERT INTO title_episode VALUES ( 4, 1 );
-INSERT INTO title_episode VALUES ( 4, 2 );
-INSERT INTO title_episode VALUES ( 4, 3 );
-INSERT INTO title_episode VALUES ( 4, 4 );
-INSERT INTO title_episode VALUES ( 4, 5 );
-INSERT INTO title_episode VALUES ( 4, 6 );
-INSERT INTO title_episode VALUES ( 4, 7 );
-INSERT INTO title_episode VALUES ( 4, 8 );
-INSERT INTO title_episode VALUES ( 4, 9 );
-INSERT INTO title_episode VALUES ( 4, 10 );
-INSERT INTO title_episode VALUES ( 4, 11 );
-INSERT INTO title_episode VALUES ( 4, 12 );
+INSERT INTO title_episode VALUES ( 4, 37 );
+INSERT INTO title_episode VALUES ( 4, 38 );
+INSERT INTO title_episode VALUES ( 4, 39 );
+INSERT INTO title_episode VALUES ( 4, 40 );
+INSERT INTO title_episode VALUES ( 4, 41 );
+INSERT INTO title_episode VALUES ( 4, 42 );
+INSERT INTO title_episode VALUES ( 4, 43 );
+INSERT INTO title_episode VALUES ( 4, 44 );
+INSERT INTO title_episode VALUES ( 4, 45 );
+INSERT INTO title_episode VALUES ( 4, 46 );
+INSERT INTO title_episode VALUES ( 4, 47 );
+INSERT INTO title_episode VALUES ( 4, 48 );
 
 INSERT INTO title_genre VALUES ( 4, 2);
 INSERT INTO title_genre VALUES ( 4, 4);
@@ -172,16 +172,50 @@ INSERT INTO title_genre VALUES ( 4, 7);
 
 COMMIT;
 
+-- ドラゴンの伝説　シーズン2 12話
+BEGIN TRANSACTION
+
+INSERT INTO titles VALUES ( 5, 'ドラゴンの伝説 シーズン2 時空の勇者 #1~12', '主人公は現代から未来世界へタイムスリップ。未来世界を救うための壮大な冒険が始まる。' );
+
+INSERT INTO episodes VALUES ( 49, 2, 1, 'タイムスリップ', '主人公が未来世界へタイムスリップ', '00:30:00', '2022-07-06', 1000);
+INSERT INTO episodes VALUES ( 50, 2, 2, '未来の街', '未来世界の風景と困難を描く', '00:30:00', '2022-07-13', 1050);
+INSERT INTO episodes VALUES ( 51, 2, 3, '新たな仲間', '未来世界での初めての友人との出会い', '00:30:00', '2022-07-20', 2200);
+INSERT INTO episodes VALUES ( 52, 2, 4, '敵の正体', '敵の正体が明かされる', '00:30:00', '2022-07-27', 2220);
+INSERT INTO episodes VALUES ( 53, 2, 5, '反撃開始', '未来を救うための行動を開始', '00:30:00', '2022-08-03', 2250);
+INSERT INTO episodes VALUES ( 54, 2, 6, '秘密の武器', '敵を倒すための秘密の武器を探す', '00:30:00', '2022-08-20', 2270);
+INSERT INTO episodes VALUES ( 55, 2, 7, '危機一髪', '仲間が危機に陥る', '00:30:00', '2022-08-27', 2200);
+INSERT INTO episodes VALUES ( 56, 2, 8, '勇者の力', '主人公の内に秘めた力が目覚める', '00:30:00', '2022-08-24', 2230);
+INSERT INTO episodes VALUES ( 57, 2, 9, '大逆転', '絶体絶命のピンチを逆転', '00:30:00', '2022-08-31', 1250);
+INSERT INTO episodes VALUES ( 58, 2, 10, '終戦の時', '敵との決定的な戦い', '00:30:00', '2022-09-07', 1280);
+INSERT INTO episodes VALUES ( 59, 2, 11, '未来への希望', '未来を救い、希望を取り戻す', '00:30:00', '2022-09-14', 1300);
+INSERT INTO episodes VALUES ( 60, 2, 12, '帰還', '主人公が現代に戻る', '00:30:00', '2022-09-21', 0);
+
+INSERT INTO title_episode VALUES ( 5, 49 );
+INSERT INTO title_episode VALUES ( 5, 50 );
+INSERT INTO title_episode VALUES ( 5, 51 );
+INSERT INTO title_episode VALUES ( 5, 52 );
+INSERT INTO title_episode VALUES ( 5, 53 );
+INSERT INTO title_episode VALUES ( 5, 54 );
+INSERT INTO title_episode VALUES ( 5, 55 );
+INSERT INTO title_episode VALUES ( 5, 56 );
+INSERT INTO title_episode VALUES ( 5, 57 );
+INSERT INTO title_episode VALUES ( 5, 58 );
+INSERT INTO title_episode VALUES ( 5, 59 );
+INSERT INTO title_episode VALUES ( 5, 60 );
+
+
+INSERT INTO title_genre VALUES ( 5, 2);
+INSERT INTO title_genre VALUES ( 5, 5);
+
+COMMIT;
+
+-- 5/18のアニメチャンネルの番組表を作成
 BEGIN TRANSACTION;
 
 INSERT INTO broadcast_times values (1, '2023-05-18 00:00:00', '2023-05-18 06:00:00' );
 INSERT INTO broadcast_times values (2, '2023-05-18 06:00:00', '2023-05-18 12:00:00' );
 INSERT INTO broadcast_times values (3, '2023-05-18 12:00:00', '2023-05-18 18:00:00' );
 INSERT INTO broadcast_times values (4, '2023-05-18 18:00:00', '2023-05-18 24:00:00' );
-
-COMMIT;
-
-BEGIN TRANSACTION;
 
 INSERT INTO tv_program_list VALUES(1, 2, 1);
 INSERT INTO tv_program_list VALUES(2, 2, 2);
