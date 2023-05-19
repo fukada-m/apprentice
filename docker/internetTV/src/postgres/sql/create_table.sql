@@ -1,4 +1,3 @@
-
 BEGIN TRANSACTION;
 
 CREATE TABLE episodes(
@@ -60,16 +59,9 @@ CREATE TABLE title_genre(
     FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
 );
 
-
-
 CREATE INDEX channel_idx ON channels(channel);
 CREATE INDEX title_idx ON titles(title);
 CREATE INDEX genre_idx ON genres(genre);
 CREATE INDEX episode_idx ON episodes(episode);
 
 COMMIT;
-
-
-
-
-
