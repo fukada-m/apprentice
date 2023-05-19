@@ -1,25 +1,3 @@
-BEGIN TRANSACTION;
-
-INSERT INTO channels  VALUES ( 1, 'Drama' );
-INSERT INTO channels  VALUES ( 2, 'Anime' );
-
-COMMIT;
-
-BEGIN TRANSACTION;
-
-INSERT INTO genres  VALUES ( 1, 'ドラマ' );
-INSERT INTO genres  VALUES ( 2, 'アニメ' );
-INSERT INTO genres  VALUES ( 3, 'スポーツ' );
-INSERT INTO genres  VALUES ( 4, 'コメディ' );
-INSERT INTO genres  VALUES ( 5, 'アクション' );
-INSERT INTO genres  VALUES ( 6, 'ロマンス' );
-INSERT INTO genres  VALUES ( 7, 'ミステリー' );
-INSERT INTO genres  VALUES ( 8, 'バラエティ' );
-INSERT INTO genres  VALUES ( 9, 'サイエンス' );
-INSERT INTO genres  VALUES ( 10, 'ニュース' );
-
-COMMIT;
-
 -- 終末のパズルマスター シーズン1 12話のデータ
 BEGIN TRANSACTION;
 
@@ -172,10 +150,11 @@ INSERT INTO title_genre VALUES ( 4, 7);
 
 COMMIT;
 
--- ドラゴンの伝説　シーズン2 12話
-BEGIN TRANSACTION
+-- ドラゴンの伝説　シーズン2 時空の勇者　12話
+BEGIN TRANSACTION;
 
-INSERT INTO titles VALUES ( 5, 'ドラゴンの伝説 シーズン2 時空の勇者 #1~12', '主人公は現代から未来世界へタイムスリップ。未来世界を救うための壮大な冒険が始まる。' );
+INSERT INTO titles VALUES ( 5, 'ドラゴンの伝説 シーズン2 時空の勇者 #1~12', '主人公は現代から未来世界へタイムスリップ。
+未来世界を救うための壮大な冒険が始まる。' );
 
 INSERT INTO episodes VALUES ( 49, 2, 1, 'タイムスリップ', '主人公が未来世界へタイムスリップ', '00:30:00', '2022-07-06', 1000);
 INSERT INTO episodes VALUES ( 50, 2, 2, '未来の街', '未来世界の風景と困難を描く', '00:30:00', '2022-07-13', 1050);
@@ -209,17 +188,3 @@ INSERT INTO title_genre VALUES ( 5, 5);
 
 COMMIT;
 
--- 5/18のアニメチャンネルの番組表を作成
-BEGIN TRANSACTION;
-
-INSERT INTO broadcast_times values (1, '2023-05-18 00:00:00', '2023-05-18 06:00:00' );
-INSERT INTO broadcast_times values (2, '2023-05-18 06:00:00', '2023-05-18 12:00:00' );
-INSERT INTO broadcast_times values (3, '2023-05-18 12:00:00', '2023-05-18 18:00:00' );
-INSERT INTO broadcast_times values (4, '2023-05-18 18:00:00', '2023-05-18 24:00:00' );
-
-INSERT INTO tv_program_list VALUES(1, 2, 1);
-INSERT INTO tv_program_list VALUES(2, 2, 2);
-INSERT INTO tv_program_list VALUES(3, 2, 3);
-INSERT INTO tv_program_list VALUES(4, 2, 4);
-
-COMMIT;
