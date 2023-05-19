@@ -1,4 +1,5 @@
 require 'pg'
+require_relative './sql/create_table'
 
 class Create_table
 
@@ -10,17 +11,6 @@ class Create_table
             password: 'yami',
             dbname: 'internet_tv'
         )
-    end
-
-    def sql_test
-        result = @conn.exec("select * from genres; select * from titles;")
-
-        result.each do |row|
-            # puts "ID: #{row['id']}, Name: #{row['name']}"
-            puts "#{row['genre']} #{row['title']}"
-
-        end
-        # @conn.close
     end
 
     def issue_sql(sql)
@@ -43,30 +33,10 @@ class Create_table
         puts ""
         @conn.close
     end
-
-
-end
-
-# 読み込んだファイルの1行目が合ってるかテストするコード
-def file_read_test(txt)
-    File.open(txt, 'r') do |f|
-         f.gets
-    end
 end
 
 
-def file_read(txt)
-    File.open(txt, 'r') do |f|
-        # while line = f.gets
-        #     p line
-        # end
-        f.read
-    end
-end
 
-# file_read('./ruby/sql/create_table.sql')
-# file_read('./ruby/sql/insert_channel_and_genre.sql')
-# file_read('./ruby/sql/insert_anime_data.sql')
 create_table = Create_table.new
 # create_table.issue_sql(file_read('./ruby/sql/show_data_anime_05_18.sql'))
 create_table.sql_test
