@@ -35,7 +35,7 @@ CREATE TABLE genres(
 
 CREATE TABLE tv_program_list(
     PRIMARY KEY(broadcast_time_id, channel_id),
-    broadcast_time_id INTEGER,
+    broadcast_time_id SERIAL,
     channel_id INTEGER,
     title_id INTEGER,
     FOREIGN KEY (broadcast_time_id) REFERENCES broadcast_times(broadcast_time_id),

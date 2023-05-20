@@ -1,7 +1,7 @@
 BEGIN TRANSACTION;
 
-INSERT INTO channels  VALUES ( 1, 'Drama' );
-INSERT INTO channels  VALUES ( 2, 'Anime' );
+INSERT INTO channels  VALUES ( 1, 'ドラマ' );
+INSERT INTO channels  VALUES ( 2, 'アニメ' );
 
 COMMIT;
 
