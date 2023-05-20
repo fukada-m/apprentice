@@ -42,6 +42,7 @@ class ShowAllList
 
     def show_all_episode
         title = ''
+        puts "全てのタイトルとそのエピソードを表示します。"
         result = @conn.exec("SELECT t.title, e.season_num, e.episode_num, e.episode, e.episode_detail, e.video_time, e.publication_date, e.views
                               FROM title_episode AS te
                              INNER JOIN titles AS t ON te.title_id = t.title_id 
