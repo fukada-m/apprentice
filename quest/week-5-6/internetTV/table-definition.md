@@ -1,7 +1,7 @@
 ## テーブル：TVprogram_list
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
 | ---- | ---- | ---- | ---- | ---- | ---- |
-|broadcast_time_id|int||PRIMARY|||
+|broadcast_time_id|int||PRIMARY||YES|
 |channel_id|int||PRIMARY||
 |title_id|int||||
 
@@ -45,7 +45,7 @@
 ## テーブル:broadcast_times
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
 | ---- | ---- | ---- | ---- | ---- | ---- |
-|broadcast_time_id|int||PRIMARY|||
+|broadcast_time_id|int||PRIMARY||YES|
 |start_time|timestanp|||||
 |end_time|timestamp|||||
 
