@@ -39,7 +39,39 @@ class ShowAllList
         end
         puts ""
     end
+
+    def show_all_episode
+        title = ''
+        result = @conn.exec("SELECT t.title, e.season_num, e.episode_num, e.episode, e.episode_detail, e.video_time, e.publication_date, e.views
+                              FROM title_episode AS te
+                             INNER JOIN titles AS t ON te.title_id = t.title_id 
+                             INNER JOIN episodes AS e ON te.episode_id = e.episode_id;")
+        result.each do |row|
+            if title == row['title'] 
+                episode_detail(row['episode_num'], row['episode'], row['episode_detail'], row['video_time'], row['publication_date'], row['views'])
+                
+            else
+                title = row['title']
+                puts "「タイトル」：#{row['title']}"
+                puts "「シーズンNo.」：#{row['season_num']}"
+                episode_detail(row['episode_num'], row['episode'], row['episode_detail'], row['video_time'], row['publication_date'], row['views'])
+            end
+        end
+        
+    end
+
+    def episode_detail(num, episode, detail, time, date, view)
+        puts "「エピソードNo.」：#{num}"
+        puts "「エピソード名」：#{episode}"
+        puts "「エピソードの詳細」：#{detail}"
+        puts "「動画時間」：#{time}"
+        puts "「公開日」：#{date}"
+        puts "「視聴数」：#{view}"
+        puts ""
+    end
+
 end
 
-show_all_ist = ShowAllList.new
-show_all_ist.show_all_program
+show_all_list = ShowAllList.new
+show_all_list.show_all_program
+show_all_list.show_all_episode
