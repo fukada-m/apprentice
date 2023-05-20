@@ -1,5 +1,4 @@
 require 'pg'
-require_relative './sql/create_table'
 
 class SetupTvProgramList
 
@@ -33,34 +32,14 @@ class SetupTvProgramList
         end
     end
 
-    def issue_sql(sql)
-        time = ""
-        result = @conn.exec(sql)
-
-        puts "5/18のアニメチャンネルの番組内容は"
-
-        result.each do |row|
-            if time == row['start_time']
-                print ", #{row['genre']}"
-            else
-                puts "\n\n"
-                time = row['start_time']
-                puts "#{row['start_time']}~#{row['end_time']}"
-                puts "「タイトル」#{row['title']}"
-                puts "「説明」#{row['title_detail']}"
-                print "「ジャンル」#{row['genre']}"
-            end
-        end
-        puts ""
-    end
-
     def end_connect
         @conn.close
     end
 end
 
-setupTvProgramList = SetupTvProgramList.new
-(19..30).each { |i| setupTvProgramList.create_anime_program_list("2023-05-#{i}") }
-setupTvProgramList.end_connect
+setup_tv_programList = SetupTvProgramList.new
+(19..30).each { |i| setup_tv_programList.create_anime_program_list("2023-05-#{i}") }
+(19..30).each { |i| setup_tv_programList.create_drama_program_list("2023-05-#{i}") }
+setup_tv_programList.end_connect
 
 
