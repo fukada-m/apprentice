@@ -12,7 +12,7 @@ class ShowAllList
         )
     end
 
-    def show_all
+    def show_all_program
         time = ""
         result = @conn.exec("SELECT b.start_time, b.end_time, c.channel, t.title,t.title_detail, g.genre
             FROM tv_program_list AS tv 
@@ -31,6 +31,7 @@ class ShowAllList
                 puts "\n\n"
                 time = row['start_time']
                 puts "#{row['start_time']}~#{row['end_time']}"
+                puts "「チャンネル」#{row['channel']}"
                 puts "「タイトル」#{row['title']}"
                 puts "「説明」#{row['title_detail']}"
                 print "「ジャンル」#{row['genre']}"
@@ -41,4 +42,4 @@ class ShowAllList
 end
 
 show_all_ist = ShowAllList.new
-show_all_ist.show_all
+show_all_ist.show_all_program

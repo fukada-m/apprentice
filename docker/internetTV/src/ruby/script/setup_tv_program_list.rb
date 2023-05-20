@@ -26,7 +26,7 @@ class SetupTvProgramList
         result = @conn.exec("SELECT MAX(broadcast_time_id) FROM broadcast_times")
         id = result[0]['max'].to_i
         2.times do |n|
-            title_num = rand(1..5)
+            title_num = rand(6..9)
             @conn.exec("INSERT INTO broadcast_times VALUES( #{id+n+1}, '#{date} 0#{n*12}:00:00', '#{date} 0#{(n+1)*12}:00:00')")
             @conn.exec("INSERT INTO tv_program_list VALUES ( #{id+n+1} , 1, #{title_num} );")
         end
