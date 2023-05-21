@@ -11,7 +11,6 @@ class App
             user: 'fukada',
             password: 'yami'
           )
-          puts @conn.class
     end
     def start
         loop do
@@ -55,7 +54,15 @@ class App
     end
     
     def run_menu1
-        result = @conn.exec()
+        n = 1
+        result = @conn.exec("SELECT episode, views
+                              FROM episodes
+                             ORDER BY views DESC
+                             LIMIT 3;")
+        result.each do |row|
+            puts "#{n}位のエピソードは#{row['episode']}で、視聴数は#{row['views']}回です。"
+            n+=1
+        end
         
     end
     def run_menu2

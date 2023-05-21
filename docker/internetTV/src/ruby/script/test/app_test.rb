@@ -10,8 +10,8 @@ class AppTest < Minitest::Test
 
 	def test_start
 		original_stdn = $stdin
-		$stdin = StringIO.new("99\n")
-		assert_equal nil, @app.start
+		$stdin = StringIO.new("1\n2\n3\n4\nhoge\n99\n")
+		assert_nil @app.start
 		# assert_equal 
 	ensure
 		$stdin = original_stdn
