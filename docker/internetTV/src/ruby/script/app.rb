@@ -1,19 +1,17 @@
-require 'pg'
+require 'pg' 
 require 'date'
+require_relative 'module/connection_module'
+
 
 # 実際に行う処理が記載されています。
 class App
+    include ConnectionModule
+
 
     def initialize
         @selected_num = 0
         @time = ""
-        @conn = PG.connect(
-            host: 'postgres', # PostgreSQLサービスのコンテナ名を指定します。
-            port: 5432, # PostgreSQLのデフォルトポート番号
-            dbname: 'internet_tv',
-            user: 'fukada',
-            password: 'yami'
-          )
+        @conn = conn
     end
     def start
         loop do
@@ -128,7 +126,7 @@ class App
             ORDER BY e.views DESC
             LIMIT 2;")
         puts "直近1週間に放送された"
-        result.each do |row|
+        # result.each do |row|
 
         
     end
