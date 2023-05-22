@@ -1,15 +1,13 @@
 require 'pg'
+require_relative 'module/connection_module'
+
 
 class SetupTvProgramList
+    include ConnectionModule
+    
 
     def initialize
-        @conn = PG.connect(
-            host: 'postgres', # PostgreSQLサービスのコンテナ名を指定します。
-            port: 5432, # PostgreSQLのデフォルトポート番号
-            user: 'fukada',
-            password: 'yami',
-            dbname: 'internet_tv'
-        )
+        @conn = conn
     end
 
     def create_anime_program_list(date)

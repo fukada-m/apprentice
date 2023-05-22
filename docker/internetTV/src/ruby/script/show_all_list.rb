@@ -1,15 +1,11 @@
 require 'pg'
+require_relative 'module/connection_module'
 
 class ShowAllList
+    include ConnectionModule
 
     def initialize
-        @conn = PG.connect(
-            host: 'postgres', # PostgreSQLサービスのコンテナ名を指定します。
-            port: 5432, # PostgreSQLのデフォルトポート番号
-            user: 'fukada',
-            password: 'yami',
-            dbname: 'internet_tv'
-        )
+        @conn = conn
     end
 
     def show_all_program
@@ -60,6 +56,8 @@ class ShowAllList
         end
         
     end
+
+    private
 
     def episode_detail(num, episode, detail, time, date, view)
         puts "「エピソードNo.」：#{num}"

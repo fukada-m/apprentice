@@ -1,19 +1,17 @@
-require 'pg'
+require 'pg' 
 require 'date'
+require_relative 'module/connection_module'
+
 
 # 実際に行う処理が記載されています。
 class App
+    include ConnectionModule
+
 
     def initialize
         @selected_num = 0
         @time = ""
-        @conn = PG.connect(
-            host: 'postgres', # PostgreSQLサービスのコンテナ名を指定します。
-            port: 5432, # PostgreSQLのデフォルトポート番号
-            dbname: 'internet_tv',
-            user: 'fukada',
-            password: 'yami'
-          )
+        @conn = conn
     end
     def start
         loop do
@@ -49,6 +47,10 @@ class App
             run_menu3
         when 4
             run_menu4
+        when 5
+            run_menu5
+        when 6
+            run_menu6
         when 99
             puts "終了します"
             true
@@ -63,12 +65,16 @@ class App
                                FROM episodes
                               ORDER BY views DESC
                               LIMIT 3;")
+        
+        puts "エピソード視聴数トップ3を表示します。"
+
         result.each do |row|
             puts "#{n}位のエピソードは#{row['episode']}で、視聴数は#{row['views']}回です。"
             n += 1
         end
         false
     end
+
     def run_menu2
         n = 1
         result = @conn.exec("SELECT t.title, e.season_num, e.episode_num, e.episode, e.views
@@ -77,12 +83,16 @@ class App
                               INNER JOIN episodes AS e ON te.episode_id = e.episode_id
                               ORDER BY e.views DESC
                               LIMIT 3;")
+
+        puts "エピソード視聴数トップ3の詳細を表示します。"
+
         result.each do |row|
             puts "#{n}位のエピソードは#{row['title']}のシーズン#{row['season_num']}の#{row['episode_num']}話でエピソード名は#{row['episode']}で視聴数は#{row['views']}です。"
             n += 1
         end
         false
     end
+
     def run_menu3
         @time = ""
         result = @conn.exec("SELECT b.start_time, b.end_time, c.channel, t.title, e.season_num, e.episode_num, e.episode, e.episode_detail
@@ -96,11 +106,13 @@ class App
                               ORDER BY c.channel_id, b.start_time, e.episode_num;")
 
         puts "本日の番組表を表示します。"
+
         result .each do |row|
             show_tv_program_list(row)
         end
         false
     end
+
     def run_menu4
         @time =""
         result = @conn.exec("SELECT b.start_time, b.end_time, t.title, e.season_num, e.episode_num, e.episode, e.episode_detail
@@ -117,22 +129,53 @@ class App
         end
         false
     end
-    def run_menu5
-        result = @conn.exec("SELECT DISTINCT t.title, e.views
-            FROM title_episode AS te 
-            INNER JOIN titles AS t ON te.title_id = t.title_id
-            INNER JOIN episodes AS e ON te.episode_id = e.episode_id
-            INNER JOIN tv_program_list AS tv ON te.title_id = tv.title_id
-            INNER JOIN broadcast_times AS b ON tv.broadcast_time_id = b.broadcast_time_id
-            WHERE DATE(b.start_time) BETWEEN CURRENT_DATE - INTERVAL '7 days' AND CURRENT_DATE
-            ORDER BY e.views DESC
-            LIMIT 2;")
-        puts "直近1週間に放送された"
-        result.each do |row|
 
-        
+    def run_menu5
+        result = @conn.exec(
+            "SELECT DISTINCT e.episode, e.views
+               FROM title_episode AS te 
+              INNER JOIN titles AS t ON te.title_id = t.title_id
+              INNER JOIN episodes AS e ON te.episode_id = e.episode_id
+              INNER JOIN tv_program_list AS tv ON te.title_id = tv.title_id
+              INNER JOIN broadcast_times AS b ON tv.broadcast_time_id = b.broadcast_time_id
+              WHERE DATE(b.start_time) BETWEEN CURRENT_DATE - INTERVAL '7 days' AND CURRENT_DATE
+              ORDER BY e.views DESC
+              LIMIT 2;")
+
+        puts "直近1週間に放送され、最も見られたエピソードトップ2を表示します。"
+        result.each do |row|
+            puts "「タイトル」#{row['episode']}「視聴数」#{row['views']}"
+        end
+        false
     end
 
+    def run_menu6
+        result = @conn.exec(
+            "WITH avg AS (
+                SELECT tg.genre_id, tg.title_id, AVG(e.views) as avg_views
+                FROM title_genre AS tg
+                INNER JOIN title_episode AS te ON tg.title_id = te.title_id
+                INNER JOIN episodes AS e ON te.episode_id = e.episode_id
+                GROUP BY tg.genre_id, tg.title_id
+            ),max AS (
+                SELECT genre_id, MAX(avg_views) as max_views
+                  FROM avg
+                 GROUP BY genre_id
+            )
+            SELECT g.genre, t.title, m.max_views
+              FROM max AS m
+             INNER JOIN avg AS a ON m.genre_id = a.genre_id AND m.max_views = a.avg_views
+             INNER JOIN genres AS g ON m.genre_id = g.genre_id
+             INNER JOIN titles AS t ON a.title_id = t.title_id
+             ORDER BY g.genre_id;"
+        )
+        puts "ジャンルごとの視聴数がトップの番組と最大視聴数（複数のエピソードがある場合はその平均値）を表示します。"
+        result.each do |row|
+            puts "「ジャンル」#{row['genre']}「タイトル」#{row['title']}「最大視聴数」#{row['max_views'].to_i}回"
+        end
+        false
+
+    end
 
     def show_tv_program_list(row)
         if @time == row['start_time']
