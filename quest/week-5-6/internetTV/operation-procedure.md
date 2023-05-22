@@ -1,7 +1,7 @@
 # ステップ2作業手順
 1. データベースの構築方法
 - dockerがインストールしてある前提です
-- GitHubからクローンします。[URL](git@github.com:fukada-m/apprentice.git)
+- GitHubからクローンします。```git@github.com:fukada-m/apprentice.git```
 - [環境構築作業手順](https://www.notion.so/Ruby-PostgreSQL-3146f41cd91148b4b0a4ab29d509f7d9?pvs=4)を元にDocker-Composeを使用してPostgreSQLとRubyのコンテナを作成します。
 2. テーブルの構築方法
 - ```$ docker exec -it postgres /bin/bash``` コマンドでPostgreSQLのコンテナに入ります。
