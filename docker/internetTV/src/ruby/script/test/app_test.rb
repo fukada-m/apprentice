@@ -10,7 +10,7 @@ class AppTest < Minitest::Test
 
 	def test_start
 		original_stdn = $stdin
-		$stdin = StringIO.new("1\n2\n3\n4\nhoge\n99\n")
+		$stdin = StringIO.new("1\n2\n3\n4\n5\n6\nhoge\n99\n")
 		assert_nil @app.start
 		# assert_equal 
 	ensure
