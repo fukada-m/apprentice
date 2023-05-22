@@ -75,7 +75,7 @@
 22. [[データベース][Level2] インデックスを設定できる](quest/week-5-6/quest22.md)
 23. [[データベース][Level3] トランザクションについて説明できる(advanced)](quest/week-5-6/quest23.md)
 24. [[データベース][Level3] 同時実行制御について説明できる(advanced)](quest/week-5-6/quest24.md)
-25. **[[提出] QUEST インターネットTV](quest/week-5-6/internetTV/)**
+25. **[[提出 QUEST インターネットTV]](quest/week-5-6/internetTV/)**
 
 # ディレクトリ構成
 <pre>
