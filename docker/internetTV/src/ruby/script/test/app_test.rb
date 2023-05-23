@@ -4,6 +4,7 @@ require 'minitest/autorun'
 require 'stringio'
 require_relative '../app'
 
+# appのテストが記載されています
 class AppTest < Minitest::Test
   def setup
     @app = App.new

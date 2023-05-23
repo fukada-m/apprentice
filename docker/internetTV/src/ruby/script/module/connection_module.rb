@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# DBと接続するメソッドです。
 module ConnectionModule
   def conn
     PG.connect(
