@@ -1,11 +1,11 @@
 # インターネットTV
-[ER図](https://www.notion.so/TV-ER-4d6ae09e578c4957a738be1eb525939d?pvs=4)
+[ER図（フィードバック後）](https://www.notion.so/TV-ER-4d6ae09e578c4957a738be1eb525939d?pvs=4)
 
-[テーブルを定義しました。ステップ1の回答です。](table-definition.md)
+[ステップ1 テーブル定義（フィードバック後）](table-definition.md)
 
-[手順書を作成しました。ステップ2の回答です。](operation-procedure.md)
+[ステップ2 手順書](operation-procedure.md)
 
-[rubyでsqlを発行できるアプリを作成しました。ステップ3の回答です。](../../../docker/internetTV/src/ruby/script/)
+[ステップ3 rubyでsqlが発行できるアプリ](../../../docker/internetTV/src/ruby/script/)
 
 # 以下はクエストの詳細です。
 好きな時間に好きな場所で話題の動画を無料で楽しめる「インターネットTVサービス」を新規に作成することになりました。データベース設計をした上で、データ取得する SQL を作成してください。

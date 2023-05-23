@@ -27,10 +27,10 @@
 | ---- | ---- | ---- | ---- | ---- | ---- |
 |id|int||PRIMARY||YES|
 |title_id|int||INDEX|||
-|episode_detail_id|int||INDES|||
+|episode_detail_id|int||INDEX|||
 - 外部キー制約：
     - title_idに対して、titlesテーブルのidカラムから設定
-    - episode_detail_idに対して、episode_detailてーぶるのidカラムから設定
+    - episode_detail_idに対して、episode_detailテーブルのidカラムから設定
 
 ## テーブル：episode_detail
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
