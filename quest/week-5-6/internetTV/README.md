@@ -1,9 +1,7 @@
 # インターネットTV
-[エンティティの抽出を行い一覧にまとめました。](entity-definition.md)
+[ER図](https://www.notion.so/TV-ER-4d6ae09e578c4957a738be1eb525939d?pvs=4)
 
-[第一から第三まで順に正規化を行いました。](normalization.md)
-
-[テーブルを定義しました。こちらがステップ1の回答です。](table-definition.md)
+[テーブルを定義しました。ステップ1の回答です。](table-definition.md)
 
 [手順書を作成しました。ステップ2の回答です。](operation-procedure.md)
 
