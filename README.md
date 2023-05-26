@@ -79,31 +79,31 @@
 25. **[[提出 QUEST インターネットTV]](quest/week-5-6/internetTV/)**
 
 # Week 7-8
-1. [HTML][Level1] HTML と CSSについて説明できる
-2. [HTML][Level1] HTML と CSS の基本を理解している
-3. [HTML][Level2] 簡単なサイトの模写ができる
-4. [HTML][Level2] レスポンシブ対応できる
-5. [HTML][Level2] HTML/CSS スタイルガイドに則って書ける
-6. [JavaScript][Level1] JavaScript について説明できる
-7. [JavaScript][Level1] 変数を宣言し代入することができる
-8. [JavaScript][Level1] 関数を定義し使うことができる
-9. [JavaScript][Level1] 条件分岐を使うことができる
-10. [JavaScript][Level1] ループを使うことができる
-11. [JavaScript][Level1] データ型を使い分けることができる
-12. [JavaScript][Level1] オブジェクトを使うことができる
-13. [JavaScript][Level2] DOM 操作ができる
-14. [JavaScript][Level2] ブラウザ環境でのデバッグができる
-15. [JavaScript][Level2] スタイルガイドに則り書くことができる
-16. [JavaScript][Level2] インタラクティブな Web アプリを作成できる
-17. [JavaScript][Level3] クラスを自作し使うことができる(advanced)
-18. [JavaScript][Level3] 例外処理を使うことができる(advanced)
-19. [JavaScript][Level3] ライブラリを使用できる(advanced)
-20. [JavaScript][Level3] Lint ツールを使用できる(advanced)
-21. [JavaScript][Level3] 非同期で処理できる(advanced)
-22. [JavaScript][Level3] Ajax 通信できる(advanced)
-23. [JavaScript][Level3] JavaScript フレームワークを使うことができる(advanced)
-24. [JavaScript][Level4] ブラウザの仕組みを説明できる(advanced)
-25. [JavaScript][Level4] TypeScript を使うことができる(advanced)
+1. [[HTML][Level1] HTML と CSSについて説明できる](quest/week7-8/quest1.md)
+2. [[HTML][Level1] HTML と CSS の基本を理解している](quest/week7-8/quest2.md)
+3. [HTML][Level2] 簡単なサイトの模写ができる　提出物はないです。
+4. [HTML][Level2] レスポンシブ対応できる　提出物はないです。
+5. [HTML][Level2] HTML/CSS スタイルガイドに則って書ける　提出物はないです。
+6. [[JavaScript][Level1] JavaScript について説明できる]
+7. [[JavaScript][Level1] 変数を宣言し代入することができる]
+8. [[JavaScript][Level1] 関数を定義し使うことができる]
+9. [[JavaScript][Level1] 条件分岐を使うことができる]
+10. [[JavaScript][Level1] ループを使うことができる]
+11. [[JavaScript][Level1] データ型を使い分けることができる]
+12. [[JavaScript][Level1] オブジェクトを使うことができる]
+13. [[JavaScript][Level2] DOM 操作ができる]
+14. [[JavaScript][Level2] ブラウザ環境でのデバッグができる]
+15. [[JavaScript][Level2] スタイルガイドに則り書くことができる]
+16. [[JavaScript][Level2] インタラクティブな Web アプリを作成できる]
+17. [[JavaScript][Level3] クラスを自作し使うことができる(advanced)]
+18. [[JavaScript][Level3] 例外処理を使うことができる(advanced)]
+19. [[JavaScript][Level3] ライブラリを使用できる(advanced)]
+20. [[JavaScript][Level3] Lint ツールを使用できる(advanced)]
+21. [[JavaScript][Level3] 非同期で処理できる(advanced)]
+22. [[JavaScript][Level3] Ajax 通信できる(advanced)]
+23. [[JavaScript][Level3] JavaScript フレームワークを使うことができる(advanced)]
+24. [[JavaScript][Level4] ブラウザの仕組みを説明できる(advanced)]
+25. [[JavaScript][Level4] TypeScript を使うことができる(advanced)]
 
 
 
