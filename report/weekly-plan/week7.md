@@ -7,11 +7,11 @@
 # スプリントバックログ
 HTMLとCSSの本をまとめる4
 ~~progateをやる4~~
-1. クエスト HTMLCSS 1
-2. クエスト HTMLCSS 1
-3. クエスト HTMLCSS 2
-4. クエスト HTMLCSS 1
-5. クエスト HTMLCSS 1
+~~1. クエスト HTMLCSS 1~~
+~~2. クエスト HTMLCSS 1~~
+~~3. クエスト HTMLCSS 2~~
+~~4. クエスト HTMLCSS 1~~
+~~5. クエスト HTMLCSS 1~~
 14時間
 6. クエスト＋本 2
 7. クエスト＋本 2
