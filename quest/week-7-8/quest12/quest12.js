@@ -5,7 +5,6 @@
 // 書籍の名前と著者名をプロパティとして持つオブジェクトの配列 books を受け取り、「『書籍名』著者名」を出力する関数 printBooks を実装してください。
 
 // ▼インプット
-// よ
 
 // ```js
 // books：オブジェクトの配列
@@ -39,6 +38,18 @@
 // }
 // ```
 
+const printBooks = (books) => {
+    books.forEach(book => {
+        console.log('「' + book.name + '」' + book.author);
+    });
+}
+
+books = [
+    {name: 'JavaScript入門', author: '山田太郎'},
+    {name: 'JavaScriptの絵本', author: '山田次郎'}
+]
+
+printBooks(books);
 // ## 2. ユーザーパーミッションチェッカー
 
 // ユーザー名 username とパーミッションの種類 permission を引数に受け取り、パーミッションが許可されているかどうかを判定する関数 checkPermission を実装してください。
@@ -98,6 +109,40 @@
 // }
 // ```
 
+let users = [
+  {
+    username: '山田',
+    permissions: {
+      canRead: true,
+      canWrite: true,
+      canDelete: false
+    }
+  },
+  {
+    username: '佐藤',
+    permissions: {
+      canRead: false,
+      canWrite: true,
+      canDelete: false
+    }
+  },
+  {
+    username: '深田',
+    permissions: {
+        canRead: false,
+        canWrite: false,
+        canDelete: true
+    }
+  }
+];
+
+const checkPermission = (username, permission) => {
+    const result = users.filter(user => username == user.username);
+    console.log(result[0].permissions[permission])
+}
+checkPermission('山田', 'canWrite');
+checkPermission('深田', 'canRead');
+
 // ## 3. メソッド
 
 // JavaScript ではオブジェクトのプロパティが関数である場合、それをメソッドと呼びます。メソッドの定義として正しいものを全て選択してください。なお、正しいかどうかは手元で実行して確認することができます。
@@ -149,3 +194,5 @@
 
 // obj.method();
 // ```
+
+// A. ①　②　③
