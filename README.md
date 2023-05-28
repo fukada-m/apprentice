@@ -84,16 +84,16 @@
 3. [HTML][Level2] 簡単なサイトの模写ができる　提出物はないです。
 4. [HTML][Level2] レスポンシブ対応できる　提出物はないです。
 5. [HTML][Level2] HTML/CSS スタイルガイドに則って書ける　提出物はないです。
-6. [[JavaScript][Level1] JavaScript について説明できる]
-7. [[JavaScript][Level1] 変数を宣言し代入することができる]
-8. [[JavaScript][Level1] 関数を定義し使うことができる]
-9. [[JavaScript][Level1] 条件分岐を使うことができる]
-10. [[JavaScript][Level1] ループを使うことができる]
-11. [[JavaScript][Level1] データ型を使い分けることができる]
-12. [[JavaScript][Level1] オブジェクトを使うことができる]
-13. [[JavaScript][Level2] DOM 操作ができる]
-14. [[JavaScript][Level2] ブラウザ環境でのデバッグができる]
-15. [[JavaScript][Level2] スタイルガイドに則り書くことができる]
+6. [[JavaScript][Level1] JavaScript について説明できる](quest/week-7-8/quest6/)
+7. [[JavaScript][Level1] 変数を宣言し代入することができる](quest/week-7-8/quest7/)
+8. [[JavaScript][Level1] 関数を定義し使うことができる](quest/week-7-8/quest8/)
+9. [[JavaScript][Level1] 条件分岐を使うことができる](quest/week-7-8/quest9/)
+10. [[JavaScript][Level1] ループを使うことができる](quest/week-7-8/quest10/)
+11. [[JavaScript][Level1] データ型を使い分けることができる](quest/week-7-8/quest11.md)
+12. [[JavaScript][Level1] オブジェクトを使うことができる](quest/week-7-8/quest12/)
+13. [[JavaScript][Level2] DOM 操作ができる](quest/week-7-8/quest13/)
+14. [[JavaScript][Level2] ブラウザ環境でのデバッグができる](quest/week-7-8/quest14.md)
+15. [JavaScript][Level2] スタイルガイドに則り書くことができる 具体的な成果物はありません
 16. [[JavaScript][Level2] インタラクティブな Web アプリを作成できる]
 17. [[JavaScript][Level3] クラスを自作し使うことができる(advanced)]
 18. [[JavaScript][Level3] 例外処理を使うことができる(advanced)]
