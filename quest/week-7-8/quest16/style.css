@@ -84,6 +84,7 @@ body {
     border: 1px solid #000;
     margin-bottom: 10px;
     font-size: 24px;
+    text-align: right;
   }
   
   #buttons {
