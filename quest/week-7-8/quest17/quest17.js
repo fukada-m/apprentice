@@ -1,4 +1,3 @@
-
 // # クラスを自作し使うことができる
 
 // 音楽のプレイリストを管理する Playlist クラスを作成します。addSong()、removeSong()、play() のメソッドを用意します。
@@ -28,30 +27,27 @@
 // A.
 
 class Playlist {
-    constructor(name) {
-        this.name = name
-        this.songs = [];
-    }
+  constructor(name) {
+    this.name = name;
+    this.songs = [];
+  }
 
+  addSong(value) {
+    this.songs.push(value);
+  }
 
-    addSong(value){
-        this.songs.push(value);
-    }
+  removeSong(value) {
+    this.songs = this.songs.filter((song) => song != value);
+  }
 
-    removeSong(value){
-        this.songs = this.songs.filter(song => song != value);
-    }
-
-    play(){
-        return '再生中: ' + this.songs[0];
-
-    }
+  play() {
+    return "再生中: " + this.songs[0];
+  }
 }
 
-
-let myPlaylist = new Playlist('お気に入りリスト');
-myPlaylist.addSong('Lemon');
-myPlaylist.addSong('花束');
+let myPlaylist = new Playlist("お気に入りリスト");
+myPlaylist.addSong("Lemon");
+myPlaylist.addSong("花束");
 console.log(myPlaylist.play()); // 再生中: Lemon
-myPlaylist.removeSong('Lemon');
+myPlaylist.removeSong("Lemon");
 console.log(myPlaylist.play()); // 再生中：花束

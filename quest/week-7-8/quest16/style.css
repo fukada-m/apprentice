@@ -1,98 +1,98 @@
 /* todo */
 body {
-    background-color: #F4F4F4;
-  }
-  
-  .todo-app {
-    width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  form {
-    display: flex;
-    margin-bottom: 20px;
-  }
-  
-  #todo-input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  #add-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    margin-left: 10px;
-    border-radius: 4px;
-  }
-  
-  #add-button:hover {
-    background-color: #0056b3;
-  }
-  
-  #todo-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .todo-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #f2f2f2;
-    border-radius: 4px;
-  }
-  
-  .delete-button {
-    padding: 5px 10px;
-    border: none;
-    background-color: #ff4d4d;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .delete-button:hover {
-    background-color: #cc0000;
-  }
+  background-color: #f4f4f4;
+}
+
+.todo-app {
+  width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#todo-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#add-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+#add-button:hover {
+  background-color: #0056b3;
+}
+
+#todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #ff4d4d;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-button:hover {
+  background-color: #cc0000;
+}
 
 /* 計算機 */
 
-  #calculator {
-    width: 200px;
-    margin: auto;
-    text-align: center;
-  }
-  
-  #display {
-    height: 50px;
-    line-height: 50px;
-    border: 1px solid #000;
-    margin-bottom: 10px;
-    font-size: 24px;
-    text-align: right;
-  }
-  
-  #buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  button {
-    height: 50px;
-    font-size: 20px;
-  }
+#calculator {
+  width: 200px;
+  margin: auto;
+  text-align: center;
+}
+
+#display {
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: right;
+}
+
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+  height: 50px;
+  font-size: 20px;
+}

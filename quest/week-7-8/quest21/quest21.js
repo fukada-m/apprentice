@@ -32,7 +32,6 @@
 
 // 以下のコードを完成させ、asyncSort 関数を呼び出し、ソートされた配列をコンソールに出力してください。なお、asyncSort 関数を呼び出しの後に `console.log('同期処理');` を実行したにもかかわらず、`同期処理` が先に表示されることを確認してください。これが非同期処理の特徴です。
 
-
 function asyncSort(numbers) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -42,17 +41,18 @@ function asyncSort(numbers) {
 }
 
 const numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
-asyncSort(numbers).then((sortedNumbers) => {
-  console.log(sortedNumbers);
-}).catch((error) => {
-  console.error(`Error: ${error}`);
-});
+asyncSort(numbers)
+  .then((sortedNumbers) => {
+    console.log(sortedNumbers);
+  })
+  .catch((error) => {
+    console.error(`Error: ${error}`);
+  });
 
-console.log('同期処理');
+console.log("同期処理");
 
 // 同期処理
 // [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
-
 
 // ## 3. async/await
 
@@ -61,7 +61,6 @@ console.log('同期処理');
 // 以下のコードを完成させ、ソートされた配列をコンソールに出力してください。
 
 // なお、Async Function の外で実行した `console.log('同期処理');` は先に表示され、一方で Async Function 内で await 式の後に実行された `console.log(sortedNumbers);` は後に表示されることを確認してください。非同期処理を同期処理のように扱え、処理の流れが読みやすくなるのが async/await の特徴です。
-
 
 function asyncSort(numbers) {
   return new Promise((resolve, reject) => {
@@ -78,8 +77,7 @@ async function sortNumbers() {
 }
 
 sortNumbers();
-console.log('同期処理');
+console.log("同期処理");
 
 // 同期処理
 // [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
-
