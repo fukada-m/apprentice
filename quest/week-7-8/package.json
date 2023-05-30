@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "eslint": "^8.41.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }
