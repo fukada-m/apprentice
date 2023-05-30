@@ -1,0 +1,19 @@
+body {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label,
+input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#weatherResult {
+  padding: 10px;
+}

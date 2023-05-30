@@ -12,6 +12,6 @@ HTML Living Standard とは何か、プログラミング初心者にわかる�
 
 また、今後 HTML を実装する際は HTML Living Standard を使用してください。
 
-A. HTML Living StandardとはHTMLの最新の仕様です。
+A. HTML Living Standard とは HTML の最新の仕様です。
 
 これを参照することで最新の技術とベストプラクティスについて学ぶことができます。

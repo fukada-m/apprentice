@@ -34,19 +34,18 @@
 // }
 // ```
 
+let hasOdd = (numbers) => {
+  let istrue = false;
+  numbers.forEach((num) => {
+    num % 2 == 0 ? (istrue = true) : undefined;
+  });
+  console.log(istrue);
+};
 
-let hasOdd = (numbers) =>{
-    let istrue = false; 
-    numbers.forEach(num => {
-        (num % 2 == 0) ? istrue = true : undefined;
-    });
-    console.log(istrue);
-}
-
-let numbers = [1, 2, 3]
-hasOdd(numbers); 
-numbers = [1, 3]
-hasOdd(numbers); 
+let numbers = [1, 2, 3];
+hasOdd(numbers);
+numbers = [1, 3];
+hasOdd(numbers);
 
 // ## 2. 奇数の抽出
 
@@ -83,9 +82,9 @@ hasOdd(numbers);
 // ```
 
 let odd = (numbers) => {
-    let result = numbers.filter(num => num % 2 == 1);
-    console.log(result);
-}
+  let result = numbers.filter((num) => num % 2 == 1);
+  console.log(result);
+};
 
 odd(numbers);
 numbers = [4, 5, 6, 7, 8, 9];
@@ -126,8 +125,8 @@ odd(numbers);
 // ```
 
 let square = (numbers) => {
-    console.log(numbers.map(num => num * num));
-}
+  console.log(numbers.map((num) => num * num));
+};
 square(numbers);
 numbers = [1, 2, 3, 4, 5];
 square(numbers);

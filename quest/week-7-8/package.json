@@ -1,5 +1,18 @@
 {
   "devDependencies": {
-    "eslint": "^8.41.0"
+    "eslint": "^8.41.0",
+    "prettier": "^2.8.8",
+    "xo": "^0.54.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  },
+  "scripts": {
+    "test": "xo"
+  },
+
+  "xo": {
+    "envs": ["browser"],
+    "space": true
   }
 }

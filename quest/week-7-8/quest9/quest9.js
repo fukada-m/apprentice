@@ -41,23 +41,23 @@
 // ```
 
 let checkTemperature = (temperature) => {
-    let answer;
-    if (-50 > temperature || temperature > 50 ) {
-        answer = '-50から50の範囲で値を入力してください';
-    } else if (temperature >= 30) {
-        answer = 'Hot';
-    } else if (temperature >= 15) {
-        answer = 'Warm';
-    } else {
-        answer = 'Cold';
-    }
-    console.log(answer);
-}
+  let answer;
+  if (-50 > temperature || temperature > 50) {
+    answer = "-50から50の範囲で値を入力してください";
+  } else if (temperature >= 30) {
+    answer = "Hot";
+  } else if (temperature >= 15) {
+    answer = "Warm";
+  } else {
+    answer = "Cold";
+  }
+  console.log(answer);
+};
 checkTemperature(51); //'-50から50の範囲で値を入力してください'
 checkTemperature(49); //Hot
 checkTemperature(16); //'Warm'
 checkTemperature(14); //'Cold'
-checkTemperature(-60); //'-50から50の範囲で値を入力してください' 
+checkTemperature(-60); //'-50から50の範囲で値を入力してください'
 
 // ## 2. 偶数チェッカー
 
@@ -94,17 +94,16 @@ checkTemperature(-60); //'-50から50の範囲で値を入力してください'
 // ```
 
 let checkOddOrEven = (n) => {
-    if ( Number.isInteger(n) ) {
-
-    }else{
-        return console.log('整数を入力してください');
-    }
-    (n % 2 == 0) ? console.log('Even') : console.log('Odd');
-}
+  if (Number.isInteger(n)) {
+  } else {
+    return console.log("整数を入力してください");
+  }
+  n % 2 == 0 ? console.log("Even") : console.log("Odd");
+};
 
 checkOddOrEven(1);
 checkOddOrEven(2);
 checkOddOrEven(100);
 checkOddOrEven(99);
 checkOddOrEven(8.8);
-checkOddOrEven('4');
+checkOddOrEven("4");

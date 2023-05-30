@@ -39,15 +39,15 @@
 // ```
 
 const printBooks = (books) => {
-    books.forEach(book => {
-        console.log('「' + book.name + '」' + book.author);
-    });
-}
+  books.forEach((book) => {
+    console.log("「" + book.name + "」" + book.author);
+  });
+};
 
 books = [
-    {name: 'JavaScript入門', author: '山田太郎'},
-    {name: 'JavaScriptの絵本', author: '山田次郎'}
-]
+  { name: "JavaScript入門", author: "山田太郎" },
+  { name: "JavaScriptの絵本", author: "山田次郎" },
+];
 
 printBooks(books);
 // ## 2. ユーザーパーミッションチェッカー
@@ -111,37 +111,37 @@ printBooks(books);
 
 let users = [
   {
-    username: '山田',
+    username: "山田",
     permissions: {
       canRead: true,
       canWrite: true,
-      canDelete: false
-    }
+      canDelete: false,
+    },
   },
   {
-    username: '佐藤',
+    username: "佐藤",
     permissions: {
       canRead: false,
       canWrite: true,
-      canDelete: false
-    }
+      canDelete: false,
+    },
   },
   {
-    username: '深田',
+    username: "深田",
     permissions: {
-        canRead: false,
-        canWrite: false,
-        canDelete: true
-    }
-  }
+      canRead: false,
+      canWrite: false,
+      canDelete: true,
+    },
+  },
 ];
 
 const checkPermission = (username, permission) => {
-    const result = users.filter(user => username == user.username);
-    console.log(result[0].permissions[permission])
-}
-checkPermission('山田', 'canWrite');
-checkPermission('深田', 'canRead');
+  const result = users.filter((user) => username == user.username);
+  console.log(result[0].permissions[permission]);
+};
+checkPermission("山田", "canWrite");
+checkPermission("深田", "canRead");
 
 // ## 3. メソッド
 
