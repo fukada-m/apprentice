@@ -94,11 +94,11 @@
 13. [[JavaScript][Level2] DOM 操作ができる](quest/week-7-8/quest13/)
 14. [[JavaScript][Level2] ブラウザ環境でのデバッグができる](quest/week-7-8/quest14.md)
 15. [JavaScript][Level2] スタイルガイドに則り書くことができる 具体的な成果物はありません
-16. [[JavaScript][Level2] インタラクティブな Web アプリを作成できる]
-17. [[JavaScript][Level3] クラスを自作し使うことができる(advanced)]
-18. [[JavaScript][Level3] 例外処理を使うことができる(advanced)]
-19. [[JavaScript][Level3] ライブラリを使用できる(advanced)]
-20. [[JavaScript][Level3] Lint ツールを使用できる(advanced)]
+16. [[JavaScript][Level2] インタラクティブな Web アプリを作成できる](quest/week-7-8/quest16/)
+17. [[JavaScript][Level3] クラスを自作し使うことができる(advanced)](quest/week-7-8/quest17/)
+18. [[JavaScript][Level3] 例外処理を使うことができる(advanced)](quest/week-7-8/quest18/)
+19. [[JavaScript][Level3] ライブラリを使用できる(advanced)](quest/week-7-8/quest19/)
+20. [JavaScript][Level3] Lint ツールを使用できる(advanced) 具体的な成果物はありません
 21. [[JavaScript][Level3] 非同期で処理できる(advanced)]
 22. [[JavaScript][Level3] Ajax 通信できる(advanced)]
 23. [[JavaScript][Level3] JavaScript フレームワークを使うことができる(advanced)]
