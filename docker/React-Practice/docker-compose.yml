@@ -9,4 +9,4 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - /Users/mitsuharu/Desktop/apprentice/docker/React/app:/home/apprentice/app
+      - /Users/mitsuharu/Desktop/apprentice/docker/React-Practice/app:/home/apprentice/app
