@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  React:
+    build: ./
+    image: apprentice/react:1.0
+    container_name: React
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+    volumes:
+      - /Users/mitsuharu/Desktop/apprentice/docker/React/app:/home/apprentice/app
