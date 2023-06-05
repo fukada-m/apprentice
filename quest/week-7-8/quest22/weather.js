@@ -6,7 +6,7 @@ const weatherResult = document.querySelector("#weatherResult");
 
 const getData = (lat, lon) => {
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=`
+    // `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=`
   )
     .then((response) => response.json())
     .then((data) => {
