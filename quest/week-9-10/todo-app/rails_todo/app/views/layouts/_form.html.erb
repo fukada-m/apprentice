@@ -1,0 +1,14 @@
+  <% if yield(:type) == "edit"%> 
+    <%= form_tag("/todo/#{@todo.id}/update") do %>
+      <input type="text" name="title" value=<%= @todo.title %>>
+      <input type="submit" value="保存する" >
+    <% end %>
+  <% else %>
+    <%= form_tag("/todo/create") do %>
+      <input type="text" placeholder="タスクを入力する" name="title" >
+      <input type="submit" value="保存する" >
+    <% end %>
+  <% end %>
+
+
+ 
