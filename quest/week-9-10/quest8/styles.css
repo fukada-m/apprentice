@@ -1,0 +1,19 @@
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+#todo-list {
+    margin: 0;
+    padding: 0;
+}
+
+.todo-item {
+    list-style-type: none;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+#new-todo {
+    margin-bottom: 10px;
+}
