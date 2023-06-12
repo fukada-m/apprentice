@@ -1,0 +1,5 @@
+<%= form_with(url: "/todos", local: true) do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <%= form.submit %>
+<% end %>
