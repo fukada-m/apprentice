@@ -7,4 +7,8 @@ RSpec.describe Todo, type: :model do
     expect(todo.errors[:title]).to include("can't be blank")
   end
 
+  it "タイトルが入力されていた場合バリデーションエラーにならない" do
+    todo = Todo.new(title: "test")
+    expect(todo).to be_valid
+  end
 end
