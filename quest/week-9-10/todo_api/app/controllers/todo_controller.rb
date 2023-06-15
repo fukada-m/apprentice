@@ -1,5 +1,7 @@
 class TodoController < ApplicationController
+  before_action :authenticate_user, {only: [:index, :update, :delete] }
   skip_before_action :verify_authenticity_token
+
   def get
     render json: {status: "success"}
   end

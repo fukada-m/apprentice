@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'api/users', to: 'api#register'
+  post 'api/users', to: 'api#register'
   post 'api/users/login', to: 'api#login'
 
   get '/get', to: 'todo#get'

@@ -1,7 +1,6 @@
-require 'jwt'
-
 class ApiController < ApplicationController
   skip_before_action :verify_authenticity_token
+
   def register
     @body = params.require(:user).permit(:email,:password)
     @user = User.new(@body)
@@ -24,11 +23,17 @@ class ApiController < ApplicationController
       render json: {
         user: {
           email: @user.email,
-          token: nil
+          token: create_jwt(@user.id)
         }
       }, status: :ok
     else
-      render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
+        render json: { user: { message: "ログインできませんでした" } }
     end
   end
+
+  def create_jwt(id)
+    payload = { user_id: id }
+    token = JWT.encode payload, nil, 'HS256'
+  end
+
 end
