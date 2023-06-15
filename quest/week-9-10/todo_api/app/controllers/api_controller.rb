@@ -20,13 +20,15 @@ class ApiController < ApplicationController
   def login
     @body = params.require(:user).permit(:email,:password)
     @user = User.find_by(email: @body[:email])
-    render json: {
+    if @user.authenticate(@body[:password])
+      render json: {
         user: {
           email: @user.email,
-          password: @user.password_digest,
           token: nil
         }
-      }, status: :created
-    
+      }, status: :ok
+    else
+      render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 end

@@ -1011,3 +1011,86 @@ Processing by ApiController#login as */*
 Completed 201 Created in 10ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 8655)
 
 
+Started POST "/api/users/login" for ::1 at 2023-06-15 22:13:24 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2281)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/api_controller.rb:22:in `[]'
+app/controllers/api_controller.rb:22:in `login'
+Started POST "/api/users/login" for ::1 at 2023-06-15 22:17:23 +0900
+  
+SyntaxError (/Users/mitsuharu/Desktop/apprentice/quest/week-9-10/todo_api/app/controllers/api_controller.rb:33: syntax error, unexpected end-of-input):
+  
+app/controllers/api_controller.rb:33: syntax error, unexpected end-of-input
+app/controllers/api_controller.rb:33: syntax error, unexpected end-of-input
+app/controllers/api_controller.rb:33: syntax error, unexpected end-of-input
+Started POST "/api/users/login" for ::1 at 2023-06-15 22:18:23 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:22:in `login'
+Completed 201 Created in 257ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 7457)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-15 22:22:38 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:22:in `login'
+No template found for ApiController#login, rendering head :no_content
+Completed 204 No Content in 256ms (ActiveRecord: 0.7ms | Allocations: 3102)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-15 22:22:43 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:22:in `login'
+Completed 201 Created in 350ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 702)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-15 22:23:19 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:22:in `login'
+Completed 422 Unprocessable Entity in 270ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 8565)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-15 22:23:40 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:22:in `login'
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.7ms | Allocations: 3623)
+
+
+  
+ArgumentError (Unrecognized status code :success):
+  
+app/controllers/api_controller.rb:24:in `login'
+Started POST "/api/users/login" for ::1 at 2023-06-15 22:24:05 +0900
+  
+SyntaxError (/Users/mitsuharu/Desktop/apprentice/quest/week-9-10/todo_api/app/controllers/api_controller.rb:30: syntax error, unexpected integer literal, expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+      }, status: :200
+                  ^~~
+):
+  
+app/controllers/api_controller.rb:30: syntax error, unexpected integer literal, expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+app/controllers/api_controller.rb:30: syntax error, unexpected integer literal, expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+app/controllers/api_controller.rb:30: syntax error, unexpected integer literal, expecting literal content or terminator or tSTRING_DBEG or tSTRING_DVAR
+Started POST "/api/users/login" for ::1 at 2023-06-15 22:24:21 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:22:in `login'
+Completed 200 OK in 262ms (Views: 0.2ms | ActiveRecord: 8.4ms | Allocations: 3264)
+
+
