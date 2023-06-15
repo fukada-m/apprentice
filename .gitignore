@@ -138,3 +138,5 @@ yarn-error.log*
 data
 .env
 rails-tutorial
+master.key
+tmp
