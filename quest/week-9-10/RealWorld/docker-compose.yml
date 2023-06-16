@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  app:
+    image: ruby:3.2.2
+    container_name: ruby_real_world
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/home/realworld
+    ports:
+      - 3008:3000
+
