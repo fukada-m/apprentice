@@ -1460,3 +1460,491 @@ Filter chain halted as :authenticate_user rendered or redirected
 Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 590)
 
 
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:19:05 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 265ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 8775)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:19:44 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 258ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 8785)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:20:26 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 257ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 8793)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:20:51 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 272ms (Views: 0.2ms | ActiveRecord: 2.4ms | Allocations: 3306)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:28:08 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 258ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 2934)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:28:32 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 253ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 2897)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:32:54 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 256ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 3265)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 08:33:14 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 674)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 08:34:35 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 1.6ms | Allocations: 1821)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+app/controllers/application_controller.rb:7:in `authenticate_user'
+Started GET "/todos" for ::1 at 2023-06-16 08:35:39 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.3ms | Allocations: 539)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+app/controllers/application_controller.rb:7:in `authenticate_user'
+Started GET "/todos" for ::1 at 2023-06-16 08:36:59 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.3ms | Allocations: 489)
+
+
+  
+NameError (undefined local variable or method `secret_key' for #<TodoController:0x0000000001b300>):
+  
+app/controllers/application_controller.rb:7:in `authenticate_user'
+Started GET "/todos" for ::1 at 2023-06-16 08:42:27 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms | Allocations: 528)
+
+
+  
+NoMethodError (undefined method `secret_key' for Auth:Module):
+  
+app/controllers/application_controller.rb:8:in `authenticate_user'
+Started GET "/todos" for ::1 at 2023-06-16 08:46:15 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.2ms | Allocations: 487)
+
+
+  
+NoMethodError (undefined method `secret_key' for Auth:Module):
+  
+app/controllers/application_controller.rb:8:in `authenticate_user'
+Started GET "/api/users/login" for ::1 at 2023-06-16 08:51:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/login"):
+  
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:52:05 +0900
+  
+NameError (uninitialized constant ApplicationController::Auth):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:3:in `<main>'
+app/controllers/api_controller.rb:1:in `<main>'
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:52:29 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 1.7ms | Allocations: 3436)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2..4)):
+  
+app/controllers/api_controller.rb:36:in `create_jwt'
+app/controllers/api_controller.rb:26:in `login'
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:53:09 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 0.8ms | Allocations: 3125)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2..4)):
+  
+app/controllers/api_controller.rb:37:in `create_jwt'
+app/controllers/api_controller.rb:26:in `login'
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:53:19 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 259ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 3324)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 08:53:46 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.3ms | Allocations: 515)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+app/controllers/application_controller.rb:7:in `authenticate_user'
+Started GET "/todos" for ::1 at 2023-06-16 08:54:07 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.3ms | Allocations: 557)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+app/controllers/application_controller.rb:7:in `authenticate_user'
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:54:38 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 258ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 2958)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 08:54:54 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 633)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+app/controllers/application_controller.rb:7:in `authenticate_user'
+Started GET "/todos" for ::1 at 2023-06-16 08:55:04 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.3ms | Allocations: 551)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+app/controllers/application_controller.rb:7:in `authenticate_user'
+Started POST "/api/users/login" for ::1 at 2023-06-16 08:57:20 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 291ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 3313)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 08:57:32 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.3ms | Allocations: 575)
+
+
+  
+JWT::VerificationError (Signature verification failed):
+  
+app/controllers/application_controller.rb:7:in `authenticate_user'
+Started POST "/api/users/login" for ::1 at 2023-06-16 09:12:52 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 0.9ms | Allocations: 3443)
+
+
+  
+NameError (undefined local variable or method `none' for #<ApiController:0x0000000002fc38>):
+  
+app/controllers/api_controller.rb:37:in `create_jwt'
+app/controllers/api_controller.rb:26:in `login'
+Started POST "/api/users/login" for ::1 at 2023-06-16 09:13:14 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 276ms (Views: 0.8ms | ActiveRecord: 0.7ms | Allocations: 3350)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-16 09:13:33 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 254ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 3240)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-16 09:14:38 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 267ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 3245)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-16 09:14:58 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 251ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3326)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-16 09:15:40 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 0.7ms | Allocations: 7557)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+app/controllers/api_controller.rb:38:in `create_jwt'
+app/controllers/api_controller.rb:26:in `login'
+Started POST "/api/users/login" for ::1 at 2023-06-16 09:15:59 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 252ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 3503)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-16 09:16:14 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 254ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 3297)
+
+
+Started POST "/api/users/login" for ::1 at 2023-06-16 09:17:01 +0900
+Processing by ApiController#login as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "api"=>{"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harry@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:21:in `login'
+Completed 200 OK in 257ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 3250)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 09:17:25 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 267)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 09:29:24 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `authenticate_user'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todo_controller.rb:27:in `map'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2331)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 09:30:29 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `authenticate_user'
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1593)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 09:30:55 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `authenticate_user'
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1538)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 09:31:05 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `authenticate_user'
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1696)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 09:31:52 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `authenticate_user'
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1692)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 09:32:05 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `authenticate_user'
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 3325)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 09:34:25 +0900
+Processing by TodoController#index as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `authenticate_user'
+  [1m[36mTodo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todo_controller.rb:27:in `map'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 3817)
+
+
+Started POST "/todos" for ::1 at 2023-06-16 09:45:25 +0900
+Processing by TodoController#create as */*
+  Parameters: {"user"=>{"email"=>"harry@example.com", "password"=>"[FILTERED]"}, "todo"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.2ms | Allocations: 500)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: todo):
+  
+app/controllers/todo_controller.rb:10:in `create'
+Started POST "/todos" for ::1 at 2023-06-16 09:46:01 +0900
+Processing by TodoController#create as */*
+  Parameters: {"todo"=>{"title"=>"宿題"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todo_controller.rb:12:in `create'
+  [1m[36mTodo Create (0.7ms)[0m  [1m[32mINSERT INTO "todos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "宿題"], ["created_at", "2023-06-16 00:46:02.092782"], ["updated_at", "2023-06-16 00:46:02.092782"]]
+  ↳ app/controllers/todo_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todo_controller.rb:12:in `create'
+Completed 201 Created in 9ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 5327)
+
+
+Started POST "/todos" for ::1 at 2023-06-16 09:46:09 +0900
+Processing by TodoController#create as */*
+  Parameters: {"todo"=>{"title"=>"買い物"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todo_controller.rb:12:in `create'
+  [1m[36mTodo Create (0.8ms)[0m  [1m[32mINSERT INTO "todos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "買い物"], ["created_at", "2023-06-16 00:46:10.039469"], ["updated_at", "2023-06-16 00:46:10.039469"]]
+  ↳ app/controllers/todo_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todo_controller.rb:12:in `create'
+Completed 201 Created in 11ms (Views: 0.7ms | ActiveRecord: 2.9ms | Allocations: 1969)
+
+
+Started GET "/todos" for ::1 at 2023-06-16 09:46:14 +0900
+Processing by TodoController#index as */*
+  Parameters: {"todo"=>{"title"=>"買い物"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `authenticate_user'
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todo_controller.rb:27:in `map'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 3667)
+
+
+Started PUT "/todos/2" for ::1 at 2023-06-16 09:46:48 +0900
+Processing by TodoController#update as */*
+  Parameters: {"todo"=>{"title"=>"掃除"}, "id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `authenticate_user'
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todo_controller.rb:35:in `update'
+  [1m[36mTodo Update (0.3ms)[0m  [1m[33mUPDATE "todos" SET "title" = ?, "updated_at" = ? WHERE "todos"."id" = ?[0m  [["title", "掃除"], ["updated_at", "2023-06-16 00:46:48.741728"], ["id", 2]]
+  ↳ app/controllers/todo_controller.rb:35:in `update'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todo_controller.rb:35:in `update'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 9159)
+
+
+Started GET "/todos/" for ::1 at 2023-06-16 09:46:55 +0900
+Processing by TodoController#index as */*
+  Parameters: {"todo"=>{"title"=>"掃除"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `authenticate_user'
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todo_controller.rb:27:in `map'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1248)
+
+
+Started DELETE "/todos/2" for ::1 at 2023-06-16 09:47:09 +0900
+Processing by TodoController#destroy as */*
+  Parameters: {"todo"=>{"title"=>"掃除"}, "id"=>"2"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_controller.rb:48:in `destroy'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todo_controller.rb:49:in `destroy'
+  [1m[36mTodo Destroy (0.7ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/todo_controller.rb:49:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todo_controller.rb:49:in `destroy'
+Completed 204 No Content in 20ms (ActiveRecord: 3.9ms | Allocations: 2177)
+
+
+Started GET "/todos/" for ::1 at 2023-06-16 09:47:16 +0900
+Processing by TodoController#index as */*
+  Parameters: {"todo"=>{"title"=>"掃除"}}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `authenticate_user'
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todo_controller.rb:27:in `map'
+Completed 200 OK in 38ms (Views: 0.3ms | ActiveRecord: 5.2ms | Allocations: 1180)
+
+
+Started POST "/todos/" for ::1 at 2023-06-16 09:47:30 +0900
+Processing by TodoController#create as */*
+  Parameters: {"todo"=>{"title"=>"選択"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todo_controller.rb:12:in `create'
+  [1m[36mTodo Create (0.7ms)[0m  [1m[32mINSERT INTO "todos" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "選択"], ["created_at", "2023-06-16 00:47:30.405809"], ["updated_at", "2023-06-16 00:47:30.405809"]]
+  ↳ app/controllers/todo_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todo_controller.rb:12:in `create'
+Completed 201 Created in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 2102)
+
+

@@ -33,7 +33,8 @@ class ApiController < ApplicationController
 
   def create_jwt(id)
     payload = { user_id: id }
-    token = JWT.encode payload, nil, 'HS256'
+    secret = Rails.application.credentials.secret_key_base
+    token = JWT.encode payload, secret
   end
 
 end
