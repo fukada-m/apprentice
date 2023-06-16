@@ -124,7 +124,7 @@
 14. [[テスト][Level2] 単体テストを書くことができる](quest/week-9-10/todo_api/spec/models/)
 15. [[テスト][Level2] 結合テストを書くことができる](quest/week-9-10/todo_api/spec/requests/)
 
-**[提出クエスト RealWorld](quest/)**
+**[提出クエスト RealWorld](quest/week-9-10/RealWorld/realworld/)**
 
 # ディレクトリ構成
 <pre>
