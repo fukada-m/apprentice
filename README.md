@@ -1,13 +1,10 @@
 # 概要 
 アプレンティスのクエストを管理するリポジトリです
 
-### [ポートフォリオ(オリジナルプロダクト)](https://www.notion.so/719e5a101c274c3694adf313553773c7?pvs=4)
+### [ポートフォリオ(オリジナルプロダクト)](https://github.com/fukada-m/ouryokukou_booking)
 ### [日報](report/daily-report)
-### [週間計画](report/weekly-plan/)
-### [自分用のWiki](https://www.notion.so/root-1764084d880f4d6ab8a5e853f5608eb4?pvs=4)
 ### [技術ブログ](https://qiita.com/yami-yami)
-
-
+### [自分用のWiki](https://www.notion.so/root-1764084d880f4d6ab8a5e853f5608eb4?pvs=4)
 
 # Week 1-2　
 1. [[学習力][Level1] 続的に学習時間を確保できる](quest/week-1-2/quest1.md)<br>
@@ -124,7 +121,10 @@
 14. [[テスト][Level2] 単体テストを書くことができる](quest/week-9-10/todo_api/spec/models/)
 15. [[テスト][Level2] 結合テストを書くことができる](quest/week-9-10/todo_api/spec/requests/)
 
-**[提出クエスト RealWorld](quest/week-9-10/RealWorld/realworld/)**
+**[提出クエスト RealWorld](https://github.com/fukada-m/RealWorld)**
+
+# week11-12
+
 
 # ディレクトリ構成
 <pre>
