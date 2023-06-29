@@ -140,11 +140,11 @@
 13. [[CI/CD][Level3] CI/CD について説明できる(advanced)](quest/week11-12/quest13.md)
 14. [[CI/CD][Level4] CI を構築できる(advanced)](https://github.com/fukada-m/git-hub-actions-practice)
 15. [[CI/CD][Level4] CD を構築できる(advanced)](https://github.com/fukada-m/git-hub-actions-practice)
-16. [[監視][Level4] 監視について説明できる(advanced)]()
-17. [[監視][Level4] エラー監視ができる(advanced)]()
-18. [[監視][Level4] URL 監視ができる(advanced)]()
+16. [[監視][Level4] 監視について説明できる(advanced)](/quest/week11-12/quest16.md)
+17. [[監視][Level4] エラー監視ができる(advanced)](/quest/week11-12/quest17.md)
+18. [監視][Level4] URL 監視ができる(advanced)(具体的な成果物はありません)
 
-**[提出QUEST RealWorldのデプロイ]()**
+**[提出QUEST RealWorldのデプロイ](https://github.com/fukada-m/RealWorld)**
 
 # ディレクトリ構成
 <pre>
