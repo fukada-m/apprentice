@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>動作確認</title>
+  </head>
+  <body>
+    <h2>お問い合わせ</h2>
+    <form name="inquiry" action="thankyou.php" method="post">
+      <table border="1">
+        <tr>
+          <th>お名前</th>
+          <td><input type="text" name="simei" value="" /></td>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+          <td><input type="text" name="email" value="" /></td>
+        </tr>
+        <tr>
+          <th>地域</th>
+          <td>
+            <select name="area">
+              <option value=""></option>
+              <option value="北海道">北海道</option>
+              <option value="東北">東北</option>
+              <option value="関東">関東</option>
+              <option value="中部">中部</option>
+              <option value="近畿">近畿</option>
+              <option value="中国">中国</option>
+              <option value="四国">四国</option>
+              <option value="九州">九州</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>お問い合わせ種別</th>
+          <td>
+            <input
+              type="checkbox"
+              name="type[]"
+              value="ユーザー登録について"
+              id="user"
+            /><label for="user">ユーザー登録について<br /></label>
+            <input
+              type="checkbox"
+              name="type[]"
+              value="商品に関するお問い合わせ"
+            />商品に関するお問い合わせ<br />
+            <input
+              type="checkbox"
+              name="type[]"
+              value="返品について"
+            />返品について<br />
+          </td>
+        </tr>
+        <tr>
+          <th>お問い合わせ内容</th>
+          <td><textarea name="inquiry" rows="3" cols="50"></textarea></td>
+        </tr>
+        <tr>
+          <th>お得な情報をEメールで受け取りますか？</th>
+          <td>
+            <input type="radio" name="news_type" value="受け取る" id="receve" />
+            <label for="receve">受け取る</label><br />
+            <input
+              type="radio"
+              name="news_type"
+              value="受け取らない"
+            />受け取らない<br />
+          </td>
+        </tr>
+      </table>
+      <button type="submit" name="operation" value="send">送信</button>
+      <button type="reset" name="reset" value="reset">リセット</button>
+    </form>
+  </body>
+</html>
