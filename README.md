@@ -1,10 +1,9 @@
-# 概要 
+# 概要
 アプレンティスのクエストを管理するリポジトリです
 
 ### [ポートフォリオ(オリジナルプロダクト)](https://github.com/fukada-m/ouryokukou_booking)
 ### [日報](report/daily-report)
 ### [技術ブログ](https://qiita.com/yami-yami)
-### [自分用のWiki](https://www.notion.so/root-1764084d880f4d6ab8a5e853f5608eb4?pvs=4)
 
 # Week 1-2　
 1. [[学習力][Level1] 続的に学習時間を確保できる](quest/week-1-2/quest1.md)<br>
